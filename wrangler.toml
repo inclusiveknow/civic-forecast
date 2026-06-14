@@ -11,7 +11,6 @@
 name = "civic-forecast"
 main = "workers/pipeline/index.ts"
 compatibility_date = "2026-04-01"
-node_compat = false
 
 # NOTE: This file configures the WORKER (the daily real-time pipeline) only.
 # A single wrangler config cannot be both a Worker and a Pages project — if
