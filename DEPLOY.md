@@ -62,7 +62,7 @@ You're live at `https://civic-forecast.pages.dev`.
 
 ```bash
 git init && git add . && git commit -m "Initial: Civic Forecast v1"
-gh repo create civicdesigners/civic-forecast --public --source=. --push
+gh repo create <your-org>/civic-forecast --public --source=. --push
 
 # In the Cloudflare Pages dashboard:
 #   Create a project → Connect to Git → select civic-forecast
@@ -81,11 +81,30 @@ npm run deploy:pages
 
 ### Custom domain
 
-In the Pages project settings → **Custom domains** → add `civicforecast.org` (or `forecast.civicdesigners.org`). Cloudflare handles the cert.
+In the Pages project settings → **Custom domains** → add `civicforecast.org` (or your own domain). Cloudflare handles the cert.
 
 ---
 
 ## Part B — Deploy the daily pipeline
+
+### Keyless quick start (see it working before registering for anything)
+
+Three of the six sources — **PRESS** (U.S. Press Freedom Tracker), **RECORD**
+(Federal Register), and the **news headlines** (NPR / ProPublica / Google News
+RSS) — need no API key at all. The pipeline is built to degrade gracefully:
+any source without a key simply fails and the page shows its last-known-good (or
+a neutral fallback) instead of blanking. So you can stand the whole thing up
+with **zero keys** and watch it self-update from those live sources, then add
+the rest later.
+
+To do the keyless run, follow steps 1–3 below (install wrangler, create the KV
+namespace, create the R2 bucket), **skip step 4 (secrets)** entirely, then do
+step 5 (`npm run deploy:worker`) and step 6 (`POST /run`). The daily sentence
+falls back to a deterministic template (no Anthropic key), and COURTS / STREETS
+/ CHAMBER show their fallback reading until you add CourtListener / ACLED /
+ProPublica keys. `GET /health` will show those three as `last_error` — that's
+expected, not a failure. Add keys with `npm run secrets:set` whenever you're
+ready and redeploy; each one lights up its indicator with live data.
 
 ### 1. Install wrangler
 

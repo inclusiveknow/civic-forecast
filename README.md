@@ -82,7 +82,7 @@ Adding a language: drop a dictionary into `public/scripts/i18n.js → DICT` and 
 
 ## License
 
-Apache 2.0. A project of [Civic Designers](https://civicdesigners.org), a 501(c)(3).
+Apache 2.0. A project of Accelerant.
 
 ## Credits
 
