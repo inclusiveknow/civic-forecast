@@ -3,4 +3,4 @@ Allow: /
 Disallow: /api/
 
 # We want this indexed. The methodology page is canonical for the math.
-Sitemap: https://civicforecast.org/sitemap.xml
+Sitemap: https://civic-forecast.pages.dev/sitemap.xml
