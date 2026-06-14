@@ -52,8 +52,9 @@ bucket_name = "civic-forecast-archive"
 # (MuckRock and Federal Register and Press Freedom Tracker need no key.)
 
 # ---- Routes ------------------------------------------------------------------
-# The Worker is reachable at the route below; the Pages site is reachable at
-# its Pages domain (e.g. civic-forecast.pages.dev or your custom domain).
-[[routes]]
-pattern = "civicforecast.org/api/*"
-zone_name = "civicforecast.org"
+# The Worker is reachable at its workers.dev URL out of the box. The custom-domain
+# route below is COMMENTED OUT — enable it only once you own civicforecast.org
+# (or your own domain) as a zone in this Cloudflare account, then redeploy.
+# [[routes]]
+# pattern = "civicforecast.org/api/*"
+# zone_name = "civicforecast.org"
