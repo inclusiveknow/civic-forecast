@@ -1,0 +1,19 @@
+# =============================================================================
+# THE CIVIC FORECAST — Pages (static site) configuration
+#
+# Separate from wrangler.toml (which configures the Worker pipeline). A single
+# wrangler config can't be both a Worker and a Pages project, so the static
+# frontend lives here.
+#
+# Deploy:  npm run deploy:pages
+#   (equivalently: wrangler pages deploy public --project-name civic-forecast
+#    -c wrangler.pages.toml)
+#
+# Or — simplest, no CLI — use the Cloudflare Pages dashboard:
+#   Create a project → Direct Upload → drag the ./public folder
+#   (or Git-connect this repo with build output directory: public)
+# =============================================================================
+
+name = "civic-forecast"
+pages_build_output_dir = "./public"
+compatibility_date = "2026-04-01"

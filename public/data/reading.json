@@ -1,0 +1,288 @@
+{
+  "date": "2026-05-01T06:00:00-04:00",
+  "generated_at": "2026-05-01T06:00:00-04:00",
+  "feeling": "overcast",
+  "pressure": 62,
+  "pressure_trend": "rising",
+  "signal": "pressure_building",
+  "reading_sentence_key": "reading_sentence",
+  "six_days": [
+    { "date": "2026-04-25", "dow": 5, "feeling": "clear",    "pressure": 22 },
+    { "date": "2026-04-26", "dow": 6, "feeling": "clear",    "pressure": 28 },
+    { "date": "2026-04-27", "dow": 0, "feeling": "overcast", "pressure": 48 },
+    { "date": "2026-04-28", "dow": 1, "feeling": "storm",    "pressure": 81 },
+    { "date": "2026-04-29", "dow": 2, "feeling": "overcast", "pressure": 58 },
+    { "date": "2026-04-30", "dow": 3, "feeling": "overcast", "pressure": 60 },
+    { "date": "2026-05-01", "dow": 4, "feeling": "overcast", "pressure": 62, "today": true }
+  ],
+  "top_stories": [
+    {
+      "rank": 1,
+      "headline": "Eleven journalists arrested in two-day operation while covering protest in Tallahassee",
+      "source": "NPR · U.S. Press Freedom Tracker",
+      "url": "https://pressfreedomtracker.us/",
+      "image": "https://images.unsplash.com/photo-1495020689067-958852a7765e?w=400&h=400&fit=crop",
+      "time": "today · 06:14 ET",
+      "indicators": ["press"],
+      "direction": "up",
+      "weather_note": "pushes PRESS higher — currently elevated (14 this week vs. 8 90-day average)."
+    },
+    {
+      "rank": 2,
+      "headline": "5th Circuit upholds voter ID requirements 3-2; civil-rights coalitions file emergency appeal",
+      "source": "ProPublica · CourtListener",
+      "url": "https://www.courtlistener.com/",
+      "image": "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=400&h=400&fit=crop",
+      "time": "yesterday · 15:30 ET",
+      "indicators": ["courts"],
+      "direction": "flat",
+      "weather_note": "keeps COURTS steady — currently unsettled (23 this week vs. 22 90-day average)."
+    },
+    {
+      "rank": 3,
+      "headline": "DOJ rejects 14 of 18 recent FOIA requests citing 'national security'",
+      "source": "MuckRock",
+      "url": "https://www.muckrock.com/",
+      "image": null,
+      "time": "today · 09:02 ET",
+      "indicators": ["sunlight"],
+      "direction": "up",
+      "weather_note": "pushes SUNLIGHT higher — currently opaque (61% denial rate vs. 54% 90-day average)."
+    },
+    {
+      "rank": 4,
+      "headline": "Estimated 30,000 march in Twin Cities for voting rights; police report 4 use-of-force incidents nationally",
+      "source": "NPR · ACLED",
+      "url": "https://acleddata.com/",
+      "image": "https://images.unsplash.com/photo-1591189824344-9b2725b8e96b?w=400&h=400&fit=crop",
+      "time": "yesterday · evening",
+      "indicators": ["streets"],
+      "direction": "up",
+      "weather_note": "pushes STREETS higher — currently active (147 this week vs. 125 90-day average)."
+    },
+    {
+      "rank": 5,
+      "headline": "26 new federal rules and 3 executive actions issued this week; HHS data-sharing comment window closes Friday",
+      "source": "Federal Register · ProPublica",
+      "url": "https://www.federalregister.gov/",
+      "image": null,
+      "time": "today · 04:00 ET",
+      "indicators": ["record"],
+      "direction": "up",
+      "weather_note": "pushes RECORD higher — currently accelerating (38 this week vs. 27 90-day average)."
+    }
+  ],
+  "indicators": [
+    {
+      "id": "press",
+      "co_name": "reporters",
+      "co_name_kid": "reporters",
+      "co_name_es": "reporteros",
+      "plain_label": "reporters under attack",
+      "plain_count": "14 reporters had trouble doing their job this week",
+      "plain_count_kid": "14 reporters got hurt or stopped this week",
+      "plain_count_es": "14 periodistas tuvieron problemas esta semana",
+      "plain_subtitle": "arrests · equipment seized · denials of access",
+      "plain_subtitle_kid": "got arrested, lost cameras, or weren't let in",
+      "plain_subtitle_es": "arrestos · equipo confiscado · acceso denegado",
+      "what_it_is": "Press freedom incidents in the United States — when reporters are arrested, assaulted, or stopped from covering the news.",
+      "why_it_matters": "A free press is how we know what's happening. When reporters can't work, we can't know.",
+      "status": "elevated",
+      "tone": "warning",
+      "count_today": 14,
+      "count_week": 14,
+      "count_avg_90": 8,
+      "trend_dir": "up",
+      "trend_n": 6,
+      "sparkline": [4, 5, 7, 6, 9, 11, 14],
+      "source": "u.s. press freedom tracker",
+      "source_url": "https://pressfreedomtracker.us/",
+      "events": [
+        { "at": "2026-05-01T14:22:00-04:00", "text": "Two journalists detained while covering protest in Atlanta, GA." },
+        { "at": "2026-05-01T11:08:00-04:00", "text": "Equipment seized from photographer at federal courthouse, Tampa." },
+        { "at": "2026-05-01T08:45:00-04:00", "text": "Press credentials denied at executive briefing for nine outlets." },
+        { "at": "2026-04-30T22:30:00-04:00", "text": "Eleven reporters arrested in single overnight action, Tallahassee." }
+      ],
+      "regions": [
+        { "center": [-83.5, 32.5], "r": 130, "i": 0.92, "label": "Southeast" },
+        { "center": [-82.4, 28.0], "r": 80, "i": 0.7, "label": "Florida" }
+      ]
+    },
+    {
+      "id": "courts",
+      "co_name": "judges",
+      "co_name_kid": "judges",
+      "co_name_es": "jueces",
+      "plain_label": "court decisions on your rights",
+      "plain_count": "23 federal rulings this week",
+      "plain_count_kid": "judges made 23 big decisions this week",
+      "plain_count_es": "23 fallos federales esta semana",
+      "plain_subtitle": "voting · free speech · executive power",
+      "plain_subtitle_kid": "about voting, speaking up, and the president's power",
+      "plain_subtitle_es": "votación · libertad de expresión · poder ejecutivo",
+      "what_it_is": "Federal court rulings that change what's legal — voting access, free speech, executive power, civil rights.",
+      "why_it_matters": "Courts decide what the rules of the country are right now. Lots of rulings in one week means lots of changes at once.",
+      "status": "unsettled",
+      "tone": "watch",
+      "count_today": 23,
+      "count_week": 23,
+      "count_avg_90": 22,
+      "trend_dir": "flat",
+      "trend_n": 0,
+      "sparkline": [20, 22, 21, 23, 24, 22, 23],
+      "source": "courtlistener · free law project",
+      "source_url": "https://www.courtlistener.com/",
+      "events": [
+        { "at": "2026-04-30T15:30:00-04:00", "text": "5th Circuit upholds voter ID requirements (3-2). Civil-rights coalitions appealing." },
+        { "at": "2026-04-30T12:14:00-04:00", "text": "9th Circuit blocks executive order on asylum processing pending review." },
+        { "at": "2026-04-30T09:50:00-04:00", "text": "D.C. District grants press access to immigration hearings (1st Amendment)." }
+      ],
+      "regions": [
+        { "center": [-95.0, 39.0], "r": 100, "i": 0.6, "label": "Central" }
+      ]
+    },
+    {
+      "id": "sunlight",
+      "co_name": "transparency",
+      "co_name_kid": "telling us things",
+      "co_name_es": "transparencia",
+      "plain_label": "government answering questions",
+      "plain_count": "61% of public records requests denied or stalled",
+      "plain_count_kid": "the government hid 6 out of every 10 things people asked about",
+      "plain_count_es": "61% de las solicitudes públicas denegadas o estancadas",
+      "plain_subtitle": "FOIA · 30-day window · federal agencies",
+      "plain_subtitle_kid": "people asked, and most didn't get an answer",
+      "plain_subtitle_es": "FOIA · ventana de 30 días · agencias federales",
+      "what_it_is": "The percent of Freedom of Information Act (FOIA) requests that the federal government denies, redirects, or sits on past the legal deadline.",
+      "why_it_matters": "When the government won't say what it's doing, you can't tell whether it's working for you. Higher percent = less you can know.",
+      "status": "opaque",
+      "tone": "warning",
+      "count_today": 61,
+      "count_week": 61,
+      "count_avg_90": 54,
+      "unit": "%",
+      "trend_dir": "up",
+      "trend_n": 4,
+      "sparkline": [52, 54, 56, 58, 57, 60, 61],
+      "source": "muckrock",
+      "source_url": "https://www.muckrock.com/",
+      "events": [
+        { "at": "2026-05-01T09:02:00-04:00", "text": "DOJ rejected 14 of 18 FOIA requests filed in past 30 days as 'national security'." },
+        { "at": "2026-04-29T16:14:00-04:00", "text": "EPA backlog now exceeds statutory 20-day window on 213 active requests." },
+        { "at": "2026-04-28T11:30:00-04:00", "text": "DHS redirected 9 inquiries to ICE FOIA office; ICE has 14-month median response." }
+      ],
+      "regions": [
+        { "center": [-77.0, 38.9], "r": 100, "i": 0.85, "label": "DC" }
+      ]
+    },
+    {
+      "id": "chamber",
+      "co_name": "congress",
+      "co_name_kid": "lawmakers",
+      "co_name_es": "congreso",
+      "plain_label": "Congress at work",
+      "plain_count": "4 days in session, 42 votes (28 party-line, 14 bipartisan)",
+      "plain_count_kid": "Congress worked 4 days. They voted 42 times — only 14 with both teams agreeing.",
+      "plain_count_es": "4 días en sesión, 42 votaciones (28 de partido, 14 bipartidistas)",
+      "plain_subtitle": "House + Senate · this week",
+      "plain_subtitle_kid": "the people who make laws · this week",
+      "plain_subtitle_es": "Cámara + Senado · esta semana",
+      "what_it_is": "Whether Congress is actually showing up and deliberating — days in session, votes cast, and how much voting crosses party lines.",
+      "why_it_matters": "Congress writes the laws. If they're not showing up, voting, or working across parties, the system is stuck.",
+      "status": "in_session",
+      "tone": "mild",
+      "count_today": 4,
+      "count_week": 4,
+      "count_avg_90": 3,
+      "unit": "days",
+      "trend_dir": "flat",
+      "trend_n": 0,
+      "sparkline": [3, 4, 4, 3, 5, 4, 4],
+      "source": "propublica congress · govtrack",
+      "source_url": "https://projects.propublica.org/api-docs/congress-api/",
+      "events": [
+        { "at": "2026-05-01T07:00:00-04:00", "text": "42 roll-call votes this week. 28 along party lines, 14 bipartisan." },
+        { "at": "2026-04-29T18:42:00-04:00", "text": "House passed appropriations continuing resolution 218-211." },
+        { "at": "2026-04-28T14:55:00-04:00", "text": "Senate cloture motion on judicial nominees: 51-48." }
+      ],
+      "regions": [
+        { "center": [-77.0, 38.9], "r": 60, "i": 0.5, "label": "Capitol" }
+      ]
+    },
+    {
+      "id": "streets",
+      "co_name": "protests",
+      "co_name_kid": "people in the streets",
+      "co_name_es": "protestas",
+      "plain_label": "people speaking out",
+      "plain_count": "147 protests in 41 cities · 4 use-of-force incidents",
+      "plain_count_kid": "147 protests in 41 cities · 4 times police used force",
+      "plain_count_es": "147 protestas en 41 ciudades · 4 incidentes con uso de la fuerza",
+      "plain_subtitle": "rallies · marches · demonstrations",
+      "plain_subtitle_kid": "people gathering to speak up about something",
+      "plain_subtitle_es": "concentraciones · marchas · manifestaciones",
+      "what_it_is": "Protests, rallies, and demonstrations across the country — and any time police use force to respond.",
+      "why_it_matters": "When lots of people are in the streets, they're trying to tell the system something. The map shows where the loudest voices are right now.",
+      "status": "active",
+      "tone": "watch",
+      "count_today": 147,
+      "count_week": 147,
+      "count_avg_90": 125,
+      "unit": "events",
+      "trend_dir": "up",
+      "trend_n": 22,
+      "sparkline": [110, 115, 120, 130, 135, 140, 147],
+      "source": "acled",
+      "source_url": "https://acleddata.com/",
+      "events": [
+        { "at": "2026-05-01T06:00:00-04:00", "text": "Protests in 41 cities. Largest gathered ~30,000 in Minneapolis-St. Paul." },
+        { "at": "2026-04-29T20:30:00-04:00", "text": "Use-of-force incidents reported in 4 cities (Tampa, Phoenix, Portland, NYC)." },
+        { "at": "2026-04-27T19:15:00-04:00", "text": "Largest single-day mobilization since previous summer." }
+      ],
+      "regions": [
+        { "center": [-93.2, 44.9], "r": 90, "i": 0.75, "label": "Twin Cities" },
+        { "center": [-122.6, 45.5], "r": 70, "i": 0.6, "label": "Portland" },
+        { "center": [-74.0, 40.7], "r": 75, "i": 0.65, "label": "NYC" }
+      ]
+    },
+    {
+      "id": "record",
+      "co_name": "executive",
+      "co_name_kid": "the president",
+      "co_name_es": "ejecutivo",
+      "plain_label": "president & agencies acting",
+      "plain_count": "38 federal actions this week (26 rules, 9 comment windows, 3 executive orders)",
+      "plain_count_kid": "the president and agencies made 38 new rules and orders this week",
+      "plain_count_es": "38 acciones federales esta semana (26 reglas, 9 períodos de comentario, 3 órdenes ejecutivas)",
+      "plain_subtitle": "rules · orders · proclamations",
+      "plain_subtitle_kid": "new rules from the president and his offices",
+      "plain_subtitle_es": "reglas · órdenes · proclamaciones",
+      "what_it_is": "How many new rules, executive orders, and proclamations the executive branch published this week, compared to its 90-day average pace.",
+      "why_it_matters": "This is the speed of change in how the government runs. Faster doesn't always mean bad — but a flood means a lot is shifting at once.",
+      "status": "accelerating",
+      "tone": "watch",
+      "count_today": 38,
+      "count_week": 38,
+      "count_avg_90": 27,
+      "unit": "actions",
+      "trend_dir": "up",
+      "trend_n": 11,
+      "sparkline": [22, 24, 26, 28, 30, 35, 38],
+      "source": "federal register",
+      "source_url": "https://www.federalregister.gov/",
+      "events": [
+        { "at": "2026-05-01T04:00:00-04:00", "text": "26 new rules issued. 9 comment periods opened. 3 executive actions." },
+        { "at": "2026-04-29T08:30:00-04:00", "text": "Notable: HHS rule on data-sharing comment window closes Friday." },
+        { "at": "2026-04-28T15:20:00-04:00", "text": "2 presidential proclamations issued." }
+      ],
+      "regions": [
+        { "center": [-77.0, 38.9], "r": 75, "i": 0.65, "label": "DC" }
+      ]
+    }
+  ],
+  "advisory": {
+    "title_key": "advisory_title",
+    "text_key": "advisory_text",
+    "sources": ["u.s. press freedom tracker"]
+  }
+}

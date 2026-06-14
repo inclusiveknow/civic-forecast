@@ -1,0 +1,26 @@
+# Cloudflare Pages headers — applied at the edge.
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: interest-cohort=(), camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://civicforecast.org
+
+# HTML — short cache so we always get fresh page chrome
+/*.html
+  Cache-Control: public, max-age=300, must-revalidate
+
+# Index gets the same treatment
+/
+  Cache-Control: public, max-age=300, must-revalidate
+
+# Today's reading — short cache, served fresh after the morning pipeline
+/data/reading.json
+  Cache-Control: public, max-age=300, s-maxage=300, must-revalidate
+
+# Static assets — long cache (filenames will be hashed when we add a build step)
+/scripts/*
+  Cache-Control: public, max-age=3600
+/styles/*
+  Cache-Control: public, max-age=3600

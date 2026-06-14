@@ -1,0 +1,40 @@
+{
+  "name": "The Civic Forecast",
+  "short_name": "forecast",
+  "description": "A daily forecast for civic life in the United States. Like checking the weather, but for democracy.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0e1a",
+  "theme_color": "#0a0e1a",
+  "categories": ["news", "government", "politics", "education"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Methodology",
+      "url": "/methodology.html",
+      "description": "How we read the weather"
+    },
+    {
+      "name": "Embed widget",
+      "url": "/embed.html",
+      "description": "Drop today's reading on your site"
+    }
+  ]
+}

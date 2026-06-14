@@ -1,0 +1,22 @@
+{
+  "name": "civic-forecast",
+  "version": "1.0.0",
+  "description": "A daily forecast for civic life in the United States.",
+  "private": true,
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev": "python -m http.server 8970 -d public",
+    "dev:worker": "wrangler dev workers/pipeline/index.ts",
+    "deploy:pages": "wrangler pages deploy public --project-name civic-forecast -c wrangler.pages.toml",
+    "deploy:worker": "wrangler deploy",
+    "deploy": "npm run deploy:pages && npm run deploy:worker",
+    "secrets:set": "wrangler secret put PROPUBLICA && wrangler secret put COURTLISTENER && wrangler secret put ACLED && wrangler secret put ANTHROPIC",
+    "kv:create": "wrangler kv namespace create READINGS",
+    "r2:create": "wrangler r2 bucket create civic-forecast-archive",
+    "pipeline:run": "wrangler dev workers/pipeline/index.ts --test-scheduled"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20251001.0",
+    "wrangler": "^4.0.0"
+  }
+}

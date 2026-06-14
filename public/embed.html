@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a0e1a">
+<title>civic forecast · embed</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:ital,wght@0,500;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --depth: #0a0e1a;
+    --surface: #131826;
+    --mist: #1f2535;
+    --haze: #2c3347;
+    --clear: #6ec5e8;
+    --mild: #a7d49b;
+    --watch: #e8c66e;
+    --warning: #e89a4f;
+    --storm: #d4524e;
+    --severe: #8b3a8f;
+    --ink: #f0f2f8;
+    --ink-soft: #a8b0c2;
+    --ink-quiet: #6c7388;
+    --font-display: 'Inter Tight', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* When loaded standalone (not in an iframe) — show the docs */
+  body {
+    background: var(--depth);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 24px;
+  }
+
+  body.in-iframe {
+    background: transparent;
+    padding: 0;
+    min-height: 0;
+  }
+
+  /* The widget itself */
+  .widget {
+    background: linear-gradient(180deg, var(--surface) 0%, var(--depth) 100%);
+    border: 1px solid rgba(168, 176, 194, 0.12);
+    border-radius: 16px;
+    padding: 18px 20px;
+    max-width: 480px;
+    margin: 0 auto;
+    color: var(--ink);
+  }
+
+  .w-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    gap: 12px;
+  }
+
+  .w-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-quiet);
+  }
+
+  .w-brand-icon { width: 18px; height: 18px; }
+
+  .w-time {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    color: var(--ink-quiet);
+    text-transform: uppercase;
+  }
+
+  .w-feeling {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .w-sentence {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+  }
+
+  .w-bar {
+    height: 4px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--clear) 0%, var(--mild) 22%, var(--watch) 45%, var(--warning) 65%, var(--storm) 85%, var(--severe) 100%);
+    position: relative;
+    margin-bottom: 8px;
+  }
+
+  .w-pointer {
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    margin-left: -5px;
+    margin-top: -5px;
+    background: var(--ink);
+    border-radius: 50%;
+    border: 2px solid var(--depth);
+  }
+
+  .w-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-quiet);
+  }
+
+  .w-foot a { color: var(--clear); text-decoration: none; }
+  .w-foot a:hover { text-decoration: underline; }
+
+  /* Docs (only shown when not in an iframe) */
+  body:not(.in-iframe) .docs {
+    max-width: 720px;
+    margin: 40px auto;
+    background: rgba(31, 37, 53, 0.4);
+    border: 1px solid rgba(168, 176, 194, 0.1);
+    border-radius: 16px;
+    padding: 28px;
+  }
+
+  body.in-iframe .docs { display: none; }
+
+  .docs h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 28px;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+
+  .docs p { color: var(--ink-soft); margin-bottom: 16px; }
+
+  .docs pre {
+    background: var(--depth);
+    border: 1px solid rgba(168, 176, 194, 0.1);
+    border-radius: 8px;
+    padding: 14px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--clear);
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .docs h2 {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-quiet);
+    margin: 24px 0 8px;
+  }
+</style>
+</head>
+<body>
+
+<div class="widget" id="widget" aria-label="Today's civic forecast">
+  <div class="w-head">
+    <div class="w-brand">
+      <svg class="w-brand-icon" viewBox="0 0 32 32" aria-hidden="true">
+        <ellipse cx="12" cy="13" rx="9" ry="4" fill="#6ec5e8" opacity="0.7"/>
+        <ellipse cx="20" cy="19" rx="10" ry="4" fill="#e89a4f" opacity="0.7"/>
+        <circle cx="16" cy="16" r="2.5" fill="#0a0e1a"/>
+      </svg>
+      <span>civic forecast</span>
+    </div>
+    <span class="w-time" id="w-time">today</span>
+  </div>
+  <div class="w-feeling" id="w-feeling">overcast</div>
+  <p class="w-sentence" id="w-sentence">Mostly overcast. Pressure building over the southeast.</p>
+  <div class="w-bar"><div class="w-pointer" id="w-pointer" style="left: 62%"></div></div>
+  <div class="w-foot">
+    <span><span id="w-pressure">62</span> · pressure</span>
+    <a href="https://civicforecast.org/" target="_blank" rel="noopener">read at civicforecast.org →</a>
+  </div>
+</div>
+
+<div class="docs">
+  <h1>Embed the forecast</h1>
+  <p>Drop this on your site to show today's reading. The widget loads from your visitors' browsers — no server-side work, no API key, fully cached. Updates automatically each morning.</p>
+
+  <h2>Standard size — 480 × auto</h2>
+  <pre>&lt;iframe src="https://civicforecast.org/embed.html"
+        width="480" height="220"
+        style="border:0;border-radius:16px;"
+        title="The Civic Forecast"
+        loading="lazy"&gt;&lt;/iframe&gt;</pre>
+
+  <h2>Compact</h2>
+  <pre>&lt;iframe src="https://civicforecast.org/embed.html?compact=1"
+        width="320" height="180"
+        style="border:0;border-radius:14px;"
+        title="The Civic Forecast"
+        loading="lazy"&gt;&lt;/iframe&gt;</pre>
+
+  <h2>Or link it</h2>
+  <pre>&lt;a href="https://civicforecast.org/" target="_blank"&gt;Today's civic forecast →&lt;/a&gt;</pre>
+
+  <h2>License</h2>
+  <p>Use freely under Apache 2.0. Attribution to civicforecast.org appreciated.</p>
+</div>
+
+<script>
+(function() {
+  // Mark in-iframe so we hide the docs
+  if (window.self !== window.top) document.body.classList.add('in-iframe');
+
+  // Hydrate from /data/reading.json if available, else keep the static defaults
+  fetch('data/reading.json', { cache: 'no-cache' })
+    .then(r => r.ok ? r.json() : null)
+    .then(d => {
+      if (!d) return;
+      const f = d.feeling || 'overcast';
+      document.getElementById('w-feeling').textContent = f;
+      document.getElementById('w-sentence').textContent = d.reading_sentence || 'Mostly overcast. Pressure building over the southeast.';
+      const p = d.pressure ?? d.cpi ?? 62;
+      document.getElementById('w-pressure').textContent = p;
+      document.getElementById('w-pointer').style.left = p + '%';
+      const dt = new Date(d.date || Date.now());
+      document.getElementById('w-time').textContent = dt.toLocaleDateString('en', { month: 'short', day: 'numeric' });
+    })
+    .catch(() => {});
+})();
+</script>
+
+</body>
+</html>

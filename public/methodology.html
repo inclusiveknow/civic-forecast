@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0e1a">
+<title>civic forecast · methodology</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230a0e1a'/%3E%3Cellipse cx='12' cy='14' rx='8' ry='4' fill='%236ec5e8' opacity='.7'/%3E%3Cellipse cx='20' cy='18' rx='9' ry='4' fill='%23e89a4f' opacity='.6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/main.css">
+<style>
+  /* Methodology-specific styles */
+  .meth-page { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+  .back-bar {
+    padding: 24px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--ink); }
+
+  .meth-hero {
+    padding: 40px 0 30px;
+    text-align: center;
+    border-bottom: 1px solid rgba(168, 176, 194, 0.1);
+    margin-bottom: 36px;
+  }
+
+  .meth-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink-quiet);
+    margin-bottom: 16px;
+  }
+
+  .meth-title {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(38px, 7vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+  }
+
+  .meth-lede {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .meth-section {
+    margin-bottom: 48px;
+  }
+
+  .meth-h2 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(24px, 4vw, 32px);
+    line-height: 1.2;
+    margin-bottom: 14px;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  .meth-h3 {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--clear);
+    margin-bottom: 8px;
+    margin-top: 28px;
+  }
+
+  .meth-prose p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+  }
+
+  .meth-prose strong { color: var(--ink); font-weight: 600; }
+  .meth-prose em { color: var(--ink); }
+
+  .meth-prose ul {
+    list-style: none;
+    margin: 14px 0 18px;
+  }
+
+  .meth-prose li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+
+  .meth-prose li::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--haze);
+  }
+
+  .indicator-card {
+    background: linear-gradient(180deg, rgba(31, 37, 53, 0.5), rgba(19, 24, 38, 0.7));
+    border: 1px solid rgba(168, 176, 194, 0.1);
+    border-radius: var(--radius-lg);
+    padding: 22px;
+    margin-bottom: 14px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .indicator-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent-color, var(--clear));
+  }
+
+  .indicator-card h3 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 26px;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+
+  .indicator-card .ic-tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-quiet);
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+
+  .indicator-card dl {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 8px 14px;
+    margin: 14px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid rgba(168, 176, 194, 0.08);
+  }
+
+  .indicator-card dt {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-quiet);
+    padding-top: 2px;
+  }
+
+  .indicator-card dd { font-size: 14px; color: var(--ink-soft); line-height: 1.55; }
+  .indicator-card dd a { color: var(--clear); text-decoration: underline; text-underline-offset: 2px; }
+
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: 16px 0;
+  }
+
+  @media (min-width: 600px) {
+    .vocab-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .vocab-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    background: rgba(19, 24, 38, 0.5);
+    border-radius: 12px;
+    border-left: 3px solid var(--vocab-color);
+  }
+
+  .vocab-words {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink);
+    flex: 1;
+  }
+
+  .vocab-color-name {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-quiet);
+  }
+
+  .pledge {
+    background: linear-gradient(180deg, rgba(110, 197, 232, 0.06), rgba(110, 197, 232, 0.02));
+    border: 1px solid rgba(110, 197, 232, 0.2);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    margin: 32px 0;
+    text-align: center;
+  }
+
+  .pledge p {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  .changelog {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .changelog .cl-row {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(168, 176, 194, 0.08);
+  }
+
+  .changelog .cl-date { color: var(--ink-quiet); }
+  .changelog .cl-text { color: var(--ink-soft); }
+
+  .footer {
+    border-top: 1px solid rgba(168, 176, 194, 0.1);
+    margin-top: 60px;
+  }
+</style>
+</head>
+<body>
+
+<div class="ambient" aria-hidden="true">
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+</div>
+
+<div class="meth-page">
+
+  <div class="back-bar">
+    <a href="index.html" class="back-link">
+      <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>back to today</span>
+    </a>
+  </div>
+
+  <header class="meth-hero">
+    <div class="meth-eyebrow">methodology · v1.0</div>
+    <h1 class="meth-title">how we read the weather</h1>
+    <p class="meth-lede">
+      Every reading on the front page is computed from public data, sourced from organizations whose work we did not write and could not replace. This page shows the math.
+    </p>
+  </header>
+
+  <section class="meth-section">
+    <h2 class="meth-h2">What this is</h2>
+    <div class="meth-prose">
+      <p>The Civic Forecast treats democracy like weather. It pulls live numbers from six independent civic-monitoring sources every morning, runs them through documented thresholds, and publishes a single page showing what the day's <em>conditions</em> look like.</p>
+      <p>Six indicators were chosen because each measures a different system that healthy democracies need to be working: a free press, functional courts, transparent government, a deliberative legislature, freedom of assembly, and rule-making accountability. When any one of them is under unusual stress, the page reflects that.</p>
+      <p>The vocabulary is meteorological by design. Words like <em>elevated</em> and <em>turbulent</em> describe pressure systems, not partisan judgments. The same word would appear under any administration if the underlying numbers warranted it.</p>
+    </div>
+  </section>
+
+  <section class="meth-section">
+    <h2 class="meth-h2">The six indicators</h2>
+    <p class="meth-prose" style="margin-bottom: 22px;">Each indicator is a computed reading from a public dataset. Here are the sources, the math, and the status thresholds.</p>
+
+    <div class="indicator-card" style="--accent-color: #e89a4f;">
+      <span class="ic-tag">indicator 01</span>
+      <h3>PRESS — Press freedom incidents</h3>
+      <p style="color: var(--ink-soft); font-size: 14px; line-height: 1.6;">Counts of journalist arrests, assaults, equipment seizures, subpoenas, and denials of access in the United States.</p>
+      <dl>
+        <dt>Source</dt><dd><a href="https://pressfreedomtracker.us/" target="_blank" rel="noopener">U.S. Press Freedom Tracker</a> (a project of the Freedom of the Press Foundation and the Committee to Protect Journalists).</dd>
+        <dt>API</dt><dd>Public JSON feed at <code>pressfreedomtracker.us/api/</code>. Updated continuously.</dd>
+        <dt>Pull cadence</dt><dd>Every 6 hours.</dd>
+        <dt>Computation</dt><dd>Sum of incidents in the past 7 days, compared to a rolling 90-day average.</dd>
+        <dt>Vocabulary</dt><dd>clear · routine · elevated · severe</dd>
+      </dl>
+    </div>
+
+    <div class="indicator-card" style="--accent-color: #e8c66e;">
+      <span class="ic-tag">indicator 02</span>
+      <h3>COURTS — Federal court rulings</h3>
+      <p style="color: var(--ink-soft); font-size: 14px; line-height: 1.6;">Rulings on civil rights, voting access, executive power, and First Amendment matters.</p>
+      <dl>
+        <dt>Source</dt><dd><a href="https://www.courtlistener.com/" target="_blank" rel="noopener">CourtListener</a> by the Free Law Project.</dd>
+        <dt>API</dt><dd>REST API at <code>courtlistener.com/api/</code> — free with registration, 5,000 calls/day.</dd>
+        <dt>Pull cadence</dt><dd>Daily at 04:00 ET.</dd>
+        <dt>Computation</dt><dd>Count of relevant rulings in the past 7 days. Each ruling is tagged by category (civil-rights, voting-rights, executive-power, First Amendment) and classified as <em>expanding</em> or <em>restricting</em> with a confidence score. Status reflects both balance and volume.</dd>
+        <dt>Vocabulary</dt><dd>settled · routine · unsettled · turbulent</dd>
+      </dl>
+    </div>
+
+    <div class="indicator-card" style="--accent-color: #e89a4f;">
+      <span class="ic-tag">indicator 03</span>
+      <h3>SUNLIGHT — FOIA response patterns</h3>
+      <p style="color: var(--ink-soft); font-size: 14px; line-height: 1.6;">How transparent the federal government is, measured by FOIA response rates and denial patterns.</p>
+      <dl>
+        <dt>Source</dt><dd><a href="https://www.muckrock.com/" target="_blank" rel="noopener">MuckRock</a>.</dd>
+        <dt>API</dt><dd><code>muckrock.com/api_v1/</code> — free.</dd>
+        <dt>Pull cadence</dt><dd>Daily at 04:00 ET.</dd>
+        <dt>Computation</dt><dd>Percentage of FOIA requests filed in the past 30 days that were denied, redirected, or stalled past statutory response deadlines. Federal level only for v1.</dd>
+        <dt>Vocabulary</dt><dd>clear · translucent · opaque · sealed</dd>
+      </dl>
+    </div>
+
+    <div class="indicator-card" style="--accent-color: #a7d49b;">
+      <span class="ic-tag">indicator 04</span>
+      <h3>CHAMBER — Functional state of Congress</h3>
+      <p style="color: var(--ink-soft); font-size: 14px; line-height: 1.6;">Whether the deliberative body is deliberating.</p>
+      <dl>
+        <dt>Sources</dt><dd><a href="https://projects.propublica.org/api-docs/congress-api/" target="_blank" rel="noopener">ProPublica Congress API</a> and <a href="https://www.govtrack.us/developers/api" target="_blank" rel="noopener">GovTrack</a>.</dd>
+        <dt>API</dt><dd>Both free; ProPublica requires a free key.</dd>
+        <dt>Pull cadence</dt><dd>Daily at 04:00 ET.</dd>
+        <dt>Computation</dt><dd>Composite of: days in session this week + count of recorded votes + ratio of party-line vs bipartisan votes + presence of any quorum-call irregularities.</dd>
+        <dt>Vocabulary</dt><dd>in session · recess · stalled · paralyzed</dd>
+      </dl>
+    </div>
+
+    <div class="indicator-card" style="--accent-color: #e8c66e;">
+      <span class="ic-tag">indicator 05</span>
+      <h3>STREETS — Civic activity outside institutions</h3>
+      <p style="color: var(--ink-soft); font-size: 14px; line-height: 1.6;">Protests, demonstrations, and any associated use-of-force incidents.</p>
+      <dl>
+        <dt>Source</dt><dd><a href="https://acleddata.com/" target="_blank" rel="noopener">ACLED</a> — Armed Conflict Location & Event Data Project.</dd>
+        <dt>API</dt><dd>Free with registration for non-commercial use.</dd>
+        <dt>Pull cadence</dt><dd>Daily at 04:00 ET. (ACLED has roughly a 1-week reporting lag for U.S. events; the reading reflects this.)</dd>
+        <dt>Computation</dt><dd>Count of protest events in the past 7 days · count of cities with events · count of use-of-force incidents reported. Geographic distribution feeds the atmospheric map.</dd>
+        <dt>Vocabulary</dt><dd>quiet · active · turbulent · convulsing</dd>
+      </dl>
+    </div>
+
+    <div class="indicator-card" style="--accent-color: #e8c66e;">
+      <span class="ic-tag">indicator 06</span>
+      <h3>RECORD — Federal Register activity</h3>
+      <p style="color: var(--ink-soft); font-size: 14px; line-height: 1.6;">The rule-making and executive-action pulse of the administrative state.</p>
+      <dl>
+        <dt>Source</dt><dd><a href="https://www.federalregister.gov/" target="_blank" rel="noopener">Federal Register</a>.</dd>
+        <dt>API</dt><dd><code>federalregister.gov/developers/api/v1</code> — free, no key.</dd>
+        <dt>Pull cadence</dt><dd>Daily at 04:00 ET.</dd>
+        <dt>Computation</dt><dd>Count of new rules issued, comment periods opened/closed, executive orders, and presidential proclamations in the past 7 days. Compared to rolling 90-day baseline. Status reflects pace, not direction.</dd>
+        <dt>Vocabulary</dt><dd>steady · accelerating · surging · floodtide</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="meth-section">
+    <h2 class="meth-h2">Status vocabulary &amp; color mapping</h2>
+    <p class="meth-prose">Status words are deliberately archaic-poetic-meteorological. They are calibrated so that no individual word reads as partisan. The same vocabulary applies regardless of who is in power.</p>
+
+    <div class="vocab-grid">
+      <div class="vocab-row" style="--vocab-color: #6ec5e8;">
+        <span class="vocab-words">clear · quiet · settled · steady · in session · translucent</span>
+        <span class="vocab-color-name">CLEAR</span>
+      </div>
+      <div class="vocab-row" style="--vocab-color: #a7d49b;">
+        <span class="vocab-words">routine · mild · recess</span>
+        <span class="vocab-color-name">MILD</span>
+      </div>
+      <div class="vocab-row" style="--vocab-color: #e8c66e;">
+        <span class="vocab-words">elevated · active · unsettled · accelerating</span>
+        <span class="vocab-color-name">WATCH</span>
+      </div>
+      <div class="vocab-row" style="--vocab-color: #e89a4f;">
+        <span class="vocab-words">turbulent · opaque · surging · stalled</span>
+        <span class="vocab-color-name">WARNING</span>
+      </div>
+      <div class="vocab-row" style="--vocab-color: #d4524e;">
+        <span class="vocab-words">severe · sealed · floodtide · paralyzed</span>
+        <span class="vocab-color-name">STORM</span>
+      </div>
+      <div class="vocab-row" style="--vocab-color: #8b3a8f;">
+        <span class="vocab-words">historic · convulsing · unprecedented</span>
+        <span class="vocab-color-name">SEVERE</span>
+      </div>
+    </div>
+
+    <p class="meth-prose" style="font-size: 14px; color: var(--ink-quiet); margin-top: 18px;">SEVERE-level readings are reserved for genuine multi-decade outliers. They appear rarely. Their presence on the front page is itself news.</p>
+  </section>
+
+  <section class="meth-section">
+    <h2 class="meth-h2">The daily reading sentence</h2>
+    <div class="meth-prose">
+      <p>Each morning at 06:00 ET an LLM (Anthropic Claude Haiku) is given the day's six readings and asked to produce one sentence. The sentence:</p>
+      <ul>
+        <li>Is always grammatically a weather report.</li>
+        <li>Never names a party, person, or administration.</li>
+        <li>Is always under 18 words.</li>
+        <li>Always describes geographic and atmospheric pattern, not specific events.</li>
+      </ul>
+      <p>The full prompt template is versioned in the project repository. Any change to the prompt is logged in the changelog below. The advisory paragraph is generated by the same architecture with the same constraints, picking the single most consequential delta of the past 24 hours.</p>
+    </div>
+  </section>
+
+  <section class="meth-section">
+    <h2 class="meth-h2">The Civic Pressure Index (CPI)</h2>
+    <div class="meth-prose">
+      <p>The single number you see at the top of the page (e.g. <em>62</em>) is the Civic Pressure Index. It is a weighted composite of the six indicators, normalized 0–100, where 0 is calm under all conditions and 100 is historic on all six axes simultaneously.</p>
+      <p>It is not a quality-of-democracy score. It is a <em>pressure</em> reading. A high CPI means many systems are under unusual stress at once. A low CPI means most systems are running near baseline. CPI does not say whether the country is well-governed. It says whether the air pressure is rising.</p>
+      <p>Weights are documented in the open-source pipeline. Default weights are 1.0 for each indicator, but PRESS and SUNLIGHT carry a slight uplift in volatility because their effects compound the others.</p>
+    </div>
+  </section>
+
+  <section class="meth-section">
+    <h2 class="meth-h2">The atmospheric map</h2>
+    <div class="meth-prose">
+      <p>The map is not a state-by-state choropleth. It renders each indicator's events as <em>atmospheric pressure regions</em> — soft, blurred, semi-transparent color zones that overlap and blend additively. A region that is both press-incident-elevated and protest-active will show a richer mixed color where the regions overlap. The whole thing drifts and pulses gently because weather is alive.</p>
+      <p>Geography is rendered with the Albers USA projection from the d3-geo / us-atlas library. Storm centers (the most intense cells) are marked with a small pulsing dot. The map updates whenever the underlying data updates.</p>
+    </div>
+  </section>
+
+  <section class="meth-section">
+    <h2 class="meth-h2">What the page does not do</h2>
+    <div class="meth-prose">
+      <ul>
+        <li>It does not interpret events. It reports conditions.</li>
+        <li>It does not endorse or oppose any party, candidate, or policy.</li>
+        <li>It does not track international civic conditions. (V1 is U.S. only.)</li>
+        <li>It does not save anything about your visit. There is no account, no email capture, no analytics, no third-party tracking.</li>
+        <li>It does not predict tomorrow. Forecasts of the future would require a different methodology and a much higher burden of evidence.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="pledge">
+    <p>The integrity of this practice depends on the methodology being open. Every claim on the front page is traceable to a specific line on this page. If you find an error, the source repository is public — file an issue.</p>
+  </div>
+
+  <section class="meth-section">
+    <h2 class="meth-h2">Changelog</h2>
+    <div class="changelog">
+      <div class="cl-row">
+        <span class="cl-date">2026-05-01</span>
+        <span class="cl-text">v1.0 published. Six indicators, daily cadence, U.S. only. No prior versions in production.</span>
+      </div>
+      <div class="cl-row">
+        <span class="cl-date">future</span>
+        <span class="cl-text">State-level breakouts, ambient sound layer, no-account email subscription.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="meth-section">
+    <h2 class="meth-h2">Credits</h2>
+    <div class="meth-prose">
+      <p>This project would not exist without the daily, often unfunded work of the organizations whose data feeds it. None of these organizations endorse the Civic Forecast; their work simply makes it possible.</p>
+      <ul>
+        <li><a href="https://pressfreedomtracker.us/" target="_blank" rel="noopener">U.S. Press Freedom Tracker</a> — Freedom of the Press Foundation &amp; Committee to Protect Journalists</li>
+        <li><a href="https://free.law/" target="_blank" rel="noopener">Free Law Project</a> — CourtListener</li>
+        <li><a href="https://www.muckrock.com/" target="_blank" rel="noopener">MuckRock</a></li>
+        <li><a href="https://www.propublica.org/" target="_blank" rel="noopener">ProPublica</a> &amp; <a href="https://www.govtrack.us/" target="_blank" rel="noopener">GovTrack</a></li>
+        <li><a href="https://acleddata.com/" target="_blank" rel="noopener">ACLED</a></li>
+        <li><a href="https://www.federalregister.gov/" target="_blank" rel="noopener">Federal Register</a> — Office of the Federal Register, NARA</li>
+      </ul>
+      <p>The geography is drawn with <a href="https://github.com/topojson/us-atlas" target="_blank" rel="noopener">us-atlas</a> by Mike Bostock. The site is built and maintained by <a href="https://civicdesigners.org" target="_blank" rel="noopener">Civic Designers</a>, a 501(c)(3). Source code is open under Apache 2.0.</p>
+    </div>
+  </section>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-creed">
+    <p>this is free. it will always be free.</p>
+    <p>we save nothing about your visit.</p>
+    <p>the methodology is open. the math is the math.</p>
+  </div>
+  <div class="footer-rule"></div>
+  <div class="footer-meta">
+    a project of civic designers · updated daily at dawn eastern · no account · no email · no analytics
+  </div>
+</footer>
+
+</body>
+</html>

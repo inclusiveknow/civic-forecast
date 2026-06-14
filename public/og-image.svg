@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="20%" r="80%">
+      <stop offset="0%" stop-color="#1a2238"/>
+      <stop offset="100%" stop-color="#0a0e1a"/>
+    </radialGradient>
+    <radialGradient id="warm" cx="60%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e89a4f" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#d4524e" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#d4524e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cool" cx="40%" cy="55%" r="45%">
+      <stop offset="0%" stop-color="#6ec5e8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#6ec5e8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="warm2" cx="80%" cy="80%" r="40%">
+      <stop offset="0%" stop-color="#e8c66e" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#e8c66e" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="40"/></filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- atmospheric blobs -->
+  <g filter="url(#blur)">
+    <ellipse cx="780" cy="320" rx="380" ry="240" fill="url(#warm)"/>
+    <ellipse cx="320" cy="380" rx="320" ry="200" fill="url(#cool)"/>
+    <ellipse cx="980" cy="510" rx="220" ry="140" fill="url(#warm2)"/>
+  </g>
+
+  <!-- subtle grid -->
+  <g stroke="rgba(168, 176, 194, 0.05)" stroke-width="1">
+    <line x1="0" y1="157" x2="1200" y2="157"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="472" x2="1200" y2="472"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+  </g>
+
+  <!-- brand kicker -->
+  <text x="80" y="100" fill="#a8b0c2" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="22" letter-spacing="6" text-transform="uppercase">A DAILY FORECAST FOR CIVIC LIFE</text>
+
+  <!-- big italic title -->
+  <text x="80" y="280" fill="#f0f2f8" font-family="'Inter Tight', 'Helvetica Neue', sans-serif" font-style="italic" font-weight="500" font-size="140" letter-spacing="-3">the civic</text>
+  <text x="80" y="430" fill="#f0f2f8" font-family="'Inter Tight', 'Helvetica Neue', sans-serif" font-style="italic" font-weight="500" font-size="140" letter-spacing="-3">forecast</text>
+
+  <!-- tagline -->
+  <text x="80" y="500" fill="#a8b0c2" font-family="'Inter Tight', 'Helvetica Neue', sans-serif" font-style="italic" font-size="32">what democracy feels like today.</text>
+
+  <!-- atmospheric mark, top-right -->
+  <g transform="translate(1000, 80)">
+    <circle r="50" fill="none" stroke="rgba(168, 176, 194, 0.3)" stroke-width="1"/>
+    <ellipse cx="-12" cy="-8" rx="28" ry="10" fill="#6ec5e8" opacity="0.7"/>
+    <ellipse cx="14" cy="10" rx="32" ry="12" fill="#e89a4f" opacity="0.65"/>
+    <circle cx="0" cy="0" r="8" fill="#0a0e1a"/>
+  </g>
+
+  <!-- bottom: indicator pills -->
+  <g transform="translate(80, 555)" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="16" letter-spacing="3" fill="#6c7388">
+    <rect x="0" y="-22" width="14" height="14" rx="3" fill="#6ec5e8"/>
+    <text x="22" y="-10">PRESS</text>
+    <rect x="120" y="-22" width="14" height="14" rx="3" fill="#a7d49b"/>
+    <text x="142" y="-10">COURTS</text>
+    <rect x="250" y="-22" width="14" height="14" rx="3" fill="#e8c66e"/>
+    <text x="272" y="-10">SUNLIGHT</text>
+    <rect x="395" y="-22" width="14" height="14" rx="3" fill="#a7d49b"/>
+    <text x="417" y="-10">CHAMBER</text>
+    <rect x="555" y="-22" width="14" height="14" rx="3" fill="#e89a4f"/>
+    <text x="577" y="-10">STREETS</text>
+    <rect x="700" y="-22" width="14" height="14" rx="3" fill="#d4524e"/>
+    <text x="722" y="-10">RECORD</text>
+  </g>
+
+  <!-- url bottom-right -->
+  <text x="1120" y="600" text-anchor="end" fill="#6c7388" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="18" letter-spacing="3">CIVICFORECAST.ORG</text>
+</svg>
