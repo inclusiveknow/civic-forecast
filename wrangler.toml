@@ -34,7 +34,7 @@ crons = [
 # Create with: wrangler kv namespace create READINGS   (npm run kv:create)
 [[kv_namespaces]]
 binding = "READINGS"
-id = "REPLACE_WITH_YOUR_KV_ID"
+id = "bf2808f5618d413691db66c0609255f5"
 
 # ---- R2 bucket for permanent archive -----------------------------------------
 # Create with: wrangler r2 bucket create civic-forecast-archive
