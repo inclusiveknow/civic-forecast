@@ -363,6 +363,12 @@
   <div class="glossary-tip-text" id="glossary-tip-text"></div>
 </div>
 
+<!-- Live data source: the deployed Worker pipeline. Cross-origin is fine — the
+     Worker sends Access-Control-Allow-Origin:* and this origin is allowed in
+     _headers (connect-src). The page falls back to the bundled data/reading.json
+     if the Worker is unreachable. When you move to a same-origin custom domain,
+     set this to '/api/today' (or delete the line) and enable the route in wrangler.toml. -->
+<script>window.CF_API = 'https://civic-forecast.spokenknowledge.workers.dev/today';</script>
 <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js" defer></script>
 <script src="scripts/i18n.js" defer></script>
