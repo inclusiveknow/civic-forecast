@@ -1,237 +1,35 @@
 # Deploying The Civic Forecast
 
-Two parts:
+v2 is a plain static site. There is nothing to build and no server to run.
 
-1. **The static site** → Cloudflare Pages (the public website at `civicforecast.org`)
-2. **The daily pipeline** → Cloudflare Worker (cron-triggered data ingestion + LLM-written sentence)
+## Cloudflare Pages (already set up)
 
-You can deploy them independently. The static site works on its own with the bundled `data/reading.json`; the Worker is what makes it self-update each morning.
+The Pages project `civic-forecast` is connected to this GitHub repo.
 
----
+- **Build command:** none
+- **Build output directory:** `public`
+- **Production branch:** `main`. Every push to `main` deploys to https://civic-forecast.pages.dev.
+- **Other branches** get their own preview URL, e.g. the `v2` branch at `https://v2.civic-forecast.pages.dev`.
 
-## What auto-runs after you deploy (the short answer)
+`public/_headers` sets the security policy. If you add a new live data source the page calls from the browser, add its origin to `connect-src` there, or the browser will block it.
 
-**Yes. Once Part B is deployed, the page updates itself every morning forever, without you doing anything.** Specifically:
+## Keeping the data current
 
-- A Cloudflare cron fires three times each morning (08:00, 09:00, 10:00 UTC = 04:00, 05:00, 06:00 ET).
-- The Worker pulls the six civic data sources + four news RSS feeds in parallel.
-- If any single source fails, the Worker uses that source's last-known-good reading from KV — the page never blanks. You'll see the failure in `/health`.
-- The Worker calls Claude Haiku to write the daily sentence + advisory under partisan-neutrality constraints. If the Claude call fails, a deterministic template fills in.
-- Top 5 stories are picked from the news pool, classified to indicators, and ranked.
-- The reading is written to KV, archived in R2, and served at `/api/today`.
-- The static page fetches `/api/today` on every load — fresh data within 5 minutes of the morning publish.
+The monthly numbers (rent, prices, jobs) refresh themselves through the GitHub Action in `.github/workflows/refresh-data.yml`. Nothing to do. To refresh by hand, open the repo's **Actions** tab, pick **Refresh monthly data**, and click **Run workflow**.
 
-**What you do need to do, periodically:**
-
-- Renew API keys if a source rotates them (rare; Anthropic, ACLED, CourtListener).
-- Watch `https://your-worker/health` — it shows last-success timestamp per source.
-- Review the methodology page once a quarter. Anything that changed should be in the changelog.
-
-**That's it.** The page is designed to be unattended infrastructure, not something that needs daily maintenance.
-
----
-
-## Prerequisites
-
-- A Cloudflare account (free tier is plenty for this scale)
-- Node 18+ and npm (only used for `wrangler` CLI)
-- Free API registrations (15 minutes total):
-  - [CourtListener](https://www.courtlistener.com/help/api/rest/) — get a token
-  - [ACLED](https://acleddata.com/access-acled-data/) — get a key + email
-  - [ProPublica Congress](https://www.propublica.org/datastore/api/propublica-congress-api) — free key (or skip; the Worker uses GovTrack as fallback)
-  - [Anthropic Console](https://console.anthropic.com/) — Claude API key for the daily sentence (Haiku — under $0.01/day)
-
-(MuckRock, Federal Register, Press Freedom Tracker, NPR RSS, ProPublica RSS, and Google News RSS need no key.)
-
----
-
-## Part A — Deploy the static site
-
-The site is pure static HTML/CSS/JS. Three ways to deploy:
-
-### Option 1: Drag-and-drop (fastest, 3 minutes)
-
-1. Open the [Cloudflare Pages dashboard](https://dash.cloudflare.com/?to=/:account/pages).
-2. Click **Create a project** → **Direct upload**.
-3. Drag the entire `civic-forecast-deploy/` folder (or `public/` from the everything folder).
-4. Name the project `civic-forecast` and create.
-
-You're live at `https://civic-forecast.pages.dev`.
-
-### Option 2: Git-connected (recommended for ongoing work)
+Voting rules and the civic calendar are researched data in `data/research/`. After editing them, rebuild and push:
 
 ```bash
-git init && git add . && git commit -m "Initial: Civic Forecast v1"
-gh repo create <your-org>/civic-forecast --public --source=. --push
-
-# In the Cloudflare Pages dashboard:
-#   Create a project → Connect to Git → select civic-forecast
-#   Build command: (none — it's static)
-#   Build output directory: public
-#   Save and deploy
+python tools/build_civic.py "C:/Users/spoke/ovu audio/same-question/data/races.json"
+git add public/data/civic.json data/research
+git commit -m "Update voting rules"
+git push
 ```
 
-### Option 3: Wrangler CLI
+## Custom domain (later)
 
-```bash
-npm install
-npx wrangler login
-npm run deploy:pages
-```
+When you own `civicforecast.org` (or another domain): Pages project, **Custom domains**, add it, and Cloudflare handles the certificate. Then swap `civic-forecast.pages.dev` for the new domain in `public/index.html` (canonical, og:url, og:image), `public/sitemap.xml`, `public/robots.txt`, `public/embed.html`, and `tools/make_og_image.py` (then re-run it).
 
-### Custom domain
+## The v1 Worker
 
-In the Pages project settings → **Custom domains** → add `civicforecast.org` (or your own domain). Cloudflare handles the cert.
-
----
-
-## Part B — Deploy the daily pipeline
-
-### Keyless quick start (see it working before registering for anything)
-
-Three of the six sources — **PRESS** (U.S. Press Freedom Tracker), **RECORD**
-(Federal Register), and the **news headlines** (NPR / ProPublica / Google News
-RSS) — need no API key at all. The pipeline is built to degrade gracefully:
-any source without a key simply fails and the page shows its last-known-good (or
-a neutral fallback) instead of blanking. So you can stand the whole thing up
-with **zero keys** and watch it self-update from those live sources, then add
-the rest later.
-
-To do the keyless run, follow steps 1–3 below (install wrangler, create the KV
-namespace, create the R2 bucket), **skip step 4 (secrets)** entirely, then do
-step 5 (`npm run deploy:worker`) and step 6 (`POST /run`). The daily sentence
-falls back to a deterministic template (no Anthropic key), and COURTS / STREETS
-/ CHAMBER show their fallback reading until you add CourtListener / ACLED /
-ProPublica keys. `GET /health` will show those three as `last_error` — that's
-expected, not a failure. Add keys with `npm run secrets:set` whenever you're
-ready and redeploy; each one lights up its indicator with live data.
-
-### 1. Install wrangler
-
-```bash
-npm install
-npx wrangler login
-```
-
-### 2. Create the KV namespace
-
-```bash
-npm run kv:create
-# → outputs an id like:  id = "a1b2c3d4..."
-```
-
-Copy that id into `wrangler.toml`:
-
-```toml
-[[kv_namespaces]]
-binding = "READINGS"
-id = "a1b2c3d4..."   # ← paste here
-```
-
-### 3. Create the R2 archive bucket
-
-```bash
-npm run r2:create
-```
-
-### 4. Set the API secrets
-
-```bash
-npx wrangler secret put COURTLISTENER   # CourtListener token
-npx wrangler secret put ACLED           # ACLED key
-npx wrangler secret put PROPUBLICA      # ProPublica key (optional)
-npx wrangler secret put ANTHROPIC       # Anthropic API key
-```
-
-### 5. Deploy the Worker
-
-```bash
-npm run deploy:worker
-```
-
-The Worker now runs on cron every morning. **You're done.**
-
-### 6. Verify it works
-
-```bash
-# Trigger immediately so you don't have to wait until tomorrow morning:
-curl -X POST https://civic-forecast.<your-account>.workers.dev/run
-
-# See today's reading:
-curl https://civic-forecast.<your-account>.workers.dev/today | jq
-
-# Check per-source health:
-curl https://civic-forecast.<your-account>.workers.dev/health | jq
-```
-
-`/health` returns something like:
-
-```json
-{
-  "ok": true,
-  "last_publish": "2026-05-01T10:00:14.221Z",
-  "sources": {
-    "press":    { "last_success": "2026-05-01T10:00:08.012Z", "last_error": null },
-    "courts":   { "last_success": "2026-05-01T10:00:09.554Z", "last_error": null },
-    "sunlight": { "last_success": "2026-05-01T10:00:08.998Z", "last_error": null },
-    "chamber":  { "last_success": "2026-05-01T10:00:09.211Z", "last_error": null },
-    "streets":  { "last_success": "2026-05-01T10:00:10.401Z", "last_error": null },
-    "record":   { "last_success": "2026-05-01T10:00:09.882Z", "last_error": null },
-    "news":     { "last_success": "2026-05-01T10:00:11.119Z", "last_error": null }
-  }
-}
-```
-
-If a source has a `last_error`, the page is still working — that source is using its last-known-good reading from KV. Look at the error message and decide whether you need to do anything (often: nothing, the source had a transient outage).
-
-### 7. Wire the static site to the live data
-
-**No code edit needed.** The page already fetches `/api/today` first on every load and falls back to the bundled `data/reading.json` if that route isn't reachable yet (see `public/scripts/data.js` → `DATA.sources()`). So once the Worker route is live, the page upgrades itself automatically.
-
-All you do is make `/api/today` resolve from the site's own origin. The route `civicforecast.org/api/*` → Worker is already configured in `wrangler.toml`; just make sure your Pages site is served from the same domain (`civicforecast.org`). Then `/api/today` is same-origin and the Content-Security-Policy in `public/_headers` (`connect-src 'self' … https://civicforecast.org`) already allows it.
-
-**Testing before a custom domain is set** (e.g. against `civic-forecast.<account>.workers.dev`): the Worker is a different origin, so two things apply — set `window.CF_API = 'https://civic-forecast.<account>.workers.dev/today'` (e.g. in the browser console or a tiny inline script), and add that origin to `connect-src` in `public/_headers`, or the browser's CSP will block the cross-origin fetch. On the final same-origin custom-domain setup, neither is needed.
-
----
-
-## What lives where
-
-| Thing | Where it runs | What happens if it fails |
-|---|---|---|
-| The static page | Cloudflare Pages CDN | Serves the bundled `data/reading.json` (last shipped) |
-| `/api/today` | Cloudflare Worker | Page falls back to bundled JSON |
-| Daily cron | Cloudflare Workers Cron | Next day's cron retries automatically |
-| Six API pulls | Inside Worker (parallel) | That source uses last-known-good from KV |
-| News RSS pull | Inside Worker (parallel) | Top stories use last-known-good from KV |
-| Daily sentence (Claude) | Inside Worker | Falls back to deterministic template |
-| Archive snapshot | R2 bucket | Logged to console; non-fatal |
-
----
-
-## Local development
-
-```bash
-# Static site
-cd public && python -m http.server 8970
-# → open http://localhost:8970
-
-# Worker (with mock data — no API keys needed)
-npx wrangler dev workers/pipeline/index.ts
-
-# Trigger the scheduled handler locally:
-npx wrangler dev workers/pipeline/index.ts --test-scheduled
-# Then in another terminal:
-curl http://localhost:8787/__scheduled
-```
-
----
-
-## Cost estimate
-
-- **Pages**: free (well under the 100k requests/day free tier)
-- **Worker**: free (well under the 100k requests/day free tier)
-- **KV**: free (a few writes/day)
-- **R2**: free (one tiny JSON/day; well under the 10GB free tier)
-- **Anthropic**: ~$0.01/day for the sentence + advisory using Haiku
-
-**Total: under $4/year if you stay on Cloudflare's free tier.** This is a deliberate design choice — the pledge in the footer ("free, forever") needs to be financially sustainable.
+The original daily pipeline (`workers/pipeline/`, deployed as `civic-forecast.spokenknowledge.workers.dev`) powered v1's six national indicators. v2 doesn't use it. It's harmless to leave running. To retire it, run `npx wrangler delete civic-forecast` from this folder (and optionally delete the `READINGS` KV namespace and `civic-forecast-archive` R2 bucket in the Cloudflare dashboard).

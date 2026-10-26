@@ -3,257 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0a0e1a">
-<title>civic forecast · embed</title>
+<meta name="color-scheme" content="dark">
+<title>Embed The Civic Forecast</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:ital,wght@0,500;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@200;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --depth: #0a0e1a;
-    --surface: #131826;
-    --mist: #1f2535;
-    --haze: #2c3347;
-    --clear: #6ec5e8;
-    --mild: #a7d49b;
-    --watch: #e8c66e;
-    --warning: #e89a4f;
-    --storm: #d4524e;
-    --severe: #8b3a8f;
-    --ink: #f0f2f8;
-    --ink-soft: #a8b0c2;
-    --ink-quiet: #6c7388;
-    --font-display: 'Inter Tight', system-ui, sans-serif;
-    --font-body: 'Inter', system-ui, sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
-  }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  /* When loaded standalone (not in an iframe) — show the docs */
-  body {
-    background: var(--depth);
-    color: var(--ink);
-    font-family: var(--font-body);
-    font-size: 15px;
-    line-height: 1.6;
-    min-height: 100vh;
-    padding: 24px;
-  }
-
-  body.in-iframe {
-    background: transparent;
-    padding: 0;
-    min-height: 0;
-  }
-
-  /* The widget itself */
-  .widget {
-    background: linear-gradient(180deg, var(--surface) 0%, var(--depth) 100%);
-    border: 1px solid rgba(168, 176, 194, 0.12);
-    border-radius: 16px;
-    padding: 18px 20px;
-    max-width: 480px;
-    margin: 0 auto;
-    color: var(--ink);
-  }
-
-  .w-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 14px;
-    gap: 12px;
-  }
-
-  .w-brand {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--font-mono);
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--ink-quiet);
-  }
-
-  .w-brand-icon { width: 18px; height: 18px; }
-
-  .w-time {
-    font-family: var(--font-mono);
-    font-size: 9px;
-    letter-spacing: 0.12em;
-    color: var(--ink-quiet);
-    text-transform: uppercase;
-  }
-
-  .w-feeling {
-    font-family: var(--font-display);
-    font-style: italic;
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 1;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-    margin-bottom: 8px;
-  }
-
-  .w-sentence {
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--ink-soft);
-    margin-bottom: 14px;
-  }
-
-  .w-bar {
-    height: 4px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, var(--clear) 0%, var(--mild) 22%, var(--watch) 45%, var(--warning) 65%, var(--storm) 85%, var(--severe) 100%);
-    position: relative;
-    margin-bottom: 8px;
-  }
-
-  .w-pointer {
-    position: absolute;
-    top: 50%;
-    width: 10px;
-    height: 10px;
-    margin-left: -5px;
-    margin-top: -5px;
-    background: var(--ink);
-    border-radius: 50%;
-    border: 2px solid var(--depth);
-  }
-
-  .w-foot {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: var(--font-mono);
-    font-size: 9px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ink-quiet);
-  }
-
-  .w-foot a { color: var(--clear); text-decoration: none; }
-  .w-foot a:hover { text-decoration: underline; }
-
-  /* Docs (only shown when not in an iframe) */
-  body:not(.in-iframe) .docs {
-    max-width: 720px;
-    margin: 40px auto;
-    background: rgba(31, 37, 53, 0.4);
-    border: 1px solid rgba(168, 176, 194, 0.1);
-    border-radius: 16px;
-    padding: 28px;
-  }
-
-  body.in-iframe .docs { display: none; }
-
-  .docs h1 {
-    font-family: var(--font-display);
-    font-style: italic;
-    font-weight: 500;
-    font-size: 28px;
-    margin-bottom: 12px;
-    letter-spacing: -0.01em;
-  }
-
-  .docs p { color: var(--ink-soft); margin-bottom: 16px; }
-
-  .docs pre {
-    background: var(--depth);
-    border: 1px solid rgba(168, 176, 194, 0.1);
-    border-radius: 8px;
-    padding: 14px;
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--clear);
-    overflow-x: auto;
-    white-space: pre-wrap;
-    word-break: break-word;
-  }
-
-  .docs h2 {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--ink-quiet);
-    margin: 24px 0 8px;
-  }
+  body { background: #0a0e1a; color: #f0f2f8; font: 400 14px/1.5 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .w { display: block; text-decoration: none; color: inherit; padding: 16px 18px; border-radius: 16px; min-height: 100vh;
+    background: radial-gradient(120% 90% at 0% 0%, rgba(57, 135, 229, 0.28), transparent 60%), linear-gradient(180deg, #181e2e, #131826); }
+  body.framed .w { border-radius: 0; }
+  .k { font: 500 11px 'JetBrains Mono', monospace; letter-spacing: 0.12em; text-transform: uppercase; color: #b3bacb; }
+  .row { display: flex; align-items: baseline; gap: 10px; margin-top: 4px; }
+  .n { font: 200 64px/1 'Inter Tight', sans-serif; letter-spacing: -0.04em; }
+  .u { font: 400 15px 'Inter Tight', sans-serif; color: #b3bacb; }
+  .c { font: 600 18px/1.3 'Inter Tight', sans-serif; margin-top: 8px; }
+  .x { color: #b3bacb; margin-top: 4px; }
+  .go { margin-top: 10px; font-weight: 600; color: #6ec5e8; }
+  .compact .n { font-size: 46px; } .compact .c { font-size: 15px; } .compact .x { display: none; }
+  .docs { max-width: 640px; margin: 28px auto; padding: 0 20px 40px; color: #b3bacb; }
+  .docs h1 { font: 500 26px 'Inter Tight', sans-serif; color: #f0f2f8; margin-bottom: 8px; }
+  .docs h2 { font: 600 12px 'JetBrains Mono', monospace; letter-spacing: 0.1em; text-transform: uppercase; color: #f0f2f8; margin: 22px 0 8px; }
+  .docs pre { background: #131826; border: 1px solid rgba(168, 176, 194, 0.15); border-radius: 12px; padding: 12px 14px; overflow-x: auto; font: 12px/1.6 'JetBrains Mono', monospace; color: #f0f2f8; }
+  .docs a { color: #6ec5e8; }
+  .preview { width: 480px; max-width: 100%; height: 230px; border: 0; border-radius: 16px; display: block; margin-top: 14px; }
 </style>
 </head>
 <body>
+<a class="w" id="w" target="_blank" rel="noopener" href="https://civic-forecast.pages.dev/">
+  <div class="k" id="k">The civic forecast</div>
+  <div class="row"><span class="n" id="n">·</span><span class="u" id="u"></span></div>
+  <div class="c" id="c"></div>
+  <div class="x" id="x"></div>
+  <div class="go">See the full forecast →</div>
+</a>
 
-<div class="widget" id="widget" aria-label="Today's civic forecast">
-  <div class="w-head">
-    <div class="w-brand">
-      <svg class="w-brand-icon" viewBox="0 0 32 32" aria-hidden="true">
-        <ellipse cx="12" cy="13" rx="9" ry="4" fill="#6ec5e8" opacity="0.7"/>
-        <ellipse cx="20" cy="19" rx="10" ry="4" fill="#e89a4f" opacity="0.7"/>
-        <circle cx="16" cy="16" r="2.5" fill="#0a0e1a"/>
-      </svg>
-      <span>civic forecast</span>
-    </div>
-    <span class="w-time" id="w-time">today</span>
-  </div>
-  <div class="w-feeling" id="w-feeling">overcast</div>
-  <p class="w-sentence" id="w-sentence">Mostly overcast. Pressure building over the southeast.</p>
-  <div class="w-bar"><div class="w-pointer" id="w-pointer" style="left: 62%"></div></div>
-  <div class="w-foot">
-    <span><span id="w-pressure">62</span> · pressure</span>
-    <a href="https://civic-forecast.pages.dev/" target="_blank" rel="noopener">read at civic-forecast.pages.dev →</a>
-  </div>
-</div>
-
-<div class="docs">
-  <h1>Embed the forecast</h1>
-  <p>Drop this on your site to show today's reading. The widget loads from your visitors' browsers — no server-side work, no API key, fully cached. Updates automatically each morning.</p>
-
-  <h2>Standard size — 480 × auto</h2>
+<div class="docs" id="docs" hidden>
+  <h1>Put the civic forecast on your site</h1>
+  <p>A small card with the days until Election Day and what voting looks like today, for the whole country or one state. It updates on its own, has no tracking, and needs no key. It's free to use. Linking back is appreciated.</p>
+  <h2>The whole country</h2>
   <pre>&lt;iframe src="https://civic-forecast.pages.dev/embed.html"
-        width="480" height="220"
-        style="border:0;border-radius:16px;"
-        title="The Civic Forecast"
-        loading="lazy"&gt;&lt;/iframe&gt;</pre>
-
-  <h2>Compact</h2>
-  <pre>&lt;iframe src="https://civic-forecast.pages.dev/embed.html?compact=1"
-        width="320" height="180"
-        style="border:0;border-radius:14px;"
-        title="The Civic Forecast"
-        loading="lazy"&gt;&lt;/iframe&gt;</pre>
-
-  <h2>Or link it</h2>
-  <pre>&lt;a href="https://civic-forecast.pages.dev/" target="_blank"&gt;Today's civic forecast →&lt;/a&gt;</pre>
-
-  <h2>License</h2>
-  <p>Use freely under Apache 2.0. Attribution to civic-forecast.pages.dev appreciated.</p>
+        width="480" height="230" style="border:0;border-radius:16px"
+        title="The Civic Forecast" loading="lazy"&gt;&lt;/iframe&gt;</pre>
+  <h2>One state (use its two-letter code)</h2>
+  <pre>&lt;iframe src="https://civic-forecast.pages.dev/embed.html?st=pa"
+        width="480" height="230" style="border:0;border-radius:16px"
+        title="The Civic Forecast for Pennsylvania" loading="lazy"&gt;&lt;/iframe&gt;</pre>
+  <h2>Smaller</h2>
+  <pre>&lt;iframe src="https://civic-forecast.pages.dev/embed.html?st=pa&amp;compact=1"
+        width="320" height="170" style="border:0;border-radius:14px"
+        title="The Civic Forecast" loading="lazy"&gt;&lt;/iframe&gt;</pre>
+  <h2>Preview</h2>
+  <iframe class="preview" id="preview" title="Preview"></iframe>
+  <p style="margin-top:14px"><a href="./">Back to the forecast</a> · <a href="methodology.html">How it works</a></p>
 </div>
 
+<script src="scripts/civic.js?v=2.0.0"></script>
 <script>
-(function() {
-  // Mark in-iframe so we hide the docs
-  if (window.self !== window.top) document.body.classList.add('in-iframe');
-
-  // Hydrate from /data/reading.json if available, else keep the static defaults
-  fetch('data/reading.json', { cache: 'no-cache' })
-    .then(r => r.ok ? r.json() : null)
-    .then(d => {
-      if (!d) return;
-      const f = d.feeling || 'overcast';
-      document.getElementById('w-feeling').textContent = f;
-      document.getElementById('w-sentence').textContent = d.reading_sentence || 'Mostly overcast. Pressure building over the southeast.';
-      const p = d.pressure ?? d.cpi ?? 62;
-      document.getElementById('w-pressure').textContent = p;
-      document.getElementById('w-pointer').style.left = p + '%';
-      const dt = new Date(d.date || Date.now());
-      document.getElementById('w-time').textContent = dt.toLocaleDateString('en', { month: 'short', day: 'numeric' });
-    })
-    .catch(() => {});
-})();
+  (async () => {
+    const q = new URLSearchParams(location.search);
+    const framed = window.self !== window.top;
+    document.body.classList.toggle('framed', framed);
+    if (q.get('compact')) document.body.classList.add('compact');
+    if (!framed) {
+      document.getElementById('docs').hidden = false;
+      document.getElementById('w').style.minHeight = 'auto';
+      document.getElementById('preview').src = 'embed.html?st=' + (q.get('st') || 'pa');
+    }
+    const NAMES = { al:'Alabama',ak:'Alaska',az:'Arizona',ar:'Arkansas',ca:'California',co:'Colorado',ct:'Connecticut',de:'Delaware',dc:'D.C.',fl:'Florida',ga:'Georgia',hi:'Hawaii',id:'Idaho',il:'Illinois',in:'Indiana',ia:'Iowa',ks:'Kansas',ky:'Kentucky',la:'Louisiana',me:'Maine',md:'Maryland',ma:'Massachusetts',mi:'Michigan',mn:'Minnesota',ms:'Mississippi',mo:'Missouri',mt:'Montana',ne:'Nebraska',nv:'Nevada',nh:'New Hampshire',nj:'New Jersey',nm:'New Mexico',ny:'New York',nc:'North Carolina',nd:'North Dakota',oh:'Ohio',ok:'Oklahoma',or:'Oregon',pa:'Pennsylvania',ri:'Rhode Island',sc:'South Carolina',sd:'South Dakota',tn:'Tennessee',tx:'Texas',ut:'Utah',vt:'Vermont',va:'Virginia',wa:'Washington',wv:'West Virginia',wi:'Wisconsin',wy:'Wyoming' };
+    let civic = null;
+    try { civic = await (await fetch('data/civic.json')).json(); } catch {}
+    if (!civic) { document.getElementById('c').textContent = 'The forecast is resting. Tap to open it.'; return; }
+    const st = (q.get('st') || '').toLowerCase();
+    const v = civic.voting[st] || null;
+    const d = Civic.today();
+    const h = Civic.hero(v, civic.voting, civic.calendar, d);
+    const set = (id, t) => { document.getElementById(id).textContent = t; };
+    set('k', v ? `Civic forecast · ${NAMES[st]}` : 'Civic forecast · United States');
+    set('n', h.big); set('u', h.unit); set('c', h.cond);
+    if (v) {
+      const next = Civic.forecastDays(v, civic.voting, civic.calendar, d, 14).flatMap((x) => x.ev.map((e) => ({ ...e, d: x.d })))
+        .find((e) => (e.d > d || (e.d === d && e.strong)) && !(e.d === d && e.title === 'Election Day'));
+      if (next) set('x', `Next up: ${next.title}, ${Civic.relDay(next.d, d)}.`);
+      document.getElementById('w').href = `https://civic-forecast.pages.dev/?st=${st}`;
+    } else {
+      set('x', Civic.nationalSentence(civic.voting, d));
+    }
+  })();
 </script>
-
 </body>
 </html>

@@ -1,0 +1,339 @@
+{
+ "source": "U.S. Bureau of Labor Statistics",
+ "jobs": {
+  "al": {
+   "value": 3.5,
+   "yearAgo": 2.8,
+   "month": "September 2026"
+  },
+  "ak": {
+   "value": 4.3,
+   "yearAgo": 4.7,
+   "month": "September 2026"
+  },
+  "az": {
+   "value": 4.9,
+   "yearAgo": 4.4,
+   "month": "September 2026"
+  },
+  "ar": {
+   "value": 3.9,
+   "yearAgo": 4.2,
+   "month": "September 2026"
+  },
+  "ca": {
+   "value": 5.1,
+   "yearAgo": 5.5,
+   "month": "September 2026"
+  },
+  "co": {
+   "value": 4.1,
+   "yearAgo": 3.8,
+   "month": "September 2026"
+  },
+  "ct": {
+   "value": 5.1,
+   "yearAgo": 4.2,
+   "month": "September 2026"
+  },
+  "de": {
+   "value": 4.6,
+   "yearAgo": 5.2,
+   "month": "September 2026"
+  },
+  "dc": {
+   "value": 5.6,
+   "yearAgo": 6.6,
+   "month": "September 2026"
+  },
+  "fl": {
+   "value": 4.4,
+   "yearAgo": 4.2,
+   "month": "September 2026"
+  },
+  "ga": {
+   "value": 3.3,
+   "yearAgo": 3.4,
+   "month": "September 2026"
+  },
+  "hi": {
+   "value": 2.8,
+   "yearAgo": 2.1,
+   "month": "September 2026"
+  },
+  "id": {
+   "value": 3.6,
+   "yearAgo": 3.6,
+   "month": "September 2026"
+  },
+  "il": {
+   "value": 4.6,
+   "yearAgo": 4.5,
+   "month": "September 2026"
+  },
+  "in": {
+   "value": 3.4,
+   "yearAgo": 3.7,
+   "month": "September 2026"
+  },
+  "ia": {
+   "value": 3.2,
+   "yearAgo": 3.4,
+   "month": "September 2026"
+  },
+  "ks": {
+   "value": 3.8,
+   "yearAgo": 3.8,
+   "month": "September 2026"
+  },
+  "ky": {
+   "value": 4.7,
+   "yearAgo": 4.5,
+   "month": "September 2026"
+  },
+  "la": {
+   "value": 4.0,
+   "yearAgo": 4.2,
+   "month": "September 2026"
+  },
+  "me": {
+   "value": 3.3,
+   "yearAgo": 3.3,
+   "month": "September 2026"
+  },
+  "md": {
+   "value": 3.9,
+   "yearAgo": 4.3,
+   "month": "September 2026"
+  },
+  "ma": {
+   "value": 4.3,
+   "yearAgo": 4.6,
+   "month": "September 2026"
+  },
+  "mi": {
+   "value": 5.0,
+   "yearAgo": 4.9,
+   "month": "September 2026"
+  },
+  "mn": {
+   "value": 4.5,
+   "yearAgo": 4.1,
+   "month": "September 2026"
+  },
+  "ms": {
+   "value": 3.3,
+   "yearAgo": 3.7,
+   "month": "September 2026"
+  },
+  "mo": {
+   "value": 3.6,
+   "yearAgo": 3.9,
+   "month": "September 2026"
+  },
+  "mt": {
+   "value": 3.1,
+   "yearAgo": 3.5,
+   "month": "September 2026"
+  },
+  "ne": {
+   "value": 2.9,
+   "yearAgo": 2.9,
+   "month": "September 2026"
+  },
+  "nv": {
+   "value": 4.7,
+   "yearAgo": 5.2,
+   "month": "September 2026"
+  },
+  "nh": {
+   "value": 2.6,
+   "yearAgo": 3.2,
+   "month": "September 2026"
+  },
+  "nj": {
+   "value": 4.2,
+   "yearAgo": 5.5,
+   "month": "September 2026"
+  },
+  "nm": {
+   "value": 4.7,
+   "yearAgo": 4.2,
+   "month": "September 2026"
+  },
+  "ny": {
+   "value": 4.3,
+   "yearAgo": 4.6,
+   "month": "September 2026"
+  },
+  "nc": {
+   "value": 3.4,
+   "yearAgo": 3.9,
+   "month": "September 2026"
+  },
+  "nd": {
+   "value": 2.2,
+   "yearAgo": 2.6,
+   "month": "September 2026"
+  },
+  "oh": {
+   "value": 3.4,
+   "yearAgo": 4.3,
+   "month": "September 2026"
+  },
+  "ok": {
+   "value": 4.2,
+   "yearAgo": 3.6,
+   "month": "September 2026"
+  },
+  "or": {
+   "value": 5.0,
+   "yearAgo": 5.3,
+   "month": "September 2026"
+  },
+  "pa": {
+   "value": 3.6,
+   "yearAgo": 4.4,
+   "month": "September 2026"
+  },
+  "ri": {
+   "value": 3.6,
+   "yearAgo": 4.3,
+   "month": "September 2026"
+  },
+  "sc": {
+   "value": 4.0,
+   "yearAgo": 4.7,
+   "month": "September 2026"
+  },
+  "sd": {
+   "value": 2.0,
+   "yearAgo": 2.1,
+   "month": "September 2026"
+  },
+  "tn": {
+   "value": 3.4,
+   "yearAgo": 3.5,
+   "month": "September 2026"
+  },
+  "tx": {
+   "value": 4.4,
+   "yearAgo": 4.3,
+   "month": "September 2026"
+  },
+  "ut": {
+   "value": 3.5,
+   "yearAgo": 3.6,
+   "month": "September 2026"
+  },
+  "vt": {
+   "value": 2.6,
+   "yearAgo": 2.6,
+   "month": "September 2026"
+  },
+  "va": {
+   "value": 3.6,
+   "yearAgo": 3.4,
+   "month": "September 2026"
+  },
+  "wa": {
+   "value": 4.8,
+   "yearAgo": 4.7,
+   "month": "September 2026"
+  },
+  "wv": {
+   "value": 4.0,
+   "yearAgo": 4.5,
+   "month": "September 2026"
+  },
+  "wi": {
+   "value": 3.2,
+   "yearAgo": 3.1,
+   "month": "September 2026"
+  },
+  "wy": {
+   "value": 3.0,
+   "yearAgo": 3.4,
+   "month": "September 2026"
+  },
+  "us": {
+   "value": 4.2,
+   "yearAgo": 4.4,
+   "month": "September 2026"
+  }
+ },
+ "prices": {
+  "us": {
+   "groceries": {
+    "change": 1.8,
+    "month": "September 2026"
+   },
+   "gas": {
+    "change": 34.2,
+    "month": "September 2026"
+   },
+   "electricity": {
+    "change": 4.4,
+    "month": "September 2026"
+   }
+  },
+  "northeast": {
+   "groceries": {
+    "change": 1.6,
+    "month": "September 2026"
+   },
+   "gas": {
+    "change": 35.8,
+    "month": "September 2026"
+   },
+   "electricity": {
+    "change": 7.1,
+    "month": "September 2026"
+   }
+  },
+  "midwest": {
+   "groceries": {
+    "change": 1.5,
+    "month": "September 2026"
+   },
+   "gas": {
+    "change": 35.5,
+    "month": "September 2026"
+   },
+   "electricity": {
+    "change": 8.8,
+    "month": "September 2026"
+   }
+  },
+  "south": {
+   "groceries": {
+    "change": 1.7,
+    "month": "September 2026"
+   },
+   "gas": {
+    "change": 37.5,
+    "month": "September 2026"
+   },
+   "electricity": {
+    "change": 1.9,
+    "month": "September 2026"
+   }
+  },
+  "west": {
+   "groceries": {
+    "change": 2.4,
+    "month": "September 2026"
+   },
+   "gas": {
+    "change": 27.8,
+    "month": "September 2026"
+   },
+   "electricity": {
+    "change": 3.2,
+    "month": "September 2026"
+   }
+  }
+ },
+ "jobsMonth": "September 2026",
+ "pricesMonth": "September 2026"
+}

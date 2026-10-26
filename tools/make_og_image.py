@@ -21,12 +21,12 @@ BG_DARK = (10, 14, 26)
 BG_LIFT = (26, 34, 56)
 
 TONE = {
-    "PRESS": (110, 197, 232),
-    "COURTS": (167, 212, 155),
-    "SUNLIGHT": (232, 198, 110),
-    "CHAMBER": (167, 212, 155),
-    "STREETS": (232, 154, 79),
-    "RECORD": (212, 82, 78),
+    "VOTING": (57, 135, 229),
+    "YOUR BALLOT": (110, 197, 232),
+    "RENT": (239, 133, 130),
+    "PRICES": (232, 198, 110),
+    "JOBS": (167, 212, 155),
+    "AIR": (25, 158, 112),
 }
 
 WIN = "C:/Windows/Fonts/"
@@ -81,23 +81,7 @@ blobs = glow((W, H), [
 ])
 img = Image.alpha_composite(img.convert("RGBA"), blobs).convert("RGB")
 
-draw = ImageDraw.Draw(img)
-
 # subtle grid
-for gy in (157, 315, 472):
-    draw.line([(0, gy), (W, gy)], fill=(168, 176, 194), width=1)
-for gx in (300, 600, 900):
-    draw.line([(gx, 0), (gx, H)], fill=(168, 176, 194), width=1)
-# (lines drawn full-opacity then knocked back by overlaying a faint scrim)
-scrim = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-ImageDraw.Draw(scrim).rectangle([0, 0, W, H], fill=(10, 14, 26, 235))
-# instead of scrim (would hide everything), redraw grid faintly:
-img2 = img  # keep
-# Redo: easier to just draw faint grid from scratch on a fresh composite
-img = Image.alpha_composite(
-    Image.alpha_composite(Image.new("RGB", (W, H), BG_DARK).convert("RGBA"), lift),
-    blobs,
-).convert("RGB")
 draw = ImageDraw.Draw(img, "RGBA")
 for gy in (157, 315, 472):
     draw.line([(0, gy), (W, gy)], fill=(168, 176, 194, 14), width=1)
@@ -105,14 +89,14 @@ for gx in (300, 600, 900):
     draw.line([(gx, 0), (gx, H)], fill=(168, 176, 194, 14), width=1)
 
 # kicker
-spaced(draw, (80, 100), "A DAILY FORECAST FOR CIVIC LIFE", F_KICK, MUTE, 6)
+spaced(draw, (80, 100), "YOUR LOCAL CIVIC WEATHER", F_KICK, MUTE, 6)
 
 # big italic title
 draw.text((76, 285), "the civic", font=F_TITLE, fill=INK, anchor="ls")
 draw.text((76, 435), "forecast", font=F_TITLE, fill=INK, anchor="ls")
 
 # tagline
-draw.text((80, 500), "what democracy feels like today.", font=F_TAG, fill=MUTE, anchor="ls")
+draw.text((80, 500), "what's coming where you live. put in your ZIP.", font=F_TAG, fill=MUTE, anchor="ls")
 
 # atmospheric mark (top-right)
 mx, my = 1000, 90
@@ -123,7 +107,7 @@ draw.ellipse([mx - 8, my - 8, mx + 8, my + 8], fill=BG_DARK)
 
 # indicator pills
 px, py = 80, 545
-for name in ["PRESS", "COURTS", "SUNLIGHT", "CHAMBER", "STREETS", "RECORD"]:
+for name in TONE:
     draw.rounded_rectangle([px, py, px + 14, py + 14], radius=3, fill=TONE[name])
     end = spaced(draw, (px + 22, py + 13), name, F_PILL, DIM, 3)
     px = end + 34

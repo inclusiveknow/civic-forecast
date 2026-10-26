@@ -1,0 +1,56 @@
+# Rebuilds the monthly numbers (rent, prices, jobs) and commits them.
+# Cloudflare Pages redeploys on the push, so the site stays current on its own.
+#
+# Runs on the 22nd, after Zillow (mid-month), BLS consumer prices (~10th-15th)
+# and BLS state jobs (~3rd week) have published. Run it by hand any time from
+# the Actions tab ("Run workflow").
+#
+# Optional: add a free BLS key as the repository secret BLS_KEY
+# (bls.gov/developers). Without it the script uses the keyless API, which
+# allows 25 requests a day per IP and can be exhausted on shared runners.
+
+name: Refresh monthly data
+
+on:
+  schedule:
+    - cron: "0 14 22 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Download Zillow rent index
+        run: |
+          mkdir -p "$RUNNER_TEMP/zillow"
+          curl -sfL -o "$RUNNER_TEMP/zillow/zip.csv" https://files.zillowstatic.com/research/public_csvs/zori/Zip_zori_uc_sfrcondomfr_sm_month.csv
+          curl -sfL -o "$RUNNER_TEMP/zillow/county.csv" https://files.zillowstatic.com/research/public_csvs/zori/County_zori_uc_sfrcondomfr_sm_month.csv
+
+      - name: Build rent
+        run: python tools/build_rent.py "$RUNNER_TEMP/zillow/zip.csv" "$RUNNER_TEMP/zillow/county.csv"
+
+      - name: Build prices and jobs
+        env:
+          BLS_KEY: ${{ secrets.BLS_KEY }}
+        run: python tools/build_econ.py
+
+      - name: Commit if anything changed
+        run: |
+          if git diff --quiet -- public/data; then
+            echo "No new data this month."
+            exit 0
+          fi
+          git config user.name "civic-forecast-data"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/rent.json public/data/econ.json
+          git commit -m "Monthly data refresh: rent, prices, jobs"
+          git push

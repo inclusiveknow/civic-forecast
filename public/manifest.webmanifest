@@ -1,7 +1,7 @@
 {
   "name": "The Civic Forecast",
   "short_name": "forecast",
-  "description": "A daily forecast for civic life in the United States. Like checking the weather, but for democracy.",
+  "description": "Your local civic weather: voting deadlines, your ballot, rent, prices and jobs where you live, and the dates that touch your life.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -27,14 +27,14 @@
   ],
   "shortcuts": [
     {
-      "name": "Methodology",
+      "name": "How it works",
       "url": "/methodology.html",
-      "description": "How we read the weather"
+      "description": "Where every number comes from"
     },
     {
       "name": "Embed widget",
       "url": "/embed.html",
-      "description": "Drop today's reading on your site"
+      "description": "Put the forecast on your site"
     }
   ]
 }

@@ -1,25 +1,27 @@
-# Cloudflare Pages headers — applied at the edge.
+# Cloudflare Pages headers, applied at the edge.
 
 /*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: interest-cohort=(), camera=(), microphone=(), geolocation=()
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cdn.jsdelivr.net https://civicforecast.org https://civic-forecast.spokenknowledge.workers.dev
+  Permissions-Policy: interest-cohort=(), camera=(), microphone=(), geolocation=(self)
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cdn.jsdelivr.net https://api.zippopotam.us https://geo.fcc.gov https://api.open-meteo.com https://air-quality-api.open-meteo.com https://api.weather.gov https://www.fema.gov
 
-# HTML — short cache so we always get fresh page chrome
+# The embed widget is meant to be framed by other sites.
+/embed.html
+  ! X-Frame-Options
+
+# HTML: short cache so page chrome stays fresh
 /*.html
   Cache-Control: public, max-age=300, must-revalidate
-
-# Index gets the same treatment
 /
   Cache-Control: public, max-age=300, must-revalidate
 
-# Today's reading — short cache, served fresh after the morning pipeline
-/data/reading.json
-  Cache-Control: public, max-age=300, s-maxage=300, must-revalidate
+# Data files: rules and numbers can be corrected at any time
+/data/*
+  Cache-Control: public, max-age=300, must-revalidate
 
-# Static assets — long cache (filenames will be hashed when we add a build step)
+# Scripts and styles are versioned with ?v= in the HTML
 /scripts/*
   Cache-Control: public, max-age=3600
 /styles/*

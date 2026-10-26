@@ -1,0 +1,414 @@
+{
+  "checked": "2026-10-26",
+  "states": {
+    "ak": {
+      "name": "Alaska",
+      "pollHours": "7 a.m. to 8 p.m. Alaska time",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-19",
+        "end": "2026-11-03",
+        "text": "Early and absentee in-person voting started Oct 19 (15 days before) and runs through Election Day. Hours and which ballots are available depend on the location."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "postmarked",
+        "receivedBy": "2026-11-13",
+        "postmarkBy": "2026-11-03",
+        "text": "Anyone can vote by mail, no reason needed. The deadline to request a mail ballot was Oct 24 (online-delivery and fax ballots can still be requested until 5 p.m. Mon, Nov 2). A mailed ballot counts if it is postmarked by Nov 3 and arrives within 10 days (Nov 13) when mailed from inside the U.S. You can also drop it at any voting location by 8 p.m. on Election Day."
+      },
+      "registration": {
+        "deadline": "2026-10-04",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register was Oct 4, so it has passed. There is no Election Day registration for this election; same-day registration only applies to the presidential race in presidential years. If you registered by Oct 4, you can vote."
+      },
+      "pollingPlaceUrl": "https://www.elections.alaska.gov/election-polls/",
+      "official": "https://www.elections.alaska.gov/",
+      "sources": [
+        "https://www.elections.alaska.gov/",
+        "https://www.elections.alaska.gov/voter-information/",
+        "https://www.elections.alaska.gov/voter-information/absentee-and-early-voting/",
+        "https://www.elections.alaska.gov/election-polls/",
+        "https://www.elections.alaska.gov/doc/mp/2026/MediaPacket-2026-General.%20V3.pdf"
+      ],
+      "confidence": "medium",
+      "note": "Confirmed on the Division's pages today: polls 7 a.m.-8 p.m.; early/absentee in-person voting starts 15 days before; no excuse needed; mail-ballot application deadline Oct 24; ballot deadline shown as 'Postmarked or Received by Nov 3'; in-person drop-off by 8 p.m. Election Day. The Nov 13 receipt date (10 days after Election Day for ballots mailed inside the U.S.) comes from the Division's 2026 General media packet via the Oct 19 research; the media packet PDF and the Division's post-election FAQ could not be re-opened today (file download / human-verification page), so Nov 13 and the 'no same-day registration' line are carried over, not re-checked. Ballots mailed from outside the U.S. have 15 days (Nov 18). The Division recommends asking a post office clerk to hand-cancel your envelope so the postmark is dated Nov 3 or earlier. Oct 4 was a Sunday; the Oct 19 file notes regional offices were open for registration Oct 3 and Oct 4."
+    },
+    "az": {
+      "name": "Arizona",
+      "pollHours": "6 a.m. to 7 p.m. Arizona time",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-07",
+        "end": "2026-10-30",
+        "text": "In-person early voting began Oct 7 and ends Fri, Oct 30. Emergency early voting is available from 7 p.m. Oct 30 to 5 p.m. Mon, Nov 2; ask your County Recorder. Sites and hours are set by each county."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Any registered voter can vote early by mail, no reason needed, but the usual request deadline (Oct 23) has passed unless you are already on the Active Early Voting List. A mailed ballot must be received by 7 p.m. on Nov 3 and postmarks do not count. The state says to mail it back by 5 p.m. Tue, Oct 27 (7 days before); after that, drop it at a ballot drop box, early voting site, or your county recorder's office, or at any voting location in your county on Election Day."
+      },
+      "registration": {
+        "deadline": "2026-10-05",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register was Oct 5, so it has passed. Arizona has no Election Day registration. If you are already registered, you can still vote."
+      },
+      "pollingPlaceUrl": "https://my.arizona.vote/WhereToVote.aspx",
+      "official": "https://azsos.gov/elections",
+      "sources": [
+        "https://azsos.gov/elections",
+        "https://azsos.gov/elections/calendar-dates",
+        "https://azsos.gov/news/1063",
+        "https://azsos.gov/elections/voters/early-voting",
+        "https://azsos.gov/elections/voters/voting-elections",
+        "https://arizona.vote/",
+        "https://apps.azsos.gov/election/BallotMeasures/2026/2026-AZ-Publicity-Pamphlet.pdf"
+      ],
+      "confidence": "high",
+      "note": "Confirmed today on azsos.gov / arizona.vote: registration deadline Oct 5, early voting begins Oct 7, polls 6 a.m.-7 p.m. (in line by 7 p.m. can vote), ballots must be received by 7 p.m. Election Day, mail back by 5 p.m. seven days before (Oct 27) or use drop-off options. The Oct 30 end of early voting, the emergency voting window, and the Oct 23 request date are carried over from the Oct 19 research (azsos.gov calendar / 2026 publicity pamphlet). Maricopa County and Pima County run their own polling-place finders (locations.maricopa.vote, pima.vote); the state portal covers everyone else. Voter trap: tomorrow (Oct 27) is the state's last recommended mail-back day."
+    },
+    "fl": {
+      "name": "Florida",
+      "pollHours": "7 a.m. to 7 p.m. local time (anyone in line at 7 p.m. can vote)",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-24",
+        "end": "2026-10-31",
+        "text": "Every county must offer early voting Oct 24 to Oct 31. Some counties add days between Oct 19 and Oct 23 and/or on Sun, Nov 1, so check your county. Each site is open at least 8 and at most 12 hours a day."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "No reason is required to vote by mail, but the deadline to ask for a mailed ballot was 5 p.m. Thu, Oct 22. Your ballot must be received by your county Supervisor of Elections by 7 p.m. local time on Nov 3; postmarks do not count. You can hand-deliver it or use a secure drop box at the elections office or early voting sites (until 7 p.m. Election Day)."
+      },
+      "registration": {
+        "deadline": "2026-10-05",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register was Oct 5, so it has passed. Florida has no Election Day registration. If you are already registered, you can still vote."
+      },
+      "pollingPlaceUrl": "https://dos.fl.gov/elections/for-voters/check-your-voter-status-and-polling-place/voter-precinct-lookup/",
+      "official": "https://dos.fl.gov/elections/for-voters/",
+      "sources": [
+        "https://dos.fl.gov/elections/for-voters/",
+        "https://dos.fl.gov/elections/for-voters/voting/vote-by-mail/",
+        "https://dos.fl.gov/elections/for-voters/voting/early-voting/",
+        "https://dos.fl.gov/elections/for-voters/voting/election-day-voting/",
+        "https://dos.fl.gov/elections/for-voters/check-your-voter-status-and-polling-place/voter-precinct-lookup/",
+        "https://files.floridados.gov/media/711204/2026-calendar-20260713.pdf",
+        "https://files.floridados.gov/media/711211/voterregvotingguide-2026-election-cycle_eng-updated-20260720.pdf"
+      ],
+      "confidence": "high",
+      "note": "State pages confirmed today: request due 5 p.m. on the 12th day before (Oct 22); ballot received by 7 p.m. local time; postmark not enough (only overseas voters get an extension); mandatory early voting from the 10th day before (Oct 24) through the 3rd day before (Oct 31); optional days from the 15th day before (Oct 19) to the 2nd day before (Nov 1); polls 7 a.m.-7 p.m. Picking up a ballot in person after the request deadline requires an emergency affidavit. Part of Florida is in the Central time zone, so 7 p.m. is local time. The Oct 22 request date was also in the Oct 19 file (calendar PDF)."
+    },
+    "ga": {
+      "name": "Georgia",
+      "pollHours": "7 a.m. to 7 p.m. (anyone in line at 7 p.m. can vote)",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-13",
+        "end": "2026-10-30",
+        "text": "In-person advance voting runs Tue, Oct 13 through Fri, Oct 30, including Saturdays Oct 17 and Oct 24. Some counties also open on Sundays (Oct 18 and/or Oct 25). You can use any early voting site in your county."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Any voter can vote absentee without a reason, but the deadline to request a ballot was Fri, Oct 23. Your ballot must be received by your county elections office by 7 p.m. on Nov 3; a postmark does not count. You can mail it or put it in a county ballot drop box, so check your county for locations."
+      },
+      "registration": {
+        "deadline": "2026-10-05",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register was Oct 5, so it has passed. Georgia has no Election Day registration. If you are already registered, you can still vote."
+      },
+      "pollingPlaceUrl": "https://mvp.sos.ga.gov/",
+      "official": "https://sos.ga.gov/november-3-2026-general-election",
+      "sources": [
+        "https://sos.ga.gov/november-3-2026-general-election",
+        "https://sos.ga.gov/how-to-guide/how-guide-voting",
+        "https://sos.ga.gov/sites/default/files/forms/2026%20Elections%20Calendar_0.pdf",
+        "https://seb.ga.gov/important-dates-november-elections/",
+        "https://sos.ga.gov/sites/default/files/forms/Voting%20In%20Georgia.pdf",
+        "https://mvp.sos.ga.gov/"
+      ],
+      "confidence": "high",
+      "note": "Confirmed today on sos.ga.gov: last registration day Oct 5, advance voting Oct 13-30, absentee request last day Oct 23, polls 7 a.m.-7 p.m. The Nov 3 7 p.m. receipt deadline and the Sunday/Saturday details are carried over from the Oct 19 research (State Election Board / calendar / Voting in Georgia guide). Advance voting starts Oct 13 because Mon, Oct 12 is a state holiday. Military and overseas ballots postmarked by Election Day count if received within three business days afterward. A photo ID is required to vote in person."
+    },
+    "ia": {
+      "name": "Iowa",
+      "pollHours": "7 a.m. to 8 p.m. Central time",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person absentee voting",
+        "start": "2026-10-14",
+        "end": "2026-11-02",
+        "text": "In-person absentee voting at your county auditor's office runs Wed, Oct 14 through Mon, Nov 2. Offices must be open at least 8 hours on Sat, Oct 31; the Nov 2 closing time depends on your auditor."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Any registered voter can vote absentee, no excuse needed, but the deadline to request a mailed ballot was 5 p.m. Mon, Oct 19. A returned ballot must be in your county auditor's hands by 8 p.m. on Nov 3, so a postmark does not help. You can hand it to your county auditor any time up to 8 p.m. on Election Day, but you cannot drop it at your polling place."
+      },
+      "registration": {
+        "deadline": "2026-10-19",
+        "sameDay": true,
+        "sameDayText": "You can register and vote on Election Day at your assigned polling place. Bring proof of who you are and where you live (an Iowa driver's license with your current address is the easiest), or have someone from your precinct vouch for you.",
+        "text": "The advance deadline to register was Oct 19, but you can still register and vote on Election Day at your polling place with ID and proof of where you live."
+      },
+      "pollingPlaceUrl": "https://apps.sos.iowa.gov/elections/voterreg/pollingplace/search.aspx",
+      "official": "https://sos.iowa.gov/elections-voting",
+      "sources": [
+        "https://sos.iowa.gov/elections-voting",
+        "https://sos.iowa.gov/voters/election-day",
+        "https://sos.iowa.gov/voters/absentee-voting",
+        "https://voterready.iowa.gov/",
+        "https://apps.sos.iowa.gov/elections/voterreg/pollingplace/search.aspx",
+        "https://www.legis.iowa.gov/docs/code/49.73.pdf",
+        "https://sos.iowa.gov/news-resources/secretary-pate-encourages-iowans-make-plan-vote-2026-general-election",
+        "https://sos.iowa.gov/sites/default/files/2026-01/Candidate's%20Guide_General%202026_010726.pdf"
+      ],
+      "confidence": "high",
+      "note": "Confirmed today on sos.iowa.gov: Election Day registration with ID and proof of residence; absentee request is a written application received by the county auditor 5 p.m. 15 days before (Oct 19); ballots must arrive by 8 p.m. CT on Election Day; voted absentee ballots cannot be delivered to a polling place. Polls 7 a.m.-8 p.m. CT per voterready.iowa.gov and Iowa Code 49.73 (search result; the 9 p.m. closing seen on an older special-election page is outdated). The Oct 14 to Nov 2 in-person absentee window and the Oct 31 Saturday rule are carried over from the Oct 19 research (SOS candidate's guide). Voter trap: if you already have an absentee ballot, you cannot take it to your polling place; you must return it to the county auditor or surrender it at the polls to vote there."
+    },
+    "me": {
+      "name": "Maine",
+      "pollHours": "Opens between 6 a.m. and 10 a.m. depending on your town (ask your town office); all polls close at 8 p.m.",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person absentee voting",
+        "start": null,
+        "end": "2026-10-29",
+        "text": "You can vote absentee in person at your town or city clerk's office until close of business Thu, Oct 29. Hours depend on your town, so call first."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Anyone can vote absentee, no reason needed. Request your ballot by close of business Thu, Oct 29 (the Thursday before Election Day), but the post office advises asking at least 15 days ahead if you rely on mail. Your clerk must receive the ballot by 8 p.m. on Nov 3; postmarks do not count. The state says mail it by Oct 27 to be safe, or drop it at your town office or its drop box by 8 p.m. on Election Day."
+      },
+      "registration": {
+        "deadline": "2026-10-13",
+        "sameDay": true,
+        "sameDayText": "You can register in person at your town or city office or at the polls up until the polls close on Election Day, with proof of who you are and where you live.",
+        "text": "The deadline to register online or by mail was Oct 13, but you can still register in person through Election Day, including at your polling place."
+      },
+      "pollingPlaceUrl": "https://www.maine.gov/portal/government/edemocracy/voter_lookup.php",
+      "official": "https://www.maine.gov/sos/elections-voting",
+      "sources": [
+        "https://www.maine.gov/sos/elections-voting",
+        "https://www.maine.gov/sos/elections-voting/state-of-maine-voter-guide",
+        "https://www.maine.gov/sos/elections-voting/absentee-guide",
+        "https://www.maine.gov/sos/elections-voting/upcoming-elections",
+        "https://www.maine.gov/portal/government/edemocracy/voter_lookup.php"
+      ],
+      "confidence": "high",
+      "note": "Confirmed today on maine.gov/sos: polls open 6-10 a.m. by town and close at 8 p.m.; registration in person until close of polls, online/mail by Oct 13 (online 5 p.m.); absentee request and in-person clerk voting deadline is close of business the Thursday before the election (Oct 29); ballots must be received by 8 p.m. Election Day; USPS advice to request by 15 days and return by 7 days before. Early in-person start is null: the state says ballots are available 30 days before (Oct 4, a Sunday), so the first day depends on when your clerk's office opens. Registration through the BMV closes Oct 27 (carried over)."
+    },
+    "mi": {
+      "name": "Michigan",
+      "pollHours": "7 a.m. to 8 p.m. local time",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-24",
+        "end": "2026-11-01",
+        "text": "Early in-person voting runs at least 9 days, Sat, Oct 24 through Sun, Nov 1; some communities offer more days (up to 29 total). You can also vote absentee in person at your clerk's office, which has been open since Sep 24."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Every registered voter can vote absentee, no reason needed. Apply online or by mail by 5 p.m. Fri, Oct 30, or in person at your clerk's office by 4 p.m. Mon, Nov 2, though the state urges applying at least 15 days ahead (that date has passed, so returning by drop box or in person is safer). Your local clerk must receive your ballot by 8 p.m. on Nov 3; postmarks do not count."
+      },
+      "registration": {
+        "deadline": "2026-10-19",
+        "sameDay": true,
+        "sameDayText": "You can register in person at your city or township clerk's office (or a satellite clerk office) through Election Day until 8 p.m., with proof of where you live, and then vote there with an absentee ballot. You can also register at an early voting site during the early voting period.",
+        "text": "The deadline to register online or by mail was Oct 19, but you can still register and vote by going to your clerk's office with proof of residency, including on Election Day until 8 p.m."
+      },
+      "pollingPlaceUrl": "https://mvic.sos.state.mi.us/Voter/Index",
+      "official": "https://www.michigan.gov/vote",
+      "sources": [
+        "https://www.michigan.gov/vote",
+        "https://www.michigan.gov/sos/elections/voting/register-to-vote",
+        "https://www.michigan.gov/sos/elections/voting/early-in-person-voting",
+        "https://www.michigan.gov/sos/elections/voting/absentee-voting",
+        "https://www.michigan.gov/sos/elections/voting/vote-on-election-day",
+        "https://mvic.sos.state.mi.us/Voter/Index"
+      ],
+      "confidence": "high",
+      "note": "Confirmed today on michigan.gov/sos: polls 7 a.m.-8 p.m. local time; mandatory early voting is at least 9 consecutive days ending the Sunday before the election (so Oct 24 to Nov 1 is the guaranteed statewide window; the exact start/end for your city is set locally); absentee online deadline 5 p.m. the Friday before (Oct 30); ballots must be received by 8 p.m. Election Day; registering within 14 days of an election, and on Election Day, is in person at a clerk's office with proof of residency; early voting sites accept same-day registration. The Nov 2 4 p.m. in-person application time and Sep 24 start are carried over. Part of Michigan's Upper Peninsula is on Central time."
+    },
+    "mn": {
+      "name": "Minnesota",
+      "pollHours": "7 a.m. to 8 p.m. (a few very small towns may open later, no later than 10 a.m.)",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-09-18",
+        "end": "2026-11-02",
+        "text": "Early voting at your local election office runs Sep 18 through Mon, Nov 2. Extended hours include until 7 p.m. Tue, Oct 27, and 9 a.m. to 3 p.m. on Sat, Oct 31 and Sun, Nov 1; offices close at 5 p.m. on Nov 2."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Any eligible voter can vote absentee, with no reason needed, and a postmark does not count: your ballot must be received by Election Day, Nov 3. If you drop it off yourself, get it to the office that sent it by 5 p.m. on Nov 3. The state suggests dropping your ballot off instead of mailing it within a week of Election Day."
+      },
+      "registration": {
+        "deadline": "2026-10-13",
+        "sameDay": true,
+        "sameDayText": "You can register at your polling place on Nov 3 (or at your local election office during early voting) by showing an accepted proof of where you live.",
+        "text": "The advance deadline to register was Oct 13, but you can still register on Election Day at your polling place with proof of residence."
+      },
+      "pollingPlaceUrl": "https://www.mnvotes.gov/pollfinder",
+      "official": "https://www.sos.mn.gov/elections-voting/",
+      "sources": [
+        "https://www.sos.mn.gov/elections-voting/",
+        "https://www.sos.mn.gov/elections-voting/other-ways-to-vote/return-your-ballot/",
+        "https://www.sos.mn.gov/elections-voting/other-ways-to-vote/vote-early-by-mail/",
+        "https://www.sos.mn.gov/about-the-office/news-room/voting-in-the-november-3-general-election-begins-september-18/",
+        "https://www.sos.mn.gov/elections-voting/election-day-voting/voting-hours/",
+        "https://sos.mn.gov/media/ybpdcuov/2026voterregistrationdrivereferenceguide.pdf",
+        "https://www.revisor.mn.gov/statutes/cite/204C.05",
+        "https://www.revisor.mn.gov/statutes/cite/203B.02"
+      ],
+      "confidence": "medium",
+      "note": "The Minnesota Secretary of State site put up a bot-check (Radware CAPTCHA) partway through today, so some pages could not be opened directly. Read directly today: the 'Return your ballot' page (received by Election Day, postmark does not count, drop-off by 5 p.m., mail-ballot cities until 8 p.m.). Read through the page-summary tool: the Secretary of State's 'Voting begins September 18' news release (early voting Sep 18-Nov 2, extended hours, Election Day registration available, polls until 8 p.m., pollfinder at mnvotes.gov/pollfinder) and Minnesota Statutes 204C.05 (7 a.m.-8 p.m.) and 203B.02 ('any eligible voter may vote by absentee ballot'). The advance registration deadline Oct 13 comes from the 2026 voter registration reference guide PDF and a search snippet. NOT confirmed: (1) a hard deadline to request a mail ballot (only a recommended Oct 20 date, from the Oct 19 file); (2) the news release summary says mailed absentee and mail ballots must be received by '8 p.m.' while the Return page says 5 p.m. for hand-delivery and only 'by Election Day' for mail, so no clock time is stated here for mail; (3) the polling-place finder URL was not opened. If you drop off an absentee ballot, do not take it to a polling place. The 'Agent delivery' process can return a ballot as late as 8 p.m. on Election Day. About 150,000 voters in mail-ballot precincts are mailed a ballot automatically (so allMail is false statewide)."
+    },
+    "ne": {
+      "name": "Nebraska",
+      "pollHours": "8 a.m. to 8 p.m. Central time; 7 a.m. to 7 p.m. Mountain time",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-05",
+        "end": "2026-11-02",
+        "text": "Early in-person voting at your county clerk or election commissioner office started Mon, Oct 5 and runs through Mon, Nov 2. Hours depend on the office."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Any registered voter can vote early by mail, no reason needed, but the deadline to request a ballot was Fri, Oct 23. Your ballot must be in the hands of your county election office, a drop box, or other official location by the time polls close on Nov 3 (8 p.m. Central / 7 p.m. Mountain). Postmarks do not count."
+      },
+      "registration": {
+        "deadline": "2026-10-16",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadlines have passed: Oct 16 to register online or by mail, and Oct 23 (6 p.m.) to register in person at your county election office. Nebraska has no Election Day registration, with a narrow exception for people who became U.S. citizens after the deadline."
+      },
+      "pollingPlaceUrl": "https://www.votercheck.necvr.ne.gov/VoterView/",
+      "official": "https://sos.nebraska.gov/elections-division",
+      "sources": [
+        "https://sos.nebraska.gov/elections-division",
+        "https://sos.nebraska.gov/elections/early-voting",
+        "https://sos.nebraska.gov/elections/election-day-faq",
+        "https://sos.nebraska.gov/sites/default/files/doc/elections/2026/2026_Election_Calendar.pdf",
+        "https://www.votercheck.necvr.ne.gov/VoterView/"
+      ],
+      "confidence": "high",
+      "note": "Confirmed today from the Secretary of State's 2026 Election Calendar PDF (read from a downloaded copy): first day for in-person early voting Oct 5, last day the day before the election (Nov 2), polls open 8 a.m. CT / 7 a.m. MT and close 8 p.m. CT / 7 p.m. MT, early ballot returned by mail must be in the county's possession by the closing hour, mail request due 6 p.m. on the 2nd Friday before (Oct 23), in-person registration to 6 p.m. Oct 23. The early-voting page says no reason has been needed since 1999. The state calendar also lists a late-registration exception for people who became naturalized citizens after the deadline. Eleven counties run elections entirely by mail (Boone, Cedar, Cherry, Clay, Dawes, Dixon, Garden, Knox, Merrick, Morrill, Stanton), so allMail is false statewide. The state says voter ID is required in statewide elections."
+    },
+    "nh": {
+      "name": "New Hampshire",
+      "pollHours": "Varies by town: polls must open by 11 a.m. and close no earlier than 7 p.m. Most open between 6 and 8 a.m. Check your town.",
+      "allMail": false,
+      "early": {
+        "available": false,
+        "kind": "none",
+        "start": null,
+        "end": null,
+        "text": "New Hampshire has no early in-person voting. If you qualify to vote absentee, you can request and return your ballot in person at your town or city clerk's office until 5 p.m. Mon, Nov 2."
+      },
+      "mail": {
+        "noExcuse": false,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "You need a qualifying reason, such as being away on Election Day, a disability or illness, a religious observance, caring for someone or working during all polling hours, or a winter storm warning. Mail requests are due by noon Mon, Nov 2. Mailed ballots must be received by your town or city clerk by 5 p.m. on Nov 3 (delivered in person by you, the deadline is 5 p.m. Nov 2); postmarks do not count."
+      },
+      "registration": {
+        "deadline": null,
+        "sameDay": true,
+        "sameDayText": "You can register at your polling place on Election Day. You must be in line by the time polls close, and you will need ID and proof you live in the town.",
+        "text": "Registering in advance at your town or city clerk's office closed 6 to 13 days before the election (the exact date depends on your town, so it has passed). You can still register at your polling place on Election Day."
+      },
+      "pollingPlaceUrl": "https://app.sos.nh.gov/",
+      "official": "https://www.sos.nh.gov/elections/voters",
+      "sources": [
+        "https://www.sos.nh.gov/elections/voters",
+        "https://www.sos.nh.gov/elections/register-vote/registration-deadlines",
+        "https://www.sos.nh.gov/elections/absentee-ballots",
+        "https://app.sos.nh.gov/",
+        "https://gc.nh.gov/rsa/html/lxiii/659/659-mrg.htm?id=8589979037"
+      ],
+      "confidence": "high",
+      "note": "Confirmed today on sos.nh.gov: absentee needs a qualifying reason; mail request due noon the day before the election; in-person request and return until 5 p.m. the day before; mailed or agent-delivered ballots received by 5 p.m. Election Day; registration up to 6-13 days before in person (varies by town) and at the polls on Election Day. Polling hours come from RSA 659:4 (open no later than 11 a.m., close no earlier than 7 p.m.) as read through a search summary of the state statute site, plus the Secretary of State's media guide; exact hours are set by each town or city and are listed in the state's voter lookup. The state site never says 'no early voting' in so many words; absentee voting is the only option before Election Day."
+    },
+    "pa": {
+      "name": "Pennsylvania",
+      "pollHours": "7 a.m. to 8 p.m. (anyone in line at 8 p.m. can vote)",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "mail ballot in person at your election office",
+        "start": null,
+        "end": "2026-10-27",
+        "text": "Pennsylvania has no traditional early voting, but you can request, fill out, and turn in a mail ballot in one visit to your county elections office or another designated site. The window for applying closes 5 p.m. Tue, Oct 27, and when it opens depends on when your county has ballots ready."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Any registered voter can vote by mail, no reason needed. Applications must reach your county by 5 p.m. Tue, Oct 27. Your county elections office must receive the ballot by 8 p.m. on Nov 3; a postmark is not enough. You can hand your own ballot in at your county office until 8 p.m. on Election Day if you applied by the deadline."
+      },
+      "registration": {
+        "deadline": "2026-10-19",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register was Oct 19, so it has passed. Pennsylvania has no Election Day registration. If you are already registered, you can still vote."
+      },
+      "pollingPlaceUrl": "https://www.pa.gov/services/vote/find-your-local-polling-place",
+      "official": "https://www.pa.gov/agencies/vote",
+      "sources": [
+        "https://www.pa.gov/agencies/vote",
+        "https://www.pa.gov/services/vote/find-your-local-polling-place",
+        "https://www.pa.gov/agencies/dos/newsroom/-deadline-to-register-to-vote-in-the-general-election-is-approac",
+        "https://www.pa.gov/agencies/dos/newsroom/oct-27-deadline-to-apply-for-a-mail-ballot-for-the-nov-election",
+        "https://www.pa.gov/agencies/vote/voter-support/mail-in-and-absentee-ballot",
+        "https://www.pa.gov/agencies/vote/voter-support/mail-in-and-absentee-ballot/mail-ballot-before-election-day"
+      ],
+      "confidence": "high",
+      "note": "Confirmed today on pa.gov/agencies/vote: no-excuse mail-in (absentee needs a reason); application due 5 p.m. Oct 27; received by 8 p.m. Nov 3 with the state saying a postmark by 8 p.m. is not sufficient; in-person mail ballot at the county office with drop-off until 8 p.m. on Election Day; emergency absentee ballot possible after Oct 27 for an unexpected illness, disability, or last-minute absence; polls 7 a.m.-8 p.m. Early start is null because it depends on each county's ballots being ready. Voter trap: if you return a voted mail ballot you cannot vote at your polling place. Unsigned or undated outer envelopes and ballots not sealed in the inner 'Official Election Ballot' envelope are not counted."
+    }
+  }
+}

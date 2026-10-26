@@ -1,0 +1,205 @@
+{
+  "checked": "2026-10-26",
+  "calendar": [
+    {
+      "id": "medicare-oe-2027",
+      "date": "2026-10-15",
+      "end": "2026-12-07",
+      "title": "Medicare Open Enrollment",
+      "text": "If you have Medicare, this is the window to join, drop, or switch Medicare Advantage and drug (Part D) plans for 2027. Compare your current plan to the 2027 options before it ends.",
+      "category": "health",
+      "source": "https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan",
+      "confidence": "high",
+      "note": "Window is already underway on 2026-10-26. Coverage changes start January 1, 2027. The plan must receive your request by December 7."
+    },
+    {
+      "id": "medicare-oe-last-day",
+      "date": "2026-12-07",
+      "end": null,
+      "title": "Last day to change Medicare plans",
+      "text": "This is the last day of Medicare Open Enrollment. If you want a different Medicare Advantage or drug plan for 2027, your request has to be in by today.",
+      "category": "health",
+      "source": "https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "dst-ends-2026",
+      "date": "2026-11-01",
+      "end": null,
+      "title": "Clocks fall back one hour",
+      "text": "Daylight saving time ends at 2 a.m. local time on Sunday, so clocks go back to 1 a.m. and you get an extra hour. Hawaii and most of Arizona do not change their clocks.",
+      "category": "clock",
+      "source": "https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst",
+      "confidence": "high",
+      "note": "NIST also lists American Samoa, Guam, Puerto Rico and the U.S. Virgin Islands as not observing DST. The Navajo Nation inside Arizona does change its clocks."
+    },
+    {
+      "id": "aca-oe-opens-2027",
+      "date": "2026-11-01",
+      "end": "2027-01-15",
+      "title": "HealthCare.gov sign-up opens for 2027",
+      "text": "You can apply for, renew, or change a 2027 health plan on HealthCare.gov from November 1 through January 15. Sign up by December 15 if you want coverage to start January 1.",
+      "category": "health",
+      "source": "https://www.healthcare.gov/quick-guide/dates-and-deadlines/",
+      "confidence": "high",
+      "note": "HealthCare.gov (federal marketplace) dates are Nov 1, 2026 to Jan 15, 2027. A 2025 CMS rule would have ended the federal window Dec 15 starting with plan year 2027, but CMS's Aug 4, 2026 court-litigation statement says the federal window will begin Nov 1, 2026 and end Jan 15, 2027 (https://www.cms.gov/files/document/statement-re-city-columbus-080426.pdf). State-run marketplaces set their own dates and can differ, so check your state's site."
+    },
+    {
+      "id": "aca-dec15-deadline",
+      "date": "2026-12-15",
+      "end": null,
+      "title": "Deadline for Jan. 1 health coverage",
+      "text": "On HealthCare.gov, pick or change a plan by this date for coverage to start January 1, 2027, and pay your first premium. Sign up later and coverage starts February 1.",
+      "category": "health",
+      "source": "https://www.healthcare.gov/quick-guide/dates-and-deadlines/",
+      "confidence": "high",
+      "note": "Applies to the federal marketplace (HealthCare.gov). State-run marketplaces may have a different cutoff for January 1 coverage."
+    },
+    {
+      "id": "aca-oe-ends-2027",
+      "date": "2027-01-15",
+      "end": null,
+      "title": "Last day to sign up on HealthCare.gov",
+      "text": "Open Enrollment on HealthCare.gov ends today. After this you can only get a marketplace plan if you qualify for a Special Enrollment Period, such as losing other coverage.",
+      "category": "health",
+      "source": "https://www.healthcare.gov/quick-guide/dates-and-deadlines/",
+      "confidence": "high",
+      "note": "Federal marketplace only. Sign-ups from Dec 16 through Jan 15 start coverage Feb 1. State-run marketplaces can end on other dates."
+    },
+    {
+      "id": "election-day-2026",
+      "date": "2026-11-03",
+      "end": null,
+      "title": "Election Day",
+      "text": "This is the general election for all 435 U.S. House seats, 35 U.S. Senate seats, 36 governorships and many state and local races. Check your registration and polling place before you go, and bring any ID your state requires.",
+      "category": "vote",
+      "source": "https://www.fec.gov/resources/cms-content/documents/2026pdates.pdf",
+      "confidence": "high",
+      "note": "Rules for ID, early voting, mail ballots and registration deadlines are set by each state, and poll hours vary. vote.gov and usa.gov/election-day point people to their state."
+    },
+    {
+      "id": "veterans-day-2026",
+      "date": "2026-11-11",
+      "end": null,
+      "title": "Veterans Day",
+      "text": "Federal offices are closed on this federal holiday, and the post office usually does not deliver regular mail. Many banks and some state or local offices close too, so check before you head out.",
+      "category": "holiday",
+      "source": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+      "confidence": "high",
+      "note": "OPM list confirms the date (Wednesday). The mail statement is the usual USPS practice for federal holidays; no 2026 Veterans Day USPS notice was found, so confirm on usps.com."
+    },
+    {
+      "id": "thanksgiving-2026",
+      "date": "2026-11-26",
+      "end": null,
+      "title": "Thanksgiving Day",
+      "text": "Federal offices are closed and there is normally no regular mail delivery. Banks and many government offices are closed too.",
+      "category": "holiday",
+      "source": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+      "confidence": "high",
+      "note": "Date confirmed by OPM. Mail closure is the usual USPS practice; check usps.com."
+    },
+    {
+      "id": "christmas-2026",
+      "date": "2026-12-25",
+      "end": null,
+      "title": "Christmas Day",
+      "text": "Federal offices are closed and there is normally no regular mail delivery. If a bill or benefit is due around this day, plan for it to arrive a day early or late.",
+      "category": "holiday",
+      "source": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+      "confidence": "high",
+      "note": "Date confirmed by OPM, which lists no extra December 24 or 26 holiday for 2026. Mail closure is the usual USPS practice; check usps.com."
+    },
+    {
+      "id": "new-years-day-2027",
+      "date": "2027-01-01",
+      "end": null,
+      "title": "New Year's Day",
+      "text": "Federal offices are closed and there is normally no regular mail delivery. Banks are usually closed too.",
+      "category": "holiday",
+      "source": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+      "confidence": "high",
+      "note": "Friday. Mail closure is the usual USPS practice; check usps.com."
+    },
+    {
+      "id": "mlk-day-2027",
+      "date": "2027-01-18",
+      "end": null,
+      "title": "Martin Luther King Jr. Day",
+      "text": "Federal offices are closed and there is normally no regular mail delivery. Many banks and schools close too.",
+      "category": "holiday",
+      "source": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+      "confidence": "high",
+      "note": "Third Monday of January. Mail closure is the usual USPS practice; check usps.com."
+    },
+    {
+      "id": "ssi-cola-2026-12-31",
+      "date": "2026-12-31",
+      "end": null,
+      "title": "SSI raise shows up in payments",
+      "text": "About 7.3 million people on SSI get their January payment on December 31, with the 3.6 percent cost-of-living raise included. Nothing to sign up for; it is automatic.",
+      "category": "benefits",
+      "source": "https://www.ssa.gov/news/en/press/releases/2026-10-14.html",
+      "confidence": "high",
+      "note": "SSA announced the 2027 COLA on Oct 14, 2026. January 1 is a holiday, so SSI's January payment is made at the end of December."
+    },
+    {
+      "id": "social-security-cola-2027",
+      "date": "2027-01-01",
+      "end": null,
+      "title": "Social Security raises 3.6 percent",
+      "text": "Nearly 72 million people on Social Security will see a 3.6 percent bigger payment starting in January 2027. You do not have to apply; look for a letter from Social Security in December.",
+      "category": "benefits",
+      "source": "https://www.ssa.gov/news/en/press/releases/2026-10-14.html",
+      "confidence": "high",
+      "note": "SSA says the raise begins in January 2027 benefits. The exact deposit day depends on each person's usual payment schedule. SSA also set the 2027 maximum taxable earnings at $192,300."
+    },
+    {
+      "id": "medicaid-work-rule-2027",
+      "date": "2027-01-01",
+      "end": null,
+      "title": "Medicaid work rules begin by Jan. 1",
+      "text": "States must start requiring many adults ages 19 to 64 in the Medicaid expansion group to show 80 hours a month of work, volunteering, school or a work program. Many people are exempt, such as parents of young children and people who are medically frail. If you are on Medicaid, watch for a letter from your state and ask the state agency whether this applies to you.",
+      "category": "health",
+      "source": "https://www.cms.gov/newsroom/fact-sheets/medicaid-community-engagement-requirement-certain-individuals-interim-final-rule-comment-period-cms",
+      "confidence": "high",
+      "note": "CMS says states must implement 'no later than January 1, 2027' and may start earlier. Details and exemptions vary by state; this is an interim final rule (published June 3, 2026) and CMS says it may change."
+    },
+    {
+      "id": "q4-estimated-tax-2027",
+      "date": "2027-01-15",
+      "end": null,
+      "title": "Last 2026 estimated tax payment due",
+      "text": "If you make quarterly estimated tax payments (for example, self-employed or gig income), the fourth 2026 payment is due this day. If you file your full 2026 return and pay by January 31, 2027, you can skip it.",
+      "category": "tax",
+      "source": "https://www.irs.gov/publications/p505",
+      "confidence": "high",
+      "note": "From IRS Publication 505 (2026), which gives January 15, 2027 for the final payment and the January 31 file-and-pay exception. January 15, 2027 is a Friday."
+    }
+  ],
+  "ballot": {
+    "senate": {
+      "regular": ["al","ak","ar","co","de","ga","id","il","ia","ks","ky","la","me","ma","mi","mn","ms","mt","ne","nh","nj","nm","nc","ok","or","ri","sc","sd","tn","tx","va","wv","wy"],
+      "special": ["fl","oh"],
+      "sources": [
+        "https://www.senate.gov/senators/Class_II.htm",
+        "https://www.senate.gov/senators/Class_III.htm",
+        "https://www.fec.gov/resources/cms-content/documents/2026pdates.pdf",
+        "https://dos.elections.myflorida.com/candidates/CanList.asp?elecid=20261103-GEN"
+      ]
+    },
+    "governor": {
+      "states": ["al","ak","az","ar","ca","co","ct","fl","ga","hi","id","il","ia","ks","me","md","ma","mi","mn","ne","nv","nh","nm","ny","oh","ok","or","pa","ri","sc","sd","tn","tx","vt","wi","wy"],
+      "sources": [
+        "https://www.nga.org/governors/elections/"
+      ]
+    },
+    "note": "Senate: senate.gov lists exactly 33 Class II states (terms end Jan 3, 2027), which are the 33 regular races. Florida and Ohio are the two specials (35 total): senate.gov lists Ashley Moody (FL) and Jon Husted (OH) in Class III (terms end Jan 3, 2029), meaning they hold seats vacated mid-term, and Ohio county election-board notices label the race 'unexpired term ending 1-3-2029'. Florida's own Division of Elections candidate list simply calls the race 'United States Senator' with no 'special' label, so FL's special status rests on the Class III term-end date (medium-high confidence). Governor: NGA counts 39 gubernatorial elections in 2026, which is the 36 states listed plus 3 territories (Guam, Northern Mariana Islands, U.S. Virgin Islands); the 36 states match the expected count. All 435 U.S. House seats are on the ballot and D.C. elects a non-voting delegate (standard fact, not separately re-fetched from a primary page). Runoffs after Nov 3 in some states were not researched."
+  },
+  "gaps": [
+    "IRS has not announced the 2027 filing season start date (no official date found as of Oct 26, 2026), so it is left out.",
+    "2027 Medicare Part B premium and deductible not yet published by CMS as of Oct 26, 2026 (last year's came in early November); left out.",
+    "Exact date SSA COLA notices appear online is unclear (sources said late November vs early December); only mailed notices in December is used."
+  ]
+}

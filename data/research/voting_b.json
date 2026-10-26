@@ -1,0 +1,361 @@
+{
+  "checked": "2026-10-26",
+  "states": {
+    "in": {
+      "name": "Indiana",
+      "pollHours": "6 a.m. to 6 p.m. local time",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-06",
+        "end": "2026-11-02",
+        "text": "You can vote early in person from Oct. 6 until noon on Monday, Nov. 2. Your county sets the exact places and hours, but every county must be open on the two Saturdays before Election Day (Oct. 24 and Oct. 31)."
+      },
+      "mail": {
+        "noExcuse": false,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "To vote by mail in Indiana you need one of the reasons on the state list, such as being 65 or older, having a disability, or being away all day on Election Day. The time to ask for a mail ballot ended Oct. 22. If you already have one, it must reach your county election office by 6 p.m. on Nov. 3. A postmark does not count."
+      },
+      "registration": {
+        "deadline": "2026-10-05",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register to vote in this election was Oct. 5, 2026. Indiana does not offer same-day registration."
+      },
+      "pollingPlaceUrl": "https://indianavoters.in.gov/",
+      "official": "https://www.in.gov/sos/elections/",
+      "sources": [
+        "https://www.in.gov/sos/elections/files/2026-Calendar-Brochure.FINAL-VERSION.pdf",
+        "https://www.in.gov/sos/elections/voter-information/ways-to-vote/absentee-voting/",
+        "https://www.in.gov/sos/elections/voter-information/"
+      ],
+      "confidence": "high",
+      "note": "Mail ballots need an approved reason, and the request deadline (Oct. 22) has passed. Only voters who are confined or caring for a confined person can still ask for a ballot to be delivered, with a request due by noon on Nov. 2. Indiana's state calendar says it reflects Indiana law as of July 2025. Early voting hours differ by county."
+    },
+    "ks": {
+      "name": "Kansas",
+      "pollHours": "7 a.m. to 7 p.m. local time (counties may open as early as 6 a.m. and close as late as 8 p.m.)",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": null,
+        "end": "2026-11-02",
+        "text": "Kansas calls early voting \"advance voting.\" Counties may start as early as Oct. 14 and every county must be open by Oct. 27. It ends at noon on Monday, Nov. 2. Show a photo ID. Check your county election office for places and hours."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Any voter can vote by mail in Kansas, but you must apply for an advance ballot. Kansas law says your ballot must reach the county election office by the time polls close on Nov. 3. You can also drop it in any drop box in your county or hand it in at any polling place in your county before polls close."
+      },
+      "registration": {
+        "deadline": "2026-10-13",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register to vote in this election was Oct. 13, 2026 (21 days before the election). Kansas does not list same-day registration."
+      },
+      "pollingPlaceUrl": "https://myvoteinfo.voteks.org/voterview",
+      "official": "https://sos.ks.gov/elections/voter-information.html",
+      "sources": [
+        "https://sos.ks.gov/elections/advance-voting-information.html",
+        "https://sos.ks.gov/elections/important-election-dates.html",
+        "https://sos.ks.gov/elections/voter-information.html",
+        "https://sos.ks.gov/elections/did-you-know.html",
+        "https://sos.ks.gov/elections/voter-registration.html",
+        "https://sos.ks.gov/Pubs/Elections/Elections-201.pdf"
+      ],
+      "confidence": "medium",
+      "note": "Mail ballot receipt is confusing. State law and the state's 2026 calendar say mail ballots must arrive by close of polls on Election Day (the old 3-day grace period ended). But the Secretary of State's advance voting page also says a Douglas County court order requires ballots postmarked by Election Day to be counted if they arrive by the last mail delivery on Friday, Nov. 6, and that the state's request to pause that order for the General Election was denied. Because the rules conflict, tell voters to get ballots back by 7 p.m. on Nov. 3. I could not find an official last day to request an advance mail ballot, so it is left out; voters should call their county office right away. Poll hours come from a state page that says to confirm hours with your county."
+    },
+    "ky": {
+      "name": "Kentucky",
+      "pollHours": "6 a.m. to 6 p.m. local time",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-29",
+        "end": "2026-10-31",
+        "text": "Any voter can vote early in person on Thursday, Oct. 29, Friday, Oct. 30, and Saturday, Oct. 31. Your county sets the places and hours. Voters with an approved excuse could also vote in person Oct. 21 to 23 and Oct. 26 to 28."
+      },
+      "mail": {
+        "noExcuse": false,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Kentucky mail ballots need a qualifying reason, and the time to request one ended Oct. 20. A mail ballot already in your hands must arrive by 6 p.m. local time on Nov. 3. Each county has drop boxes, and the state tells voters not to wait until Election Day to hand-deliver."
+      },
+      "registration": {
+        "deadline": "2026-10-05",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register to vote in this election was Oct. 5, 2026. Kentucky does not offer same-day registration."
+      },
+      "pollingPlaceUrl": "https://vrsws.sos.ky.gov/vic/",
+      "official": "https://elect.ky.gov/",
+      "sources": [
+        "https://elect.ky.gov/Voters/Pages/Voting-In-Person-and-By-Mail.aspx",
+        "https://elect.ky.gov/Voters/Pages/Absentee-Voting-By-Mail.aspx",
+        "https://elect.ky.gov/Pages/default.aspx"
+      ],
+      "confidence": "high",
+      "note": "Early voting for everyone is only three days (Oct. 29 to 31). Mail voting needs an excuse (such as being out of the county, age, disability, or illness), and the request portal closed Oct. 20. The state's page says the Postal Service suggested mailing by Oct. 27, so use a drop box or hand-deliver if you have not mailed yet. An older FAQ page on the same site has different dates; the General Election Summary page was used."
+    },
+    "la": {
+      "name": "Louisiana",
+      "pollHours": "6 a.m. to 8 p.m. Central time",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-20",
+        "end": "2026-10-27",
+        "text": "Early voting is Oct. 20 to 27, except Sunday, Oct. 25, from 8:30 a.m. to 6 p.m. at your parish registrar of voters office and other set places. Bring a photo ID or be ready to sign an affidavit."
+      },
+      "mail": {
+        "noExcuse": false,
+        "returnRule": "received",
+        "receivedBy": "2026-11-02",
+        "postmarkBy": null,
+        "text": "Louisiana mail ballots need a qualifying reason, such as age 65 or older, a disability, or being away. The last day to request one is Oct. 30 by 4:30 p.m., and it must reach your parish registrar by 4:30 p.m. on Monday, Nov. 2 (the day before Election Day). Military and overseas voters have until 8 p.m. on Election Day."
+      },
+      "registration": {
+        "deadline": "2026-10-13",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register online was Oct. 13, 2026. The deadline to register in person or by mail was Oct. 5, 2026. Louisiana does not offer same-day registration."
+      },
+      "pollingPlaceUrl": "https://voterportal.sos.la.gov/",
+      "official": "https://www.sos.la.gov/elections-voting",
+      "sources": [
+        "https://www.sos.la.gov/media/p31j4zkc/elections-calendar-2026.pdf",
+        "https://www.sos.la.gov/elections-voting/ways-to-vote",
+        "https://www.sos.la.gov/elections-voting/absentee-voting-faqs"
+      ],
+      "confidence": "high",
+      "note": "The mail ballot deadline is the day BEFORE Election Day (Nov. 2, 4:30 p.m.), which surprises people. If you registered online or by mail and have not voted in your parish before, you must vote in person the first time. The state's calendar says Nov. 3 is a U.S. Senate general election and an open primary for U.S. House, with a Dec. 12 general election listed after it, so some House races may not be settled on Nov. 3. The calendar says dates are subject to change by the Legislature."
+    },
+    "md": {
+      "name": "Maryland",
+      "pollHours": "7 a.m. to 8 p.m.",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-22",
+        "end": "2026-10-29",
+        "text": "Early voting runs Thursday, Oct. 22 through Thursday, Oct. 29, including the weekend, from 7 a.m. to 8 p.m. every day. You vote at an early voting center in the county where you live. Anyone in line at 8 p.m. can vote."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "postmarked",
+        "receivedBy": "2026-11-13",
+        "postmarkBy": "2026-11-03",
+        "text": "Any registered voter can vote by mail in Maryland. Mail your ballot so it is postmarked by Nov. 3, and it counts if your local election office gets it by 10 a.m. on Nov. 13. Or put it in a ballot drop box or hand it in by 8 p.m. on Nov. 3. To get a ballot by mail or fax, your request must arrive by Oct. 27 (online delivery request by Oct. 30)."
+      },
+      "registration": {
+        "deadline": "2026-10-13",
+        "sameDay": true,
+        "sameDayText": "You can register and vote on the same day at an early voting center (in your county) or at your assigned Election Day polling place. Bring a document that proves where you live.",
+        "text": "The deadline to register online or by mail was Oct. 13, 2026. After that, you can still register in person during early voting or on Election Day."
+      },
+      "pollingPlaceUrl": "https://voterservices.elections.maryland.gov/PollingPlaceSearch",
+      "official": "https://elections.maryland.gov/",
+      "sources": [
+        "https://elections.maryland.gov/elections/2026/vote2026/",
+        "https://elections.maryland.gov/voting/index.html",
+        "https://elections.maryland.gov/voting/early_voting.html",
+        "https://elections.maryland.gov/voting/absentee.html",
+        "https://elections.maryland.gov/voter_registration/index.html",
+        "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf",
+        "https://elections.maryland.gov/press_room/documents/2026/USPS_Policy_Change_Press_Release.pdf"
+      ],
+      "confidence": "high",
+      "note": "On Election Day you must vote at your assigned polling place (not any location). The state warns that dropping a ballot in a mailbox on Election Day may not get that day's postmark, and says to use a drop box instead. The Nov. 13 10 a.m. arrival date is from the State Board's 2026 election calendar; the public voter pages only say the ballot must be postmarked by Election Day. The mail-fax request deadline of Oct. 27 is tomorrow."
+    },
+    "ma": {
+      "name": "Massachusetts",
+      "pollHours": "7 a.m. to 8 p.m. (some towns open earlier; anyone in line at 8 p.m. can vote)",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-17",
+        "end": "2026-10-30",
+        "text": "Early voting runs Oct. 17 through Friday, Oct. 30, with weekend hours in every city and town. Anyone can vote early, no reason needed. Your town sets the places and hours, and many have few or no hours on Fridays."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "postmarked",
+        "receivedBy": "2026-11-06",
+        "postmarkBy": "2026-11-03",
+        "text": "Anyone can vote by mail in Massachusetts. Your application must reach your local election office by 5 p.m. on Tuesday, Oct. 27. Mailed ballots postmarked by Nov. 3 can arrive up to 3 days later (by Nov. 6). You can also use a ballot drop box or hand it in at your local election office; you cannot drop it off at a polling place on Election Day."
+      },
+      "registration": {
+        "deadline": "2026-10-24",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register to vote in this election was Saturday, Oct. 24, 2026 (online until 11:59 p.m., in person until 5 p.m., by mail if postmarked that day). Massachusetts does not offer same-day registration."
+      },
+      "pollingPlaceUrl": "https://www.sec.state.ma.us/WhereDoIVoteMA/WhereDoIVote",
+      "official": "https://www.sec.state.ma.us/divisions/elections/elections-and-voting.htm",
+      "sources": [
+        "https://www.sec.state.ma.us/divisions/elections/recent-updates/upcoming-elections.htm",
+        "https://www.sec.state.ma.us/divisions/elections/voting-information/vote-early.htm",
+        "https://www.sec.state.ma.us/divisions/elections/voting-information/vote-by-mail.htm",
+        "https://www.sec.state.ma.us/divisions/elections/research-and-statistics/2026-Information-for-voters/2026-voting-options.htm",
+        "https://www.sec.state.ma.us/divisions/elections/elesplash.htm"
+      ],
+      "confidence": "high",
+      "note": "Mail ballot applications are due tomorrow (Oct. 27, 5 p.m.) and must be at the local office by then, not just mailed. The state says that if you have not mailed your ballot within a week of Election Day, use a drop box or hand it in. The state's Information for Voters page does not mention the Nov. 6 grace period; the Voting by Mail page does. The Nov. 6 arrival date applies only to ballots returned by mail; ballots delivered by hand or drop box must be in by the close of polls on Nov. 3."
+    },
+    "ms": {
+      "name": "Mississippi",
+      "pollHours": "7 a.m. to 7 p.m. local time",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person absentee voting",
+        "start": "2026-09-21",
+        "end": "2026-10-31",
+        "text": "Mississippi has no open early voting. If you qualify (for example, age 65 or older, a disability, working during polling hours, or being away from home on Election Day), you can vote in person at your circuit clerk's office Monday to Friday, 8 a.m. to 5 p.m. The last day is Saturday, Oct. 31, from 8 a.m. to noon."
+      },
+      "mail": {
+        "noExcuse": false,
+        "returnRule": "postmarked",
+        "receivedBy": "2026-11-10",
+        "postmarkBy": "2026-11-03",
+        "text": "Mississippi mail ballots are only for certain voters, such as people 65 or older, people with a disability, or people living outside their county. The ballot must be postmarked by Nov. 3 and reach the circuit clerk's office within 5 business days (by 5 p.m. on Nov. 10). The state also tells voters to get ballots in as early as they can."
+      },
+      "registration": {
+        "deadline": "2026-10-05",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register to vote in this election was Oct. 5, 2026 (in person, or mailed with a postmark by that day). Mississippi does not offer same-day registration."
+      },
+      "pollingPlaceUrl": "https://myelectionday.sos.state.ms.us/VoterOutreach/Pages/VOSearch.aspx",
+      "official": "https://www.sos.ms.gov/elections-voting",
+      "sources": [
+        "https://www.sos.ms.gov/content/documents/elections/2026%20Elections%20Calendar.pdf",
+        "https://www.sos.ms.gov/yall-vote/absentee-voting-information",
+        "https://www.sos.ms.gov/news/saturday-person-absentee-voting-begins-upcoming-deadlines-2026-general-election",
+        "https://www.sos.ms.gov/news/absentee-ballots-now-available-2026-general-election"
+      ],
+      "confidence": "medium",
+      "note": "Mississippi has no open early voting; both in-person absentee and mail absentee need a qualifying reason. The mail ballot rule (postmarked by Election Day, arrives within 5 business days) is the state's current rule on its Oct. 2026 notices and its 9/8/2026 calendar, but late-arriving mail ballots have been challenged in court and I could not confirm from an official source that nothing has changed, so voters should not count on the grace period. The first day of in-person absentee voting is listed as Sept. 21 on the state calendar and as Sept. 19 on the Y'all Vote page; Sept. 21 (a Monday) is used. Voters need a photo ID to vote in person."
+    },
+    "mo": {
+      "name": "Missouri",
+      "pollHours": "6 a.m. to 7 p.m. local time",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person absentee voting",
+        "start": "2026-10-20",
+        "end": "2026-11-02",
+        "text": "Any voter can vote a no-excuse absentee ballot in person at the place your local election authority sets, starting Tuesday, Oct. 20. You can vote until 5 p.m. on Monday, Nov. 2. Show an acceptable photo ID."
+      },
+      "mail": {
+        "noExcuse": false,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "To vote by mail in Missouri you need one of the reasons on the state list, such as being away from your area on Election Day or having an illness or disability. The last day to request a mail ballot was Oct. 21 at 5 p.m. A mail ballot must reach your local election authority by the time polls close at 7 p.m. on Nov. 3."
+      },
+      "registration": {
+        "deadline": "2026-10-07",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register to vote in this election was Oct. 7, 2026. Missouri does not list same-day registration."
+      },
+      "pollingPlaceUrl": "https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx",
+      "official": "https://www.sos.mo.gov/elections/goVoteMissouri",
+      "sources": [
+        "https://www.sos.mo.gov/elections/goVoteMissouri/howtovote",
+        "https://www.sos.mo.gov/elections/goVoteMissouri/votingquestions",
+        "https://www.sos.mo.gov/elections/goVoteMissouri/register",
+        "https://www.sos.mo.gov/elections/calendar"
+      ],
+      "confidence": "medium",
+      "note": "The state's \"How to Vote\" page says the no-excuse in-person window starts the second Tuesday before the election (Oct. 20, my calculation) and ends the day before; it also says in-person absentee voting runs until 5 p.m. the night before. Another state FAQ says \"two weeks prior.\" Hours and places vary by local election authority, so check yours. The mail-in return deadline comes from the state's FAQ (close of polls on Election Day); the how-to page still mentions a notary requirement for some mail ballots, so voters should ask their local office. I did not find an official statement on same-day registration; the state describes a registration deadline on the 4th Wednesday before the election."
+    },
+    "mt": {
+      "name": "Montana",
+      "pollHours": "7 a.m. to 8 p.m. local time (very small polling places may open later but close at 8 p.m.)",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "mail ballot in person at your election office",
+        "start": "2026-10-09",
+        "end": "2026-11-03",
+        "text": "Montana absentee ballots go out starting Oct. 9. You can fill out the request at your county election office and pick up your ballot there, then vote and return it at the office. The last day to request an absentee ballot is noon on Monday, Nov. 2. Call your county office for its hours."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Any registered voter can vote absentee in Montana. Your ballot must be in your county election office or at your polling place by 8 p.m. on Nov. 3. A postmark does not count. The state says to mail it a week early, so with 8 days left it is safest to drop it off at your county election office now. Sign the return envelope yourself."
+      },
+      "registration": {
+        "deadline": "2026-10-05",
+        "sameDay": true,
+        "sameDayText": "After Oct. 5, you can still register or update your registration at your county election office through Election Day. You must pick up and cast your ballot in person at the election office. Ask your county office what to bring and the final cutoff time on Nov. 3.",
+        "text": "Regular registration closed Oct. 5, 2026. From Oct. 6 on, \"late registration\" is open at your county election office, where you register and get your ballot in person."
+      },
+      "pollingPlaceUrl": "https://prodvoterportal.mt.gov/WhereToVote.aspx",
+      "official": "https://votemt.gov/",
+      "sources": [
+        "https://sosmt.gov/elections/absentee/",
+        "https://votemt.gov/voter-calendar/",
+        "https://votemt.gov/same-weekend-registration/",
+        "https://votemt.gov/frequently-asked-questions/",
+        "https://votemt.gov/events/general-election-day/",
+        "https://votemt.gov/absentee-ballot/"
+      ],
+      "confidence": "medium",
+      "note": "Late registration is confusing. The state's voter site says registration is open through Election Day and ends at 8 p.m., but one line on the same page also says \"through noon on Election Day,\" so go early and confirm the time with your county office. Another state page says a court order blocked SB 490, a law that would have opened all counties on Saturday, Oct. 31 and changed registration timing. The state calendar still lists election offices open Oct. 31, 8 a.m. to 5 p.m. I could not open the state's PDF calendar, and I did not confirm what ID or proof of address late registration needs."
+    },
+    "nv": {
+      "name": "Nevada",
+      "pollHours": "7 a.m. to 7 p.m. Pacific time",
+      "allMail": true,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-17",
+        "end": "2026-10-30",
+        "text": "Early voting runs Saturday, Oct. 17 through Friday, Oct. 30. Your county sets the places and hours. You can also register and vote on the same visit."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "postmarked",
+        "receivedBy": "2026-11-07",
+        "postmarkBy": "2026-11-03",
+        "text": "Nevada mails a ballot to every active registered voter unless they opted out. Mail it so it is postmarked by Nov. 3 and it counts if your county gets it by Nov. 7. You can also use any official drop box in your county until polls close on Nov. 3. The state suggests mailing at least a week before Election Day."
+      },
+      "registration": {
+        "deadline": "2026-10-20",
+        "sameDay": true,
+        "sameDayText": "You can register or update your registration in person during early voting or on Election Day at a polling place. You need a valid Nevada driver's license or Nevada ID card, plus proof of where you live if your ID does not show your current address.",
+        "text": "Oct. 20, 2026 was the last day to register or update your registration and be mailed a ballot. After that, you can still register in person during early voting or on Election Day."
+      },
+      "pollingPlaceUrl": "https://www.nvsos.gov/votersearch/",
+      "official": "https://www.nvsos.gov/elections/election-information/2026-election-information",
+      "sources": [
+        "https://www.nvsos.gov/Home/Components/News/News/3802/23",
+        "https://www.nvsos.gov/elections/election-information/2026-election-information",
+        "https://www.nvsos.gov/elections/election-information/same-day-registration",
+        "https://www.nvsos.gov/elections/voters/mail-ballot-voting",
+        "https://www.nvsos.gov/elections/election-information/2026-election-information/signature-cure"
+      ],
+      "confidence": "high",
+      "note": "If you registered or updated online less than 14 days before the election (after Oct. 20), you may only vote in person with your Nevada driver's license or ID. Voters whose mail ballot signature is missing or does not match have until 5 p.m. Pacific on Nov. 9 to fix it, so answer calls, texts, and mail from the county. Same-day registration requires a Nevada driver's license or ID card (a military ID or passport cannot prove identity for this), and the ballot may be provisional."
+    }
+  }
+}

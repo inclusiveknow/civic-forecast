@@ -1,89 +1,60 @@
 # The Civic Forecast
 
-A daily forecast for civic life in the United States. Treats democracy like weather. Pulls real-time data from six independent civic-monitoring sources every morning, runs them through documented thresholds, and publishes a single page showing what the day's conditions look like.
+**Your local civic weather.** Put in a ZIP and see what's coming where you live: when and how to vote, what's on your ballot, what rent, groceries, gas, electricity and jobs are doing, live weather alerts, disaster declarations and air quality, and the dates that touch most households (Medicare and HealthCare.gov enrollment, Social Security changes, tax deadlines, holidays).
 
-> Not a dashboard. Not analytics. A forecast — designed to be checked the way you check the weather before leaving the house.
+Live at **https://civic-forecast.pages.dev**. A project of Accelerant.
 
-## What's in this repo
+## What's on the page
 
-```
-civic-forecast/
-├── public/                   # The static site (deploy this to Cloudflare Pages)
-│   ├── index.html            # The forecast page
-│   ├── methodology.html      # Open methodology — required, non-optional
-│   ├── styles/               # CSS — atmospheric design, mobile-first
-│   ├── scripts/              # i18n, data, map (D3), app
-│   ├── data/reading.json     # Today's reading (regenerated daily by the Worker)
-│   ├── _headers              # Cloudflare edge headers (CSP, caching)
-│   └── _redirects            # Pages redirects
-├── workers/
-│   └── pipeline/             # Cloudflare Worker — daily data pipeline
-│       ├── index.ts          # Cron-triggered orchestration
-│       ├── sources/          # One file per data source
-│       ├── compute/          # Status, geography, sentence, advisory
-│       └── publish/          # Write to KV + R2 archive
-├── docs/                     # Architecture & indicator notes
-├── wrangler.toml             # Cloudflare config
-└── package.json
-```
+- **Hero:** days until Election Day (after the election, the next big civic date) and what's true in your state today.
+- **Alerts:** like severe-weather warnings, most urgent first. Voting deadlines from your state's rules, National Weather Service warnings at your exact location, FEMA disaster declarations covering your county, and unhealthy air.
+- **Your next 14 days:** a day-by-day strip of what opens, closes and changes. Tap a day for details and sources.
+- **On your ballot / How to vote here:** statewide races, a link to [Same Question](https://same-question.spokenknowledge.workers.dev/) where a race has real debate answers, and your state's rules in plain language with the official source.
+- **Life where you live:** rent (ZIP, county or state), regional grocery, gas and electricity prices vs a year ago, state unemployment, live air quality.
+- **The civic weather map:** states colored by how people can vote today, where you can still register, rent change, and unemployment. Every layer has a list view.
+- **The regular weather,** small, in the corner.
 
-## Quick start (local)
+No accounts, no ads, no analytics. The ZIP stays in the visitor's browser. The page never says who to vote for.
 
-```bash
-# Serve the static site (Python)
-cd public
-python -m http.server 8970
+## How it's built
 
-# Open http://localhost:8970
-```
+A static site in `public/` (plain HTML/CSS/JS, d3 for the map). No build step, no server.
 
-That's it for the frontend. The page renders from `public/data/reading.json`, which ships with a real-shaped sample so you see the full UI immediately.
+| File | What it does |
+|---|---|
+| `public/scripts/civic.js` | The logic: what's true in a state on a given day, alerts, the 14-day forecast. Pure functions. Add `?date=2026-11-03` to the URL to see any day. |
+| `public/scripts/live.js` | Free public lookups called from the browser: Zippopotam.us (ZIP), FCC (county), Open-Meteo (weather, air), NWS (alerts), OpenFEMA (declarations). Each times out and degrades quietly. |
+| `public/scripts/map.js` | The four-layer map. Palettes are validated for colorblind readers. |
+| `public/scripts/app.js` | Rendering and interaction. |
+| `public/data/civic.json` | Voting rules for 50 states + D.C., the civic calendar, ballot races, Same Question links. |
+| `public/data/rent.json` | Zillow Observed Rent Index by ZIP, county and state. |
+| `public/data/econ.json` | BLS unemployment by state; grocery, gas and electricity prices by region. |
 
-## Deploy to Cloudflare
+## Keeping it current
 
-See [DEPLOY.md](DEPLOY.md) for the full walkthrough. Quick version:
+- **Rent, prices, jobs:** `.github/workflows/refresh-data.yml` rebuilds them on the 22nd of each month and commits, and Pages redeploys. Run it by hand from the Actions tab any time. (Optional: add a free BLS key as the secret `BLS_KEY`.)
+- **Voting rules:** researched from each state's election office into `data/research/voting_*.json`, then merged and validated with `python tools/build_civic.py <path-to-same-question/data/races.json>`. The build refuses malformed dates or windows that end before they start. Rules can change late (courts), so re-check before Election Day.
+- **Calendar and ballot races:** `data/research/calendar_ballot.json`, sourced from the agencies that run each program.
+- **Share card:** `python tools/make_og_image.py` regenerates `public/og-image.png`.
+
+By hand:
 
 ```bash
-# 1. One-time: install wrangler, log in, create infra
-npm install
-npx wrangler login
-npm run kv:create     # creates KV namespace, copy the id into wrangler.toml
-npm run r2:create     # creates R2 archive bucket
-npm run secrets:set   # sets PROPUBLICA, COURTLISTENER, ACLED, ANTHROPIC
-
-# 2. Deploy
-npm run deploy:pages  # static site → civic-forecast.pages.dev
-npm run deploy:worker # daily pipeline → cron + /api routes
+python tools/build_rent.py Zip_zori.csv County_zori.csv
+python tools/build_econ.py
+python tools/build_civic.py ../same-question/data/races.json
 ```
 
-## Languages
+## Local preview
 
-The page ships in 8 languages plus a "kid mode" plain-English register. Toggle with the language picker in the top-left, or via Kid Mode button below the advisory.
+```bash
+python -m http.server 8975 -d public
+```
 
-| Code | Language | Notes |
-|------|----------|-------|
-| `en` | English | Default |
-| `kid` | Plain English (~age 8) | Translates jargon: *opaque* → *hidden*, *unsettled* → *wobbly* |
-| `es` | Español | |
-| `zh` | 中文 | |
-| `fr` | Français | |
-| `pt` | Português | |
-| `vi` | Tiếng Việt | |
-| `ar` | العربية | RTL — full layout flip |
+## Sources
 
-Adding a language: drop a dictionary into `public/scripts/i18n.js → DICT` and add the entry to `LANGS`. Two-line change.
-
-## What it is not
-
-- **Not partisan.** Same vocabulary applies regardless of who is in power.
-- **Not opinion.** The page reports conditions; it does not interpret.
-- **Not a dashboard for analysts.** This is for ordinary people who want to glance at the country once a day.
-- **Not a news site.** One page. One reading. Updated at dawn.
+State election offices · senate.gov · Same Question · Zillow Research · U.S. Bureau of Labor Statistics · National Weather Service · OpenFEMA · Open-Meteo · FCC Area API · Zippopotam.us · Medicare.gov · HealthCare.gov / CMS · Social Security Administration · IRS · OPM. Details in `public/methodology.html`.
 
 ## License
 
 Apache 2.0. A project of Accelerant.
-
-## Credits
-
-Every reading on this site is computed from the work of organizations whose data feeds it: U.S. Press Freedom Tracker, Free Law Project / CourtListener, MuckRock, ProPublica, GovTrack, ACLED, and the Federal Register. None of them endorse the Civic Forecast; their work simply makes it possible.

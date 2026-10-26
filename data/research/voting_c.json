@@ -1,0 +1,368 @@
+{
+  "checked": "2026-10-26",
+  "states": {
+    "nj": {
+      "name": "New Jersey",
+      "pollHours": "6 a.m. to 8 p.m.",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-24",
+        "end": "2026-11-01",
+        "text": "You can vote in person at an early voting site in your county from Oct. 24 to Nov. 1. Hours are Monday to Saturday 10 a.m. to 8 p.m. and Sunday 10 a.m. to 6 p.m. No appointment needed."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "postmarked",
+        "receivedBy": "2026-11-09",
+        "postmarkBy": "2026-11-03",
+        "text": "A mailed ballot must be postmarked by 8 p.m. on Election Day (Nov. 3) and reach your county Board of Elections by Nov. 9. You can also drop it in a county ballot drop box or hand it to your county Board of Elections office by 8 p.m. on Nov. 3."
+      },
+      "registration": {
+        "deadline": "2026-10-13",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register to vote in the November election was Oct. 13, 2026."
+      },
+      "pollingPlaceUrl": "https://www.nj.gov/state/elections/vote-polling-location.shtml",
+      "official": "https://www.nj.gov/state/elections/vote.shtml",
+      "sources": [
+        "https://www.nj.gov/state/elections/vote.shtml",
+        "https://www.nj.gov/state/elections/vote-by-mail.shtml",
+        "https://www.nj.gov/state/elections/vote-early-voting.shtml",
+        "https://www.nj.gov/state/elections/vote-polling-location.shtml"
+      ],
+      "confidence": "high",
+      "note": "The deadline to request a mail ballot by mail was Oct. 27. You can still pick one up in person from your county clerk until 3 p.m. on Nov. 2. You cannot turn in a mail ballot at your polling place or early voting site, only at the county Board of Elections office or a county drop box. A ballot with no postmark that arrives by Nov. 5 can still count, but do not count on that. If you are set up to vote by mail and want to vote early in person instead, contact your county clerk first to opt out. The state pages do not list any same-day registration, so sameDay is false from that absence. The NJ vote-by-mail page prints a few dates labeled 'November 2, 2026' that appear to be the in-person pickup cutoff for the day before Election Day."
+    },
+    "nm": {
+      "name": "New Mexico",
+      "pollHours": "7 a.m. to 7 p.m.",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-06",
+        "end": "2026-10-31",
+        "text": "Early voting started Oct. 6 at your county clerk's office and ends Saturday, Oct. 31. More early voting sites open in many counties from Oct. 17, so check your county clerk for locations and hours."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Your mailed ballot must reach your county clerk by 7 p.m. on Election Day, Nov. 3. A postmark does not count. You can also drop it at the county clerk's office, any early voting or Election Day voting site, or an official drop box in your county."
+      },
+      "registration": {
+        "deadline": "2026-10-06",
+        "sameDay": true,
+        "sameDayText": "You can register or update your registration and vote on the same day at your county clerk's office, an early voting site, or your polling place on Election Day. At a polling place, bring a photo ID (it can be expired). If the address on it does not match, bring a recent bill, bank statement, or paycheck showing your address.",
+        "text": "The regular online or mail registration deadline was Oct. 6, 2026. After that you can still register in person and vote the same day."
+      },
+      "pollingPlaceUrl": "https://www.nmvote.gov/",
+      "official": "https://www.sos.nm.gov/voting-and-elections/",
+      "sources": [
+        "https://www.sos.nm.gov/goodquestions/",
+        "https://www.sos.nm.gov/voting-and-elections/voting-faqs/same-day-voter-registration/",
+        "https://www.sos.nm.gov/voting-and-elections/voting-faqs/early-voting-in-person/",
+        "https://www.sos.nm.gov/voting-and-elections/voter-information-portal-nmvote-org/returning-your-absentee-ballot/",
+        "https://www.sos.nm.gov/voting-and-elections/absentee-and-early-voting/",
+        "https://www.sos.nm.gov/wp-content/uploads/2026/09/IT-0976-1A06E285BD1-1EA01218E0D402F2F5-2026-CA-and-GOB-Questions-final.pdf"
+      ],
+      "confidence": "high",
+      "note": "The deadline to request a mail ballot was Oct. 20, so new requests are closed. The state says that if you have not mailed your ballot by Oct. 27, you should return it in person instead. Some state web pages still show an old 2021 banner date; ignore it."
+    },
+    "ny": {
+      "name": "New York",
+      "pollHours": "6 a.m. to 9 p.m.",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-24",
+        "end": "2026-11-01",
+        "text": "Early voting runs Oct. 24 to Nov. 1. Each county board of elections sets the daily hours. Outside New York City you can use any early voting site in your county. In New York City you are assigned one site."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "postmarked",
+        "receivedBy": "2026-11-10",
+        "postmarkBy": "2026-11-03",
+        "text": "A mailed ballot must be postmarked by Nov. 3 and reach your county board of elections by Nov. 10. You can also hand it in at your county board office by 9 p.m. on Nov. 3, at an early voting site Oct. 24 to Nov. 1, or at a poll site in your county by 9 p.m. on Nov. 3."
+      },
+      "registration": {
+        "deadline": "2026-10-24",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register to vote in the November election was Oct. 24, 2026."
+      },
+      "pollingPlaceUrl": "https://voterlookup.elections.ny.gov/",
+      "official": "https://elections.ny.gov/",
+      "sources": [
+        "https://elections.ny.gov/early-voting",
+        "https://elections.ny.gov/request-ballot",
+        "https://elections.ny.gov/registration-and-voting-deadlines",
+        "https://elections.ny.gov/ways-vote",
+        "https://elections.ny.gov/time-vote",
+        "https://elections.ny.gov/know-your-rights"
+      ],
+      "confidence": "high",
+      "note": "New York calls its no-reason mail ballot an 'early mail ballot'. The deadline to ask for one by mail or online was Oct. 24. You can still request one in person at your county board of elections until Nov. 2. If you were already sent a mail ballot, you cannot use a voting machine. You would vote on an affidavit ballot instead, and it only counts if your mail ballot never arrives. A ballot put in a mailbox after the last pickup on Nov. 3 gets a Nov. 4 postmark and will not count, so use a drop-off instead. The 6 a.m. to 9 p.m. poll hours come from the state's own time-off-to-vote page. The state registration pages list no same-day registration, so sameDay is false from that absence."
+    },
+    "nc": {
+      "name": "North Carolina",
+      "pollHours": "6:30 a.m. to 7:30 p.m.",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-15",
+        "end": "2026-10-31",
+        "text": "Early voting runs Oct. 15 to Oct. 31 and ends at 3 p.m. on the last day. You can use any early voting site in your county. Sites and hours differ by county, so check your county list."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Your mailed ballot must reach your county board of elections by 7:30 p.m. on Election Day, Nov. 3. You can also hand it in at your county board of elections office, or at any early voting site in your county during early voting."
+      },
+      "registration": {
+        "deadline": "2026-10-09",
+        "sameDay": true,
+        "sameDayText": "You can register and vote at the same time at an early voting site in your county from Oct. 15 to Oct. 31. Bring proof of where you live, such as a driver's license, paycheck, utility bill, or bank statement with your name and current address. This is not offered on Election Day.",
+        "text": "The regular registration deadline was 5 p.m. on Oct. 9, 2026. After that you can only register during early voting."
+      },
+      "pollingPlaceUrl": "https://vt.ncsbe.gov/PPLkup/",
+      "official": "https://www.ncsbe.gov/",
+      "sources": [
+        "https://www.ncsbe.gov/voting/upcoming-election",
+        "https://www.ncsbe.gov/event-terms/voter-dates-deadlines",
+        "https://www.ncsbe.gov/voting/vote-mail",
+        "https://www.ncsbe.gov/voting/vote-mail/faq-voting-mail",
+        "https://www.ncsbe.gov/registering/how-register",
+        "https://www.ncsbe.gov/news/press-releases/2026/10/09/10-things-person-early-voters-know-north-carolina"
+      ],
+      "confidence": "high",
+      "note": "The deadline to request a mail ballot was 5 p.m. on Oct. 20, so new requests are closed. If you already have a mail ballot, it cannot be handed in at a polling place on Election Day. Take it to your county board office instead, or to an early voting site before Oct. 31. On Election Day you must vote at your assigned polling place. A photo ID is required to vote in person."
+    },
+    "nd": {
+      "name": "North Dakota",
+      "pollHours": "Set by each county. Polls open between 7 a.m. and 9 a.m. and close between 7 p.m. and 9 p.m., local time.",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": null,
+        "end": null,
+        "text": "Only some counties offer early voting, and each sets its own dates and hours. In August the state listed Burleigh, Cass, Grand Forks, Morton, Stark, Stutsman, and Ward. Check the state's My Voting Information page for your county's dates."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Your absentee ballot must reach your county auditor by the time polls close on Nov. 3. A postmark does not count. You can mail it (you pay for the stamp), put it in a county drop box, or hand it to the county auditor. It will not be accepted at a polling place."
+      },
+      "registration": {
+        "deadline": null,
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "North Dakota has no voter registration. If you are 18 or older, a U.S. citizen, and have lived in your precinct for 30 days, you can just show up with a valid ID."
+      },
+      "pollingPlaceUrl": "https://vote.nd.gov/myvotinginfo",
+      "official": "https://www.sos.nd.gov/elections",
+      "sources": [
+        "https://www.sos.nd.gov/elections",
+        "https://www.sos.nd.gov/elections/voter/voting-north-dakota/how-do-i-vote",
+        "https://www.sos.nd.gov/elections/voter/voting-north-dakota/how-do-i-vote/absentee-voting",
+        "https://www.sos.nd.gov/elections/voter/voting-north-dakota/where-do-i-vote",
+        "https://www.sos.nd.gov/sites/default/files/documents/news/2026-general-election-media-info-aug26.pdf"
+      ],
+      "confidence": "high",
+      "note": "Poll hours depend on the county, and western North Dakota is on Mountain time. A valid ID is required for every way of voting. A state search listing gives Nov. 2 as the absentee application deadline, but mail takes days, so that is too late for mail in practice. If you have an absentee ballot you have not returned, you can still vote at your polling place. If you already returned it, you cannot vote again. The early voting county list comes from an August state document, so confirm yours on the state portal. The 2026 mail-ballot rule 'no excuse needed' comes from that same state document."
+    },
+    "oh": {
+      "name": "Ohio",
+      "pollHours": "6:30 a.m. to 7:30 p.m.",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-06",
+        "end": "2026-11-01",
+        "text": "Early voting at your county board of elections runs Oct. 6 to Nov. 1. Hours change by day, such as 8 a.m. to 4 p.m. on Saturday, Oct. 31 and 1 p.m. to 5 p.m. on Sunday, Nov. 1."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Your mailed ballot must reach your county board of elections by 7:30 p.m. on Election Day, Nov. 3. A postmark does not count. You or a close relative can also hand it in at the board office or its drop box by 7:30 p.m. on Nov. 3."
+      },
+      "registration": {
+        "deadline": "2026-10-05",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register to vote in the November election was Oct. 5, 2026."
+      },
+      "pollingPlaceUrl": "https://voterlookup.ohiosos.gov/voterlookup.aspx",
+      "official": "https://www.ohiosos.gov/elections",
+      "sources": [
+        "https://www.ohiosos.gov/elections",
+        "https://www.ohiosos.gov/elections/voting-schedule-text-only",
+        "https://www.ohiosos.gov/elections/request-an-absentee-ballot"
+      ],
+      "confidence": "high",
+      "note": "The last day for your county board to receive a mail ballot request is Oct. 27 at 8:30 p.m. Mail is too slow for that now, so request in person at your board. The state's schedule ends early voting on Sunday, Nov. 1. A valid photo ID is needed to vote in person. The state pages list no same-day registration, so sameDay is false from that absence."
+    },
+    "ok": {
+      "name": "Oklahoma",
+      "pollHours": "7 a.m. to 7 p.m.",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-28",
+        "end": "2026-10-31",
+        "text": "You can vote early at your county election board's early voting location on Wed. Oct. 28, Thu. Oct. 29, and Fri. Oct. 30 from 8 a.m. to 6 p.m., and Sat. Oct. 31 from 8 a.m. to 2 p.m. No reason is needed. You must vote in the county where you are registered."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "A mailed absentee ballot must reach your county election board by 7 p.m. on Election Day, Nov. 3. A postmark does not count. If you hand-deliver it, it must be there by the end of business on Monday, Nov. 2."
+      },
+      "registration": {
+        "deadline": "2026-10-09",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register to vote in the November election was Oct. 9, 2026."
+      },
+      "pollingPlaceUrl": "https://oklahoma.gov/elections/ovp.html",
+      "official": "https://oklahoma.gov/elections.html",
+      "sources": [
+        "https://oklahoma.gov/elections.html",
+        "https://oklahoma.gov/elections/elections-results/next-election.html",
+        "https://oklahoma.gov/elections/elections-results/next-election/voter-information-calendar.html",
+        "https://oklahoma.gov/elections/voters/early-voting.html",
+        "https://oklahoma.gov/elections/voters/absentee-voting.html",
+        "https://oklahoma.gov/elections/voters/absentee-voting/standard-absentee-voters.html"
+      ],
+      "confidence": "high",
+      "note": "The deadline to request a mail ballot was 5 p.m. on Oct. 19, so new requests are closed. A standard mail ballot must be notarized. Oklahoma calls early voting 'in-person absentee' voting. Early voting is short, only four days. You need proof of identity to vote. The state pages list no same-day registration, so sameDay is false from that absence."
+    },
+    "or": {
+      "name": "Oregon",
+      "pollHours": "Oregon has no polling places. Drop boxes are open until 8 p.m. on Election Day, and county elections offices are open 7 a.m. to 8 p.m.",
+      "allMail": true,
+      "early": {
+        "available": false,
+        "kind": "none",
+        "start": null,
+        "end": null,
+        "text": "Oregon votes by mail. Ballots were mailed starting Oct. 14, so you can fill yours out at home and return it any time before Election Day."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "postmarked",
+        "receivedBy": "2026-11-10",
+        "postmarkBy": "2026-11-03",
+        "text": "Put your ballot in an official drop box by 8 p.m. on Nov. 3. If you mail it instead, it must be postmarked by Nov. 3 and arrive within 7 days after Election Day, by Nov. 10. The state's last recommended day to mail is Oct. 27."
+      },
+      "registration": {
+        "deadline": "2026-10-13",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register to vote in the November election was Oct. 13, 2026."
+      },
+      "pollingPlaceUrl": "https://sos.oregon.gov/elections/Pages/myvote.aspx",
+      "official": "https://sos.oregon.gov/elections/Pages/current-election.aspx",
+      "sources": [
+        "https://sos.oregon.gov/elections/Pages/current-election.aspx",
+        "https://sos.oregon.gov/elections/Pages/registration.aspx",
+        "https://sos.oregon.gov/elections/Pages/faq.aspx",
+        "https://sos.oregon.gov/voting/Pages/default.aspx"
+      ],
+      "confidence": "high",
+      "note": "The state's last recommended day to mail a ballot is Oct. 27 (tomorrow), so from now on a drop box is the safe choice. A mailed ballot only counts if the post office puts a postmark on it showing it was mailed by Nov. 3. Mail dropped after the last pickup on Nov. 3 may get a Nov. 4 postmark. Ballots are not mailed to voters marked inactive; check your status in MyVote. Use the state's Ballot Drop Box Locator for drop box hours. The state pages list no same-day registration, so sameDay is false from that absence."
+    },
+    "ri": {
+      "name": "Rhode Island",
+      "pollHours": "7 a.m. to 8 p.m. (New Shoreham on Block Island opens at 9 a.m.)",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-14",
+        "end": "2026-11-02",
+        "text": "You can vote in person at your city or town hall (or another site your local board picks) from Oct. 14 to Nov. 2, during regular business hours. Bring a photo ID."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Your mail ballot must reach the state Board of Elections by 8 p.m. on Election Day, Nov. 3. A postmark does not count. You can mail it, put it in an official drop box, or hand it to the Board of Elections in Cranston."
+      },
+      "registration": {
+        "deadline": "2026-10-04",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register to vote in the November election was Oct. 4, 2026. Same-day registration in Rhode Island is only for presidential elections, so it is not offered this year."
+      },
+      "pollingPlaceUrl": "https://vote.sos.ri.gov/",
+      "official": "https://vote.sos.ri.gov/",
+      "sources": [
+        "https://vote.sos.ri.gov/",
+        "https://vote.sos.ri.gov/Voter/VotebyMail",
+        "https://vote.sos.ri.gov/Voter/PersonVotingPage",
+        "https://vote.sos.ri.gov/Voter/RegisterToVote",
+        "https://vote.sos.ri.gov/Elections/PollingPlaceHours",
+        "https://vote.sos.ri.gov/forms/elections/ElectionPage/PPPEng.html"
+      ],
+      "confidence": "high",
+      "note": "The normal mail ballot request deadline was 4 p.m. on Oct. 13. From Oct. 14 to Nov. 2 you can still get an emergency mail ballot by going to your local board of canvassers. The state's date chart is a spreadsheet on the state site that still mixes in some 2024 rows. The 2026 rows used here match the state's registration, early voting, and mail ballot pages. The state advises allowing 7 mailing days. You must show a photo ID to vote in person, or you vote an emergency mail ballot."
+    },
+    "sc": {
+      "name": "South Carolina",
+      "pollHours": "7 a.m. to 7 p.m.",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-19",
+        "end": "2026-10-31",
+        "text": "Early voting runs Monday, Oct. 19 to Saturday, Oct. 31, from 8:30 a.m. to 6 p.m. Centers are closed on Sunday, Oct. 25. No reason is needed. Early voting centers can be different from your Election Day polling place."
+      },
+      "mail": {
+        "noExcuse": false,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "You need a qualifying reason to vote by mail, such as being 65 or older, having a disability, or being away. Your ballot must reach your county voter registration office by 7 p.m. on Nov. 3. A postmark does not count. You can also hand it in at your county office or an early voting center, with a photo ID."
+      },
+      "registration": {
+        "deadline": "2026-10-04",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register to vote in the November election was Sunday, Oct. 4, 2026."
+      },
+      "pollingPlaceUrl": "https://vrems.scvotes.sc.gov/Voter/Login?PageMode=PollingPlace",
+      "official": "https://scvotes.gov/",
+      "sources": [
+        "https://scvotes.gov/",
+        "https://scvotes.gov/make-your-plan-to-vote-early-for-the-november-3-statewide-general-election/",
+        "https://scvotes.gov/how-to-vote-absentee-in-south-carolinas-november-3-general-election/",
+        "https://scvotes.gov/get-registered-for-statewide-general-election-before-october-4-deadline/",
+        "https://scvotes.gov/voters/early-voting/",
+        "https://scvotes.gov/voters/absentee-voting/",
+        "https://scvotes.gov/voters/how-to-vote/"
+      ],
+      "confidence": "high",
+      "note": "The deadline to return a mail ballot application was 5 p.m. on Oct. 23, so new mail ballot requests are closed. If you do not have a mail ballot, vote early (through Oct. 31) or on Election Day. A mail ballot must be signed with a witness who is 18 or older; a notary is not needed. A photo ID is needed to vote in person and to hand in a ballot. Anyone in line at 7 p.m. may still vote. The state pages list no same-day registration, so sameDay is false from that absence."
+    }
+  }
+}

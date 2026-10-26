@@ -1,0 +1,357 @@
+{
+  "checked": "2026-10-26",
+  "states": {
+    "al": {
+      "name": "Alabama",
+      "pollHours": "7 a.m. to 7 p.m. (Central time; polling places in Eastern-time areas may use 7 a.m. to 7 p.m. Eastern)",
+      "allMail": false,
+      "early": {
+        "available": false,
+        "kind": "none",
+        "start": null,
+        "end": null,
+        "text": "Alabama has no early voting period. You vote at your polling place on Election Day, or you vote by absentee ballot if you have a qualifying reason."
+      },
+      "mail": {
+        "noExcuse": false,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "You need a reason to vote absentee, and you must list it on your application. A mailed ballot must arrive at your county absentee office by noon on Election Day, Nov. 3. A postmark does not count. You can also hand-deliver it to the office by the close of business (no later than 5 p.m.) on Monday, Nov. 2."
+      },
+      "registration": {
+        "deadline": "2026-10-19",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register to vote in this election was Monday, Oct. 19, 2026. It has passed. Alabama does not have same-day registration."
+      },
+      "pollingPlaceUrl": "https://myinfo.alabamavotes.gov/",
+      "official": "https://www.sos.alabama.gov/alabama-votes/voter",
+      "sources": [
+        "https://www.sos.alabama.gov/sites/default/files/election-2026/2026-VoterGuide.pdf",
+        "https://www.sos.alabama.gov/newsroom/secretary-state-wes-allen-reminds-alabamians-november-3-general-election-absentee",
+        "https://www.sos.alabama.gov/alabama-votes/voter/absentee-voting",
+        "https://www.sos.alabama.gov/alabama-votes/voter/register-to-vote"
+      ],
+      "confidence": "high",
+      "note": "Absentee application deadlines: Tue, Oct. 27 if mailed (must be received by then), Thu, Oct. 29 if handed in in person. Voters need a valid photo ID, including for absentee voting. Qualifying reasons include being out of the county on Election Day, illness or disability, working a shift of 10 hours or more that overlaps poll hours, and others listed on the SOS absentee page."
+    },
+    "ar": {
+      "name": "Arkansas",
+      "pollHours": "7:30 a.m. to 7:30 p.m.",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-19",
+        "end": "2026-11-02",
+        "text": "Early voting starts Monday, Oct. 19. Hours are 8 a.m. to 6 p.m. Monday to Friday and 10 a.m. to 4 p.m. on Saturday. It ends at 5 p.m. on Monday, Nov. 2. There is no Sunday voting. Locations are set by each county."
+      },
+      "mail": {
+        "noExcuse": false,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "You need a reason to vote absentee. A mailed ballot must reach your county clerk by 7:30 p.m. on Election Day, Nov. 3. A postmark does not count. If you or a designated helper deliver it in person, it is due by the close of business on Friday, Oct. 30."
+      },
+      "registration": {
+        "deadline": "2026-10-05",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register was Monday, Oct. 5, 2026 (30 days before the election, moved off the Sunday). It has passed. The state calendar lists no same-day registration."
+      },
+      "pollingPlaceUrl": "https://www.voterview.ar-nova.org/voterview",
+      "official": "https://www.sos.arkansas.gov/elections",
+      "sources": [
+        "https://www.sos.arkansas.gov/uploads/elections/2026_Election_Calendar_Rev._6-2025_.pdf",
+        "https://www.sos.arkansas.gov/elections/voter-information/absentee-voting",
+        "https://www.sos.arkansas.gov/elections/for-voters",
+        "https://www.sos.arkansas.gov/elections/voter-information/voter-registration-faqs"
+      ],
+      "confidence": "medium",
+      "note": "The state election calendar PDF I used is the June 2025 revision. The Secretary of State pages do not say outright that same-day registration does not exist, but the calendar gives a firm 30-day deadline and lists no exception. Absentee reasons: out of the area on Election Day, illness or disability, active-duty military (or spouse or dependent), or living outside the U.S. Mail applications were due 7 days before the election (Tue, Oct. 27). A voter's authorized agent can turn in an application until 1:30 p.m. on Election Day. Voters should check the county clerk for early voting sites."
+    },
+    "ca": {
+      "name": "California",
+      "pollHours": "7 a.m. to 8 p.m.",
+      "allMail": true,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-05",
+        "end": "2026-11-02",
+        "text": "Early voting at county elections offices opens Oct. 5. Many counties open more vote centers on Oct. 24, and every county has at least one early location for about the last 10 days. Look up places and hours on the state early voting site."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "postmarked",
+        "receivedBy": "2026-11-10",
+        "postmarkBy": "2026-11-03",
+        "text": "Every active registered voter is mailed a ballot. If you mail it back, it must be postmarked on or before Election Day, Nov. 3, and arrive by Nov. 10. Mail it at least a week early if you can. You can also use a drop box or drop it at a polling place or county elections office by 8 p.m. on Election Day."
+      },
+      "registration": {
+        "deadline": "2026-10-19",
+        "sameDay": true,
+        "sameDayText": "From Oct. 20 through Election Day you can 'conditionally' register and vote. Go to your county elections office, a vote center, or a polling place. You vote a provisional ballot, and it is counted once your registration is checked.",
+        "text": "The regular deadline to register was Monday, Oct. 19, 2026. If you missed it, you can still register and vote using conditional (same-day) registration."
+      },
+      "pollingPlaceUrl": "https://www.sos.ca.gov/elections/polling-place",
+      "official": "https://www.sos.ca.gov/elections/upcoming-elections/general-election-november-3-2026",
+      "sources": [
+        "https://www.sos.ca.gov/elections/upcoming-elections/general-election-november-3-2026",
+        "https://www.sos.ca.gov/elections/upcoming-elections/general-election-november-3-2026/key-dates-deadlines",
+        "https://elections.cdn.sos.ca.gov/pdfs/quick-facts-2026-general.pdf",
+        "https://www.sos.ca.gov/elections/voter-registration/vote-mail",
+        "https://www.sos.ca.gov/elections/voting-info/ways-vote",
+        "https://caearlyvoting.sos.ca.gov/"
+      ],
+      "confidence": "high",
+      "note": "A mail ballot dropped in a mailbox on Election Day may get no postmark that day. The state says to take it to a post office counter and ask for a hand postmark, or use a drop box. State pages give slightly different early-voting starts: county election offices Oct. 5, Voter's Choice Act vote centers Oct. 24, and statewide in-person locations by Oct. 31. Check your county for exact sites and hours. Inactive voters are not automatically mailed a ballot."
+    },
+    "co": {
+      "name": "Colorado",
+      "pollHours": "7 a.m. to 7 p.m.",
+      "allMail": true,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-19",
+        "end": "2026-11-02",
+        "text": "Voter service centers are open for in-person voting starting Oct. 19 (some counties open earlier) and stay open through Election Day. Hours vary by county, so check your county on GoVoteColorado."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Every active voter is mailed a ballot. Your ballot must be in a drop box, at a voter center, or received by your county clerk by 7 p.m. on Election Day, Nov. 3. A postmark does not count. The state says mail it back by Oct. 26. After that, use a drop box or voter center."
+      },
+      "registration": {
+        "deadline": "2026-10-26",
+        "sameDay": true,
+        "sameDayText": "After Oct. 26, you can still register and vote in person at a voter service center, up to 7 p.m. on Election Day.",
+        "text": "Register by Monday, Oct. 26, 2026 to get a ballot in the mail. After that you can still register and vote in person at a voter center through Election Day."
+      },
+      "pollingPlaceUrl": "https://www.coloradosos.gov/voter/pages/pub/home.xhtml",
+      "official": "https://www.govotecolorado.gov/",
+      "sources": [
+        "https://www.sos.state.co.us/pubs/newsRoom/pressReleases/2026/PR20261002Ballots.html",
+        "https://coloradosos.gov/pubs/newsRoom/pressReleases/2026/PR20261019InPersonVoting.html",
+        "https://coloradosos.gov/pubs/newsRoom/pressReleases/2026/PR20261023VoteEarly.html",
+        "https://www.sos.state.co.us/pubs/newsRoom/pressReleases/2026/PR20260923GeneralElection.html"
+      ],
+      "confidence": "high",
+      "note": "Today (Oct. 26) is the state's last suggested day to mail a ballot back, so most voters should now use a drop box or voter center. Voters who get a notice about a signature or ID problem can fix it until Nov. 12. Early voting end date is the day before Election Day; voter centers are also open on Election Day."
+    },
+    "ct": {
+      "name": "Connecticut",
+      "pollHours": "6 a.m. to 8 p.m.",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-19",
+        "end": "2026-11-01",
+        "text": "Early voting runs 14 days, Oct. 19 to Nov. 1, including both weekends. Most days are 10 a.m. to 6 p.m. On Tue, Oct. 27 and Thu, Oct. 29, hours are 8 a.m. to 8 p.m. You vote at your own town's early voting site."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Any registered voter can vote absentee with no reason needed. You must request a ballot by Nov. 2. A mailed or drop-box ballot must reach your town clerk by 8 p.m. on Election Day, Nov. 3. If you bring it yourself, hand it to your town clerk by the close of business on Mon, Nov. 2."
+      },
+      "registration": {
+        "deadline": "2026-10-16",
+        "sameDay": true,
+        "sameDayText": "After Oct. 16 you can register and vote in person during early voting (Oct. 19 to Nov. 1) or on Election Day at your town's designated same-day registration spot.",
+        "text": "The regular deadline to register was Friday, Oct. 16, 2026. After that, use same-day registration in person."
+      },
+      "pollingPlaceUrl": "https://myvote.ct.gov",
+      "official": "https://portal.ct.gov/sots/election-services",
+      "sources": [
+        "https://portal.ct.gov/-/media/sots/electionservices/voter_guide/2026/2026_voter_guide_final.pdf",
+        "https://portal.ct.gov/governor/news/press-releases/2026/10-2026/governor-lamont-and-secretary-thomas-remind-voters-that-a-14-day-period-of-in-person-early-voting",
+        "https://portal.ct.gov/sots/election-services/voter-information/voter-fact-sheet"
+      ],
+      "confidence": "high",
+      "note": "Same-day registration on Election Day happens at one designated location in each town, which may not be your usual polling place. A voter's designee (for an ill or disabled voter) can deliver a ballot to the town clerk until 8 p.m. on Election Day. I could not open the myvote.ct.gov page itself; its address comes from the official voter guide."
+    },
+    "de": {
+      "name": "Delaware",
+      "pollHours": "7 a.m. to 8 p.m.",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-22",
+        "end": "2026-11-01",
+        "text": "Early voting is Oct. 22 to Nov. 1. There is no early voting on Sunday, Oct. 25. Hours are 7 a.m. to 7 p.m. through Tue, Oct. 27, then 11 a.m. to 7 p.m. from Wed, Oct. 28 to Sun, Nov. 1. You can use any early voting site in your county."
+      },
+      "mail": {
+        "noExcuse": false,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "You need a reason allowed by state law to vote absentee. Your ballot must reach your county Department of Elections office by 8 p.m. on Election Day, Nov. 3. A postmark does not count. Early voting sites and polling places do not accept absentee ballots."
+      },
+      "registration": {
+        "deadline": "2026-10-10",
+        "sameDay": false,
+        "sameDayText": null,
+        "text": "The deadline to register was Saturday, Oct. 10, 2026, at 11:59 p.m. It has passed. Delaware does not offer same-day registration."
+      },
+      "pollingPlaceUrl": "https://ivote.de.gov",
+      "official": "https://elections.delaware.gov/",
+      "sources": [
+        "https://elections.delaware.gov/elections/general/general.html",
+        "https://news.delaware.gov/2026/10/19/voting-alert-10-day-early-voting-period-for-the-2026-general-election-starts-thurs-october-22nd/",
+        "https://news.delaware.gov/2026/10/07/voting-alert-2026-general-election-voter-registration-deadline-is-saturday-october-10-2026-at-1159-p-m/",
+        "https://elections.delaware.gov/voter/waystovote.html"
+      ],
+      "confidence": "high",
+      "note": "The state's page says the last day to request an absentee ballot to be mailed is Fri, Oct. 30, and the Department must issue absentee ballots by noon on Mon, Nov. 2. With the 8 p.m. receipt deadline, voters should use the county office drop-off instead of mail now. Delaware pages do not explicitly say 'no same-day registration,' but the registration page treats Oct. 10 as the cutoff (in-person office signup was allowed that day only). Early voting is open on Sunday, Nov. 1 but closed on Sunday, Oct. 25."
+    },
+    "dc": {
+      "name": "District of Columbia",
+      "pollHours": "7 a.m. to 8 p.m.",
+      "allMail": true,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-26",
+        "end": "2026-11-01",
+        "text": "Early voting runs Oct. 26 to Nov. 1 at 25 vote centers, every day from 8:30 a.m. to 7 p.m. You can use any of them, no matter where you live in D.C."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "postmarked",
+        "receivedBy": "2026-11-13",
+        "postmarkBy": "2026-11-03",
+        "text": "Every active registered voter is mailed a ballot. A mailed ballot must be postmarked by Nov. 3 and arrive by Fri, Nov. 13. You can also use one of the 55 mail ballot drop boxes (open until 8 p.m. on Election Day) or any vote center."
+      },
+      "registration": {
+        "deadline": "2026-10-13",
+        "sameDay": true,
+        "sameDayText": "Same-day registration is available at every early voting and Election Day vote center, with proof of residence.",
+        "text": "The deadline to register by mail or online was Tuesday, Oct. 13, 2026. After that you can still register and vote at a vote center with proof of residence."
+      },
+      "pollingPlaceUrl": "https://www.dcboe.org/voters/find-out-where-to-vote/vote-center-locator-tool",
+      "official": "https://www.dcboe.org/",
+      "sources": [
+        "https://www.dcboe.org/getContentAsset/5a9ceeda-114c-4171-810d-1317c9e06b0e/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/_-DCBOE-Voter-Guide-Web-Smaller-File.pdf",
+        "https://www.dcboe.org/getContentAsset/ba47334d-b5ae-45c1-9b5b-9e26b1b50600/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/GE2026_Early-Voting-Opens_10202026_FINAL.pdf?language=en",
+        "https://dcboe.org/getmedia/4d04f4a1-fb2a-4f8a-809f-d3f708f232df/2026-General-Election-Calendar-Version-08072025.pdf",
+        "https://dcboe.org/"
+      ],
+      "confidence": "high",
+      "note": "On Election Day there are 75 vote centers and you can be in line at 8 p.m. and still vote. The USPS does not always postmark mail the day it picks it up, so DCBOE says to mail early or ask for a hand-stamped postmark. D.C. uses ranked-choice voting for some races, which can take longer at the polls."
+    },
+    "hi": {
+      "name": "Hawaii",
+      "pollHours": "7 a.m. to 7 p.m. at voter service centers on Election Day (Hawaii votes mainly by mail and has no neighborhood polling places)",
+      "allMail": true,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": "2026-10-20",
+        "end": "2026-11-02",
+        "text": "Voter service centers are open Oct. 20 to Nov. 2, Monday to Saturday, usually 8 a.m. to 4:30 p.m. They are also open on Election Day, 7 a.m. to 7 p.m. Some small-island sites have shorter schedules."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Every registered voter is mailed a ballot. It must reach your County Elections Division by 7 p.m. on Election Day, Nov. 3. A postmark does not count. Use a drop box (open from Oct. 14 until 7 p.m. on Election Day) or a voter service center."
+      },
+      "registration": {
+        "deadline": "2026-10-26",
+        "sameDay": true,
+        "sameDayText": "You can register and vote in person at any voter service center from Oct. 20 through Election Day.",
+        "text": "Paper applications must reach your County Elections Division by Monday, Oct. 26, 2026 (4:30 p.m.). You can register online any time. After the deadline you can register and vote at a voter service center."
+      },
+      "pollingPlaceUrl": "https://elections.hawaii.gov/voter-service-centers-and-places-of-deposit/",
+      "official": "https://elections.hawaii.gov/",
+      "sources": [
+        "https://elections.hawaii.gov/voting/voting-in-hawaii/",
+        "https://elections.hawaii.gov/voter-service-centers-and-places-of-deposit/",
+        "https://elections.hawaii.gov/register-to-vote/registration/",
+        "https://elections.hawaii.gov/news-release/voter-service-centers-open-october-20/"
+      ],
+      "confidence": "high",
+      "note": "Do not mail your ballot now. It must arrive by 7 p.m. on Nov. 3, so use a drop box or voter service center. Same-day registration is in person at voter service centers, and online registration stays open. Hours and sites differ by county and island."
+    },
+    "id": {
+      "name": "Idaho",
+      "pollHours": "8 a.m. to 8 p.m. local time (Idaho has two time zones)",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": null,
+        "end": "2026-10-30",
+        "text": "Early voting (also called in-person absentee) ends Friday, Oct. 30 in every county. Start dates differ: Oct. 13, 14, or 19 depending on your county. Hours and places are set by your county clerk."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "received",
+        "receivedBy": "2026-11-03",
+        "postmarkBy": null,
+        "text": "Any registered voter can ask for an absentee ballot, but the request deadline was 5 p.m. on Oct. 23, so mail ballots are no longer available for most voters. Your voted ballot must reach your county clerk by 8 p.m. on Election Day, Nov. 3. A postmark does not count. Use a drop box or the clerk's office."
+      },
+      "registration": {
+        "deadline": "2026-10-23",
+        "sameDay": true,
+        "sameDayText": "You can register in person during early voting (through Oct. 30) or at your polling place on Election Day. Be ready to show a photo ID.",
+        "text": "Online and mail registration closed at 5 p.m. on Oct. 23, 2026. After that you can still register in person at early voting or on Election Day."
+      },
+      "pollingPlaceUrl": "https://votertools.voteidaho.gov/TEDElectionLink/VoterServices/voter/where-do-I-vote",
+      "official": "https://voteidaho.gov/",
+      "sources": [
+        "https://voteidaho.gov/idaho-general-election/",
+        "https://voteidaho.gov/casting-your-ballot/",
+        "https://voteidaho.gov/event/preregistration-deadline-2/",
+        "https://voteidaho.gov/event/absentee-ballot-return-deadline-4/"
+      ],
+      "confidence": "medium",
+      "note": "There is no single statewide early voting start date (Oct. 13, 14, or 19 by county), so start is null. The state says to be ready to show a photo ID; I did not find an official page listing the exact proof-of-residence items for Election Day registration. Online registration and absentee requests both closed at 5 p.m. on Oct. 23. Check your county clerk for early voting hours and places."
+    },
+    "il": {
+      "name": "Illinois",
+      "pollHours": "6 a.m. to 7 p.m.",
+      "allMail": false,
+      "early": {
+        "available": true,
+        "kind": "in-person early voting",
+        "start": null,
+        "end": "2026-11-02",
+        "text": "Anyone can vote early in person with no reason needed, through Monday, Nov. 2. Places, hours and start dates are set by your local election authority (many start in September or October). Use the state's early voting location search."
+      },
+      "mail": {
+        "noExcuse": true,
+        "returnRule": "postmarked",
+        "receivedBy": "2026-11-17",
+        "postmarkBy": "2026-11-03",
+        "text": "Any registered voter can vote by mail with no reason. A mailed ballot must be postmarked by Election Day, Nov. 3, and arrive within 14 days (by Nov. 17). A request sent by mail must reach your election office by Oct. 29. You can also use a drop box if your county has one, before the polls close on Election Day."
+      },
+      "registration": {
+        "deadline": "2026-10-06",
+        "sameDay": true,
+        "sameDayText": "Illinois has 'grace period' registration. From Oct. 7 through Election Day you can register and vote in person at your election authority's office or other designated sites, including some polling places on Election Day. Bring two forms of ID, one with your current address. You must have lived in your precinct for 30 days.",
+        "text": "The regular deadline to register was Tuesday, Oct. 6, 2026 (28 days before the election). After that, use grace period registration in person."
+      },
+      "pollingPlaceUrl": "https://ova.elections.il.gov/PollingPlaceLookup.aspx",
+      "official": "https://elections.il.gov/",
+      "sources": [
+        "https://www.elections.il.gov/electionoperations/votingbymail.aspx",
+        "https://elections.il.gov/electiondayhome.aspx",
+        "https://elections.il.gov/ElectionOperations/RegisterToVoteOnElectionDay.aspx",
+        "https://elections.il.gov/votingandregistrationsystems/beforeelectionday.aspx",
+        "https://elections.il.gov/NewDocDisplay.aspx"
+      ],
+      "confidence": "high",
+      "note": "The state web server blocks automated tools, so I read the State Board of Elections pages and fact sheets through the built-in browser. The Oct. 6 regular registration deadline is calculated from the fact sheet's '28 days before the election' rule, not a printed date. The Nov. 17 receipt date is calculated from the fact sheet's 'within 14 days of Election Day' rule. Postmarks are not guaranteed to be stamped the same day, so the state suggests asking for a hand postmark at a post office counter. Early voting start dates vary by local election authority, so start is null."
+    }
+  }
+}
