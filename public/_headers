@@ -7,7 +7,10 @@
   Permissions-Policy: interest-cohort=(), camera=(), microphone=(), geolocation=(self)
   Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cdn.jsdelivr.net https://api.zippopotam.us https://geo.fcc.gov https://api.open-meteo.com https://air-quality-api.open-meteo.com https://api.weather.gov https://www.fema.gov
 
-# The embed widget is meant to be framed by other sites.
+# The embed widget is meant to be framed by other sites. Pages serves
+# embed.html at the pretty URL /embed, so both paths need the rule.
+/embed
+  ! X-Frame-Options
 /embed.html
   ! X-Frame-Options
 
