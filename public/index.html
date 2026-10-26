@@ -26,8 +26,9 @@
 <meta name="twitter:image" content="https://civic-forecast.pages.dev/og-image.png">
 
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="apple-touch-icon" href="apple-touch-icon.svg">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Civic Forecast">
@@ -36,7 +37,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles/app.css?v=2.0.0">
+<link rel="stylesheet" href="styles/app.css?v=2.1.0">
 </head>
 <body>
 
@@ -74,10 +75,12 @@
 
   <section class="alerts" id="alerts" aria-label="Alerts"></section>
 
+  <section class="card plan" id="plan" aria-labelledby="plan-title" hidden></section>
+
   <section class="card strip-card" aria-labelledby="strip-title">
     <div class="card-head">
       <h2 id="strip-title">Your next 14 days</h2>
-      <span class="meta" id="strip-meta"></span>
+      <button type="button" class="link-btn" data-act="calendar" id="cal-btn"></button>
     </div>
     <ol class="strip" id="strip"></ol>
     <div class="day-detail" id="day-detail" aria-live="polite"></div>
@@ -95,6 +98,8 @@
     </div>
     <div class="tiles" id="tiles"></div>
   </section>
+
+  <section class="card install" id="install" hidden></section>
 
   <section class="card map-card" id="map-card" aria-labelledby="map-heading">
     <div class="card-head">
@@ -141,14 +146,45 @@
   <p class="attr">A project of Accelerant</p>
 </footer>
 
+<div class="sheet" id="places-sheet" hidden>
+  <div class="sheet-backdrop" data-close></div>
+  <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="places-title">
+    <div class="sheet-grip" aria-hidden="true"></div>
+    <div class="sheet-head"><h2 id="places-title">Your places</h2><button type="button" class="icon-btn" data-close aria-label="Close"></button></div>
+    <p class="sheet-sub">Home, family, school. Swipe the forecast to move between them.</p>
+    <ul class="place-list" id="place-list"></ul>
+    <form class="add-place" id="add-place" autocomplete="on">
+      <label class="sr" for="add-zip">Add a ZIP code</label>
+      <input id="add-zip" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="Add a ZIP" autocomplete="postal-code">
+      <button type="submit" class="go">Add</button>
+    </form>
+    <p class="find-msg" id="add-msg" role="status"></p>
+  </div>
+</div>
+
+<div class="sheet" id="sticker-sheet" hidden>
+  <div class="sheet-backdrop" data-close></div>
+  <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sticker-title">
+    <div class="sheet-grip" aria-hidden="true"></div>
+    <div class="sheet-head"><h2 id="sticker-title">You voted. Thank you.</h2><button type="button" class="icon-btn" data-close aria-label="Close"></button></div>
+    <img class="sticker-img" id="sticker-img" alt="An I voted sticker">
+    <div class="sticker-actions">
+      <button type="button" class="pill-btn primary" data-act="sticker-share"></button>
+    </div>
+    <p class="sheet-sub">Sharing it nudges the people who see it. Nothing about who you voted for is on it.</p>
+  </div>
+</div>
+
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js" defer></script>
-<script src="scripts/icons.js?v=2.0.0" defer></script>
-<script src="scripts/civic.js?v=2.0.0" defer></script>
-<script src="scripts/live.js?v=2.0.0" defer></script>
-<script src="scripts/map.js?v=2.0.0" defer></script>
-<script src="scripts/app.js?v=2.0.0" defer></script>
+<script src="scripts/icons.js?v=2.1.0" defer></script>
+<script src="scripts/civic.js?v=2.1.0" defer></script>
+<script src="scripts/live.js?v=2.1.0" defer></script>
+<script src="scripts/map.js?v=2.1.0" defer></script>
+<script src="scripts/plan.js?v=2.1.0" defer></script>
+<script src="scripts/sky.js?v=2.1.0" defer></script>
+<script src="scripts/app.js?v=2.1.0" defer></script>
 </body>
 </html>

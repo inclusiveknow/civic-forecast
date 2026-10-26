@@ -144,9 +144,10 @@ const Live = (() => {
   }
 
   // everything that depends on being somewhere specific
-  function conditions(place) {
+  function conditions(place, fresh = false) {
     if (!place || place.lat == null) return Promise.resolve({});
     const key = `${place.lat},${place.lon}`;
+    if (fresh) memo.delete(key);
     return once(key, async () => {
       const [wx, air, alerts, decl] = await Promise.all([
         weather(place.lat, place.lon), aqi(place.lat, place.lon), nws(place.lat, place.lon),

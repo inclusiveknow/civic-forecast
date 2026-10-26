@@ -19,9 +19,26 @@ const App = (() => {
     try { const r = await fetch(p, { cache: 'no-cache' }); return r.ok ? await r.json() : null; } catch { return null; }
   }
 
-  // ---------- place ----------
+  // ---------- places (the current one + your saved list, like cities in a weather app) ----------
+  const PLACES_KEY = 'cf-places-v2';
+  const pkey = (p) => p.zip || `${p.state}:${p.lat ?? ''},${p.lon ?? ''}`;
   const saved = () => { try { return JSON.parse(localStorage.getItem(PLACE_KEY)); } catch { return null; } };
   const save = (p) => { try { p ? localStorage.setItem(PLACE_KEY, JSON.stringify(p)) : localStorage.removeItem(PLACE_KEY); } catch {} };
+  function places() {
+    try { const l = JSON.parse(localStorage.getItem(PLACES_KEY)); if (Array.isArray(l)) return l; } catch {}
+    const c = saved(); // first visit after the update: carry over the one saved place
+    return c && !c.stateOnly ? [c] : [];
+  }
+  const savePlaces = (l) => { try { localStorage.setItem(PLACES_KEY, JSON.stringify(l.slice(0, 8))); } catch {} };
+  function remember(p) {
+    const l = places(); // read BEFORE the current place changes: first run migrates from it
+    if (!l.some((x) => pkey(x) === pkey(p))) l.push(p);
+    savePlaces(l);
+  }
+  function forget(k) {
+    savePlaces(places().filter((x) => pkey(x) !== k));
+    if (S.place && pkey(S.place) === k) { const next = places()[0] || null; save(next); setPlace(next, { persist: false }); }
+  }
 
   async function placeFromURL() {
     const q = new URLSearchParams(location.search);
@@ -44,7 +61,9 @@ const App = (() => {
     S.place = p;
     S.live = {};
     S.selDay = 0;
-    if (persist && p && !p.stateOnly) save(p);
+    S.liveAt = Date.now();
+    if (persist && p && !p.stateOnly) { remember(p); save(p); }
+    else if (p && !p.stateOnly) save(p);
     // keep the address bar shareable without carrying a ZIP around
     const url = new URL(location.href);
     url.searchParams.delete('zip');
@@ -69,8 +88,9 @@ const App = (() => {
     document.body.dataset.sky = cond?.code || (S.today === Civic.ELECTION ? 'election' : S.today > Civic.ELECTION ? 'counting' : 'inperson');
     document.title = S.place ? `${placeLabel(S.place)} · The Civic Forecast` : "The Civic Forecast · what's coming where you live";
 
-    renderChip(); renderWeather(); renderHero(v, h); renderFind(); renderAlerts();
-    renderStrip(v); renderVote(v); renderTiles(); renderAhead();
+    renderChip(); renderWeather(); renderHero(v, h); renderFind(); renderAlerts(); renderPlan(v);
+    renderStrip(v); renderVote(v); renderTiles(); renderInstall(); renderAhead();
+    if (window.Sky) Sky.set(document.body.dataset.sky);
   }
 
   function renderChip() {
@@ -102,14 +122,90 @@ const App = (() => {
       line = Civic.nationalSentence(S.civic?.voting, d);
     }
     const word = !/^\d+$/.test(h.big);
+    const list = places();
+    const at = S.place ? list.findIndex((x) => pkey(x) === pkey(S.place)) : -1;
+    const voted = S.place && Plan.get(S.place.state)?.voted;
     $('#hero').innerHTML = `
       <div class="hero-place">${ICONS.pin}<span>${esc(placeLabel(S.place, true))}</span></div>
       <div class="hero-big"><span class="hero-num${word ? ' word' : ''}">${esc(h.big)}</span><span class="hero-unit">${esc(h.unit)}</span></div>
       <p class="hero-cond">${esc(h.cond)}</p>
       ${line ? `<p class="hero-line">${esc(line)}</p>` : ''}
+      ${voted ? `<p class="hero-voted">${ICONS.check}You voted. Thank you.</p>` : ''}
+      ${list.length > 1 ? `<div class="dots" role="tablist" aria-label="Your places">${list.map((p, i) =>
+        `<button type="button" role="tab" aria-selected="${i === at}" aria-label="${esc(placeLabel(p))}" data-goto="${i}"></button>`).join('')}</div>` : ''}
       <div class="hero-actions">
-        ${S.place ? `<button class="pill-btn" type="button" data-act="change">${ICONS.pin}Change place</button>` : ''}
-        <button class="pill-btn" type="button" data-act="share">${ICONS.share}Share this forecast</button>
+        ${S.place ? `<button class="pill-btn" type="button" data-act="places">${ICONS.pin}${list.length > 1 ? 'Your places' : 'Add a place'}</button>` : ''}
+        <button class="pill-btn" type="button" data-act="share">${ICONS.share}Share</button>
+      </div>`;
+  }
+
+  // ---------- your voting plan ----------
+  function renderPlan(v) {
+    const box = $('#plan');
+    const show = v && S.today <= Civic.ELECTION;
+    box.hidden = !show;
+    if (!show) return;
+    const st = S.place.state, mine = Plan.get(st) || {};
+    const opts = Plan.options(v, S.today);
+    if (mine.voted) {
+      box.innerHTML = `
+        <div class="card-head"><h2 id="plan-title">Your voting plan</h2></div>
+        <p class="plan-done">${ICONS.check}<span>You voted. Thank you.</span></p>
+        <div class="plan-actions">
+          <button type="button" class="pill-btn primary" data-act="sticker">${ICONS.star}See your sticker</button>
+          <button type="button" class="link-btn" data-act="unvote">Undo</button>
+        </div>`;
+      return;
+    }
+    const chosen = opts.find((o) => o.k === mine.method && o.ok);
+    if (!chosen) {
+      box.innerHTML = `
+        <div class="card-head"><h2 id="plan-title">Your voting plan</h2><span class="meta">takes 10 seconds</span></div>
+        <p class="plan-q">How are you voting?</p>
+        <div class="plan-opts">${opts.map((o) => `
+          <button type="button" class="plan-opt" data-method="${o.k}" ${o.ok ? '' : 'disabled'}>
+            ${ICONS[{ early: 'ballot', mail: 'mail', election: 'star' }[o.k]]}
+            <b>${esc(o.label)}</b>${o.ok ? '' : `<small>${esc(o.why)}</small>`}
+          </button>`).join('')}</div>
+        <p class="plan-note">People who plan when and how they'll vote are more likely to follow through. Your plan stays in this browser.</p>`;
+      return;
+    }
+    const steps = Plan.steps(chosen.k, v, S.today);
+    box.innerHTML = `
+      <div class="card-head"><h2 id="plan-title">Your voting plan</h2><button type="button" class="link-btn" data-act="replan">Change</button></div>
+      <p class="plan-q">${esc(chosen.label)}</p>
+      <ol class="plan-steps">${steps.map((s) => `
+        <li><span class="when">${esc(s.when)}</span><b>${esc(s.what)}</b>${s.how ? `<p>${esc(s.how)}</p>` : ''}
+        ${s.link ? `<a href="${esc(s.link)}" target="_blank" rel="noopener">${esc(s.linkText)} ${ICONS.out}</a>` : ''}</li>`).join('')}</ol>
+      <div class="plan-actions">
+        <button type="button" class="pill-btn" data-act="plan-cal">${ICONS.calendar}Remind me</button>
+        <button type="button" class="pill-btn primary" data-act="voted">${ICONS.check}I voted</button>
+      </div>`;
+  }
+
+  // ---------- get it on your home screen ----------
+  let installEvent = null;
+  const standalone = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+  const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  function renderInstall() {
+    const box = $('#install');
+    let dismissed = false;
+    try { dismissed = localStorage.getItem('cf-install-dismissed') === '1'; } catch {}
+    const can = !standalone() && !dismissed && S.place && (installEvent || isIOS());
+    box.hidden = !can;
+    if (!can) return;
+    box.innerHTML = `
+      <div class="install-in">
+        <img src="icons/icon-192.png" alt="" width="56" height="56">
+        <div>
+          <h2 class="install-t">Keep it on your home screen</h2>
+          <p>Open it like the weather app. It knows your places and works offline.</p>
+          ${installEvent ? '' : `<p class="ios-how">On iPhone: tap ${ICONS.share} <b>Share</b>, then <b>Add to Home Screen</b>.</p>`}
+        </div>
+      </div>
+      <div class="plan-actions">
+        ${installEvent ? `<button type="button" class="pill-btn primary" data-act="install">Add it</button>` : ''}
+        <button type="button" class="link-btn" data-act="install-later">Not now</button>
       </div>`;
   }
 
@@ -146,7 +242,7 @@ const App = (() => {
   function renderStrip(v) {
     const days = Civic.forecastDays(v, S.civic?.voting, S.civic?.calendar, S.today, 14);
     $('#strip-title').textContent = v ? `Your next 14 days in ${Live.STATE_NAMES[S.place.state]}` : 'The next 14 days';
-    $('#strip-meta').textContent = 'tap a day';
+    $('#cal-btn').innerHTML = `${ICONS.calendar}<span>Add to calendar</span>`;
     $('#strip').innerHTML = days.map((x) => {
       const top = x.ev.find((e) => e.strong) || x.ev[0];
       const icon = x.election ? 'star' : top ? CAT_ICON[top.cat] || 'calendar' : COND_ICON[x.cond?.code] || 'calendar';
@@ -318,23 +414,153 @@ const App = (() => {
     try { await navigator.clipboard.writeText(`${text} ${url}`); toast('Link copied'); } catch { prompt('Copy this link', url); }
   }
 
+  // ---------- sheets ----------
+  let lastFocus = null;
+  function openSheet(id) {
+    lastFocus = document.activeElement;
+    const s = $(id);
+    s.hidden = false;
+    document.body.classList.add('sheet-open');
+    void s.offsetWidth; // commit the closed position, then animate open (never wait on rAF: it stalls in background tabs)
+    s.classList.add('in');
+    s.querySelector('input, button:not([data-close])')?.focus({ preventScroll: true });
+  }
+  function closeSheets() {
+    document.querySelectorAll('.sheet:not([hidden])').forEach((s) => { s.classList.remove('in'); s.hidden = true; });
+    document.body.classList.remove('sheet-open');
+    lastFocus?.focus?.({ preventScroll: true });
+  }
+
+  function renderPlaces() {
+    const list = places();
+    $('#place-list').innerHTML = list.map((p) => {
+      const v = S.civic.voting[p.state];
+      const now = v ? Civic.stateNow(v, S.today) : null;
+      const cur = S.place && pkey(p) === pkey(S.place);
+      return `<li class="${cur ? 'cur' : ''}">
+        <button type="button" class="place-row" data-go="${esc(pkey(p))}">
+          <b>${esc(placeLabel(p))}</b><span>${esc(now?.label || '')}</span>
+        </button>
+        <button type="button" class="icon-btn" data-forget="${esc(pkey(p))}" aria-label="Remove ${esc(placeLabel(p))}">${ICONS.close}</button>
+      </li>`;
+    }).join('') || '<li class="empty">No saved places yet. Add your ZIP, and the places you care about.</li>';
+  }
+
+  // swipe the forecast left/right to move between saved places
+  function wireSwipe() {
+    const hero = $('#hero');
+    let x0 = null, y0 = null;
+    hero.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
+    hero.addEventListener('touchend', (e) => {
+      if (x0 == null) return;
+      const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+      x0 = null;
+      if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+      step(dx < 0 ? 1 : -1);
+    }, { passive: true });
+  }
+  function step(dir) {
+    const list = places();
+    if (list.length < 2) return;
+    const at = Math.max(0, list.findIndex((x) => S.place && pkey(x) === pkey(S.place)));
+    const next = list[(at + dir + list.length) % list.length];
+    $('#hero').classList.remove('slide-l', 'slide-r');
+    void $('#hero').offsetWidth;
+    $('#hero').classList.add(dir > 0 ? 'slide-l' : 'slide-r');
+    setPlace(next, { persist: false });
+  }
+
+  let stickerImg = null;
+  async function showSticker() {
+    const st = S.place.state;
+    stickerImg = await Plan.sticker(Live.STATE_NAMES[st]);
+    $('#sticker-img').src = stickerImg.url;
+    document.querySelector('[data-act="sticker-share"]').innerHTML = `${ICONS.share}${navigator.canShare ? 'Share your sticker' : 'Save your sticker'}`;
+    openSheet('#sticker-sheet');
+  }
+
   function wire() {
-    document.addEventListener('click', (e) => {
+    document.addEventListener('click', async (e) => {
+      if (e.target.closest('[data-close]')) { closeSheets(); return; }
       const act = e.target.closest('[data-act]')?.dataset.act;
+      const v = S.place ? S.civic.voting[S.place.state] : null;
       if (act === 'share') share();
-      if (act === 'change') { $('#find').scrollIntoView({ behavior: 'smooth', block: 'center' }); setTimeout(() => $('#zip').focus(), 400); }
+      if (act === 'places' || act === 'change') { renderPlaces(); openSheet('#places-sheet'); }
       if (act === 'alerts') { S.alertsOpen = !S.alertsOpen; renderAlerts(); }
+      if (act === 'calendar') {
+        const n = Plan.addAllToCalendar({ st: S.place?.state, v, cal: S.civic.calendar, today: S.today });
+        toast(`${n} dates ready for your calendar`);
+      }
+      if (act === 'plan-cal' && v) {
+        const n = Plan.addPlanToCalendar({ st: S.place.state, v, today: S.today, method: Plan.get(S.place.state)?.method });
+        toast(n ? `${n} reminders ready for your calendar` : 'Nothing left to remind you about');
+      }
+      if (act === 'replan' && v) { Plan.set(S.place.state, { method: null }); renderPlan(v); }
+      if (act === 'voted' && v) { Plan.set(S.place.state, { voted: true, votedOn: S.today }); renderPlan(v); renderHero(v, Civic.hero(v, S.civic.voting, S.civic.calendar, S.today)); showSticker(); }
+      if (act === 'unvote' && v) { Plan.set(S.place.state, { voted: false }); render(); }
+      if (act === 'sticker' && v) showSticker();
+      if (act === 'sticker-share' && stickerImg) {
+        const r = await Plan.shareSticker(S.place.state, stickerImg);
+        if (r === 'saved') toast('Saved. The link is copied too.');
+      }
+      if (act === 'install' && installEvent) {
+        installEvent.prompt();
+        try { await installEvent.userChoice; } catch {}
+        installEvent = null; renderInstall();
+      }
+      if (act === 'install-later') { try { localStorage.setItem('cf-install-dismissed', '1'); } catch {} renderInstall(); }
+
+      const m = e.target.closest('[data-method]');
+      if (m && v) { Plan.set(S.place.state, { method: m.dataset.method }); renderPlan(v); }
+      const go = e.target.closest('[data-go]');
+      if (go) { const p = places().find((x) => pkey(x) === go.dataset.go); closeSheets(); if (p) setPlace(p, { persist: false }); }
+      const fg = e.target.closest('[data-forget]');
+      if (fg) { forget(fg.dataset.forget); renderPlaces(); render(); }
+      const dot = e.target.closest('[data-goto]');
+      if (dot) { const p = places()[+dot.dataset.goto]; if (p) setPlace(p, { persist: false }); }
       const day = e.target.closest('[data-day]');
       if (day) {
         S.selDay = +day.dataset.day;
         document.querySelectorAll('.day').forEach((li, i) => li.classList.toggle('sel', i === S.selDay));
-        const v = S.place ? S.civic.voting[S.place.state] : null;
         renderDay(Civic.forecastDays(v, S.civic.voting, S.civic.calendar, S.today, 14)[S.selDay], v);
       }
       const pick = e.target.closest('[data-pick]');
       if (pick) { e.preventDefault(); setPlace({ state: pick.dataset.pick, stateOnly: true }, { persist: false }); }
     });
-    $('#place-chip').addEventListener('click', () => { $('#find').scrollIntoView({ behavior: 'smooth', block: 'center' }); setTimeout(() => $('#zip').focus(), 400); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSheets(); });
+    document.querySelectorAll('.sheet-head [data-close]').forEach((b) => { b.innerHTML = ICONS.close; });
+    $('#place-chip').addEventListener('click', () => { renderPlaces(); openSheet('#places-sheet'); });
+    wireSwipe();
+
+    $('#add-place').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const z = $('#add-zip').value.trim(), msg = $('#add-msg');
+      if (!/^\d{5}$/.test(z)) { msg.textContent = 'Five digits, please.'; return; }
+      msg.textContent = 'Looking that up…';
+      const p = await Live.placeFromZip(z, S.rent);
+      if (!p) { msg.textContent = "We couldn't find that ZIP."; return; }
+      msg.textContent = '';
+      $('#add-zip').value = '';
+      closeSheets();
+      setPlace(p);
+    });
+
+    // Android / desktop Chrome hand us an install prompt; iPhone gets instructions instead
+    addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); installEvent = e; renderInstall(); });
+    addEventListener('appinstalled', () => { installEvent = null; renderInstall(); toast('It’s on your home screen'); });
+
+    // opened again later (or the next morning): bring the day and the live conditions up to date
+    document.addEventListener('visibilitychange', async () => {
+      if (document.hidden || !S.civic) return;
+      const t = Civic.today();
+      const stale = Date.now() - (S.liveAt || 0) > 20 * 60 * 1000;
+      if (t !== S.today) { S.today = t; S.selDay = 0; render(); CivicMap.update({ today: t }); }
+      if (stale && S.place?.lat != null) {
+        S.liveAt = Date.now();
+        const live = await Live.conditions(S.place, true);
+        S.live = live; renderWeather(); renderAlerts(); renderTiles();
+      }
+    });
 
     $('#find-form').addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -373,6 +599,7 @@ const App = (() => {
       return;
     }
     wire();
+    Sky.init($('.sky'));
     const fromURL = await placeFromURL();
     const p = fromURL || saved();
     await CivicMap.init($('#map-card'), { voting: S.civic.voting, rent: S.rent, econ: S.econ, today: S.today, home: p?.state || null });

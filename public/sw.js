@@ -6,9 +6,10 @@
  * Bumping VERSION clears every older cache, including v1's.
  */
 
-const VERSION = 'cf-v2.0.0';
+const VERSION = 'cf-v2.1.0';
 const STATIC_CACHE = `${VERSION}-static`;
 const DYNAMIC_CACHE = `${VERSION}-dynamic`;
+const V = '?v=2.1.0';
 
 const PRECACHE = [
   './',
@@ -16,18 +17,25 @@ const PRECACHE = [
   'methodology.html',
   '404.html',
   'manifest.webmanifest',
-  'styles/app.css?v=2.0.0',
-  'scripts/icons.js?v=2.0.0',
-  'scripts/civic.js?v=2.0.0',
-  'scripts/live.js?v=2.0.0',
-  'scripts/map.js?v=2.0.0',
-  'scripts/app.js?v=2.0.0',
+  `styles/app.css${V}`,
+  `scripts/icons.js${V}`,
+  `scripts/civic.js${V}`,
+  `scripts/live.js${V}`,
+  `scripts/map.js${V}`,
+  `scripts/plan.js${V}`,
+  `scripts/sky.js${V}`,
+  `scripts/app.js${V}`,
   'data/civic.json',
   'data/rent.json',
   'data/econ.json',
   'favicon.svg',
-  'apple-touch-icon.svg',
+  'icons/icon-192.png',
+  'icons/apple-touch-icon.png',
 ];
+
+// third-party files the app needs to draw (map libraries, the map itself, fonts):
+// keep a copy so the installed app opens fast and works offline
+const CDN = ['cdn.jsdelivr.net', 'fonts.googleapis.com', 'fonts.gstatic.com'];
 
 self.addEventListener('install', (event) => {
   // cache: 'reload' skips the browser's HTTP cache, so a new version never
@@ -56,7 +64,10 @@ self.addEventListener('fetch', (event) => {
   const req = event.request;
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
-  if (url.origin !== self.location.origin) return;
+  if (url.origin !== self.location.origin) {
+    if (CDN.includes(url.hostname)) event.respondWith(staleWhileRevalidate(req));
+    return; // live lookups (weather, NWS, FEMA...) always go to the network
+  }
   if (url.pathname.includes('/data/')) { event.respondWith(networkFirst(req)); return; }
   event.respondWith(staleWhileRevalidate(req));
 });

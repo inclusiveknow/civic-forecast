@@ -14,6 +14,14 @@ Live at **https://civic-forecast.pages.dev**. A project of Accelerant.
 - **The civic weather map:** states colored by how people can vote today, where you can still register, rent change, and unemployment. Every layer has a list view.
 - **The regular weather,** small, in the corner.
 
+Built to live on a phone like the weather app:
+
+- **Installs to the home screen** (PNG icons + manifest; Android gets an install button, iPhone gets the two-tap instructions) and works offline.
+- **Your places:** save home, family, school. Swipe the forecast to move between them, or open the list to see each place's condition at a glance.
+- **Your voting plan:** early, by mail, or on Election Day, with your exact steps and dates. Then **I voted** draws a shareable sticker (state + year, never a choice).
+- **Calendar reminders instead of push notifications:** a standard `.ics` file with your dates and a reminder the evening before, so your phone does the reminding and nothing is stored on a server.
+- **A living sky** that matches the day's civic condition, and the forecast brings itself up to date when you open it the next morning.
+
 No accounts, no ads, no analytics. The ZIP stays in the visitor's browser. The page never says who to vote for.
 
 ## How it's built
@@ -25,7 +33,9 @@ A static site in `public/` (plain HTML/CSS/JS, d3 for the map). No build step, n
 | `public/scripts/civic.js` | The logic: what's true in a state on a given day, alerts, the 14-day forecast. Pure functions. Add `?date=2026-11-03` to the URL to see any day. |
 | `public/scripts/live.js` | Free public lookups called from the browser: Zippopotam.us (ZIP), FCC (county), Open-Meteo (weather, air), NWS (alerts), OpenFEMA (declarations). Each times out and degrades quietly. |
 | `public/scripts/map.js` | The four-layer map. Palettes are validated for colorblind readers. |
-| `public/scripts/app.js` | Rendering and interaction. |
+| `public/scripts/plan.js` | Voting plan, calendar (.ics) export, and the "I voted" sticker. |
+| `public/scripts/sky.js` | The living sky (pauses in the background, still for reduced motion). |
+| `public/scripts/app.js` | Rendering, saved places, sheets, install, and interaction. |
 | `public/data/civic.json` | Voting rules for 50 states + D.C., the civic calendar, ballot races, Same Question links. |
 | `public/data/rent.json` | Zillow Observed Rent Index by ZIP, county and state. |
 | `public/data/econ.json` | BLS unemployment by state; grocery, gas and electricity prices by region. |
@@ -35,7 +45,7 @@ A static site in `public/` (plain HTML/CSS/JS, d3 for the map). No build step, n
 - **Rent, prices, jobs:** `.github/workflows/refresh-data.yml` rebuilds them on the 22nd of each month and commits, and Pages redeploys. Run it by hand from the Actions tab any time. (Optional: add a free BLS key as the secret `BLS_KEY`.)
 - **Voting rules:** researched from each state's election office into `data/research/voting_*.json`, then merged and validated with `python tools/build_civic.py <path-to-same-question/data/races.json>`. The build refuses malformed dates or windows that end before they start. Rules can change late (courts), so re-check before Election Day.
 - **Calendar and ballot races:** `data/research/calendar_ballot.json`, sourced from the agencies that run each program.
-- **Share card:** `python tools/make_og_image.py` regenerates `public/og-image.png`.
+- **Share card and app icons:** `python tools/make_og_image.py` and `python tools/make_icons.py` regenerate `public/og-image.png` and `public/icons/`.
 
 By hand:
 
