@@ -15,6 +15,9 @@ Warnings (things a person should eyeball) print but don't stop the build.
 import glob, json, os, re, sys
 from datetime import date
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import recurring, feeds  # noqa: E402
+
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 OUT = os.path.join(ROOT, "public", "data", "civic.json")
 ELECTION = "2026-11-03"
@@ -124,6 +127,47 @@ def main(sq_races):
     else:
         warnings.append("no calendar/ballot research yet")
 
+    # the life calendar that extends itself; researched items win on the same date/category/subject
+    first = lambda t: re.sub(r"[^a-z]", "", (t or "").lower().split(" ")[0])
+    have = {(c["date"], c["category"], first(c["title"])) for c in cal}
+    gen = [g for g in recurring.generate(date.today()) if (g["date"], g["category"], first(g["title"])) not in have]
+    cal += gen
+    # the dates most households feel; the hero leads with these between elections
+    for c in cal:
+        c["major"] = bool(re.search(r"tax-day|medicare-oe-last|aca-dec15|aca-oe-ends", c["id"]))
+
+    # the next elections in each state (after this one)
+    nxt, pres, local = {}, {}, {}
+    for f in sorted(glob.glob(os.path.join(ROOT, "data", "research", "next_elections_*.json"))):
+        with open(f, encoding="utf-8") as fh:
+            d = json.load(fh)
+        for code, s in d["states"].items():
+            code = code.lower()
+            items = []
+            for i, x in enumerate(s.get("next") or []):
+                w = f"{code}.next[{i}]"
+                if x.get("scope") not in ("statewide", "local", "special", "runoff"):
+                    errors.append(f"{w}: scope {x.get('scope')!r}")
+                iso(x.get("date"), f"{w}.date")
+                iso(x.get("registrationDeadline"), f"{w}.registrationDeadline")
+                if x.get("date") and x["date"] <= ELECTION:
+                    warnings.append(f"{w}: {x['date']} is not after the 2026 general")
+                if x.get("registrationDeadline") and x.get("date") and x["registrationDeadline"] > x["date"]:
+                    errors.append(f"{w}: registration deadline after the election")
+                url(x.get("source"), f"{w}.source")
+                items.append(x)
+            nxt[code] = sorted(items, key=lambda x: x.get("date") or "9999")
+            p = s.get("presidentialPrimary2028")
+            if p and p.get("date"):
+                iso(p["date"], f"{code}.presidentialPrimary2028")
+                pres[code] = p
+            if s.get("localNote"):
+                local[code] = s["localNote"]
+    if nxt:
+        missing_next = sorted(ALL - set(nxt))
+        if missing_next:
+            warnings.append(f"no next-election data yet for: {', '.join(missing_next)}")
+
     races = []
     if sq_races and os.path.exists(sq_races):
         with open(sq_races, encoding="utf-8") as fh:
@@ -131,6 +175,10 @@ def main(sq_races):
                 if r.get("status") == "live":
                     races.append({"state": r["id"][:2], "office": r["office"], "candidates": r["candidates"],
                                   "note": r.get("note"), "url": SQ_BASE + r["id"]})
+    elif os.path.exists(OUT):
+        # no Same Question file here (e.g. the monthly GitHub job): keep the races already published
+        with open(OUT, encoding="utf-8") as fh:
+            races = json.load(fh).get("races", [])
 
     for w in warnings:
         print("WARN ", w)
@@ -140,12 +188,18 @@ def main(sq_races):
         raise SystemExit(f"\n{len(errors)} error(s); civic.json NOT written.")
 
     out = {"election": ELECTION, "checked": max(c for c in checked if c) if checked else None,
-           "voting": dict(sorted(voting.items())), "calendar": sorted(cal, key=lambda c: c["date"]),
-           "ballot": ballot, "races": races}
+           "built": date.today().isoformat(),
+           "voting": dict(sorted(voting.items())), "calendar": sorted(cal, key=lambda c: (c["date"], c["id"])),
+           "ballot": ballot, "races": races, "next": nxt, "presPrimary": pres, "localNote": local}
     with open(OUT, "w", encoding="utf-8") as fh:
         json.dump(out, fh, ensure_ascii=False, separators=(",", ":"))
-    print(f"\nwrote {os.path.abspath(OUT)}: {len(voting)} states, {len(cal)} calendar items, "
+    print(f"\nwrote {os.path.abspath(OUT)}: {len(voting)} states, {len(cal)} calendar items "
+          f"({len(gen)} by rule), {sum(len(v) for v in nxt.values())} upcoming elections, "
           f"{len(races)} Same Question races, {os.path.getsize(OUT)//1024} KB")
+
+    names = {k: v.get("name", k.upper()) for k, v in voting.items()}
+    counts, us = feeds.build(os.path.join(ROOT, "public", "cal"), out, names)
+    print(f"wrote calendar feeds: {len(counts)} states (median {sorted(counts.values())[len(counts)//2]} dates each) + us.ics ({us} dates)")
 
 
 if __name__ == "__main__":

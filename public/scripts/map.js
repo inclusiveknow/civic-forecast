@@ -21,6 +21,13 @@ const CivicMap = (() => {
 
   // ---------- layers ----------
   function voteLegend(d) {
+    if (d > Civic.CERTIFY) {
+      return [
+        { key: 'now', label: 'Votes in the next 3 months' },
+        { key: 'mail', label: 'In 3 to 12 months' },
+        { key: 'wait', label: 'Nothing set for the next year' },
+      ];
+    }
     if (d === Civic.ELECTION) return [{ key: 'now', label: 'Polls are open' }];
     if (d > Civic.ELECTION) return [{ key: 'mail', label: 'Mailed ballots still arriving' }, { key: 'wait', label: 'Counting the vote' }];
     return [
@@ -32,8 +39,8 @@ const CivicMap = (() => {
 
   const LAYERS = {
     vote: {
-      tab: 'Voting now',
-      title: (d) => (d > Civic.ELECTION ? 'Where the count stands' : d === Civic.ELECTION ? 'Election Day' : 'How people can vote today'),
+      tab: 'Voting',
+      title: (d) => (d > Civic.CERTIFY ? 'When each state votes next' : d > Civic.ELECTION ? 'Where the count stands' : d === Civic.ELECTION ? 'Election Day' : 'How people can vote today'),
       legend: (d) => voteLegend(d),
       key: (code, o) => Civic.mapCategory(o.voting[code], o.today),
       tip: (code, o) => {
@@ -44,7 +51,7 @@ const CivicMap = (() => {
         if (s.code === 'inperson' && e.end) return `${s.label} through ${Civic.fmtDay(e.end)}`;
         return s.label;
       },
-      source: 'State election offices, checked Oct 26, 2026',
+      source: (o) => (o.today > Civic.CERTIFY ? 'State election offices, researched Oct 26, 2026. Local elections are on top of these.' : 'State election offices, checked Oct 26, 2026'),
     },
     reg: {
       tab: 'Can still register',

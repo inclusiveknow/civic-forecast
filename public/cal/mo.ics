@@ -1,0 +1,569 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Accelerant//The Civic Forecast//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Civic Forecast · Missouri
+X-WR-CALDESC:Voting dates for Missouri\, the next elections\, and the date
+ s that touch most households. Updates on its own.
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:mo-aca-oe-opens-2027@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+SUMMARY:HealthCare.gov sign-up opens for 2027
+DESCRIPTION:You can apply for\, renew\, or change a 2027 health plan on He
+ althCare.gov from November 1 through January 15. Sign up by December 15 i
+ f you want coverage to start January 1.\nMore: https://www.healthcare.gov
+ /quick-guide/dates-and-deadlines/\nFrom The Civic Forecast: https://civic
+ -forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.healthcare.gov/quick-guide/dates-and-deadlines/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:HealthCare.gov sign-up opens for 2027
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-dst-ends-2026@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+SUMMARY:Clocks fall back one hour
+DESCRIPTION:Daylight saving time ends at 2 a.m. local time on Sunday\, so 
+ clocks go back to 1 a.m. and you get an extra hour. Hawaii and most of Ar
+ izona do not change their clocks.\nMore: https://www.nist.gov/pml/time-an
+ d-frequency-division/popular-links/daylight-saving-time-dst\nFrom The Civ
+ ic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
+ light-saving-time-dst
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-2026-early-last@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:Last day of early voting (Missouri)
+DESCRIPTION:Any voter can vote a no-excuse absentee ballot in person at th
+ e place your local election authority sets\, starting Tuesday\, Oct. 20. 
+ You can vote until 5 p.m. on Monday\, Nov. 2. Show an acceptable photo ID
+ .\nMore: https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx
+ \nFrom The Civic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last day of early voting (Missouri)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-2026-election@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:Election Day (Missouri)
+DESCRIPTION:Polls are open 6 a.m. to 7 p.m. local time\nMore: https://vote
+ routreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx\nFrom The Civic Fore
+ cast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Election Day (Missouri)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-medicare-oe-last-day@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20261207
+DTEND;VALUE=DATE:20261208
+SUMMARY:Last day to change Medicare plans
+DESCRIPTION:This is the last day of Medicare Open Enrollment. If you want 
+ a different Medicare Advantage or drug plan for 2027\, your request has t
+ o be in by today.\nMore: https://www.medicare.gov/basics/get-started-with
+ -medicare/get-more-coverage/joining-a-plan\nFrom The Civic Forecast: http
+ s://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.medicare.gov/basics/get-started-with-medicare/get-more-cov
+ erage/joining-a-plan
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last day to change Medicare plans
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-aca-dec15-deadline@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20261215
+DTEND;VALUE=DATE:20261216
+SUMMARY:Deadline for Jan. 1 health coverage
+DESCRIPTION:On HealthCare.gov\, pick or change a plan by this date for cov
+ erage to start January 1\, 2027\, and pay your first premium. Sign up lat
+ er and coverage starts February 1.\nMore: https://www.healthcare.gov/quic
+ k-guide/dates-and-deadlines/\nFrom The Civic Forecast: https://civic-fore
+ cast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.healthcare.gov/quick-guide/dates-and-deadlines/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Deadline for Jan. 1 health coverage
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-ssi-cola-2026-12-31@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:SSI raise shows up in payments
+DESCRIPTION:About 7.3 million people on SSI get their January payment on D
+ ecember 31\, with the 3.6 percent cost-of-living raise included. Nothing 
+ to sign up for\; it is automatic.\nMore: https://www.ssa.gov/news/en/pres
+ s/releases/2026-10-14.html\nFrom The Civic Forecast: https://civic-foreca
+ st.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.ssa.gov/news/en/press/releases/2026-10-14.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:SSI raise shows up in payments
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-medicaid-work-rule-2027@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:Medicaid work rules begin by Jan. 1
+DESCRIPTION:States must start requiring many adults ages 19 to 64 in the M
+ edicaid expansion group to show 80 hours a month of work\, volunteering\,
+  school or a work program. Many people are exempt\, such as parents of yo
+ ung children and people who are medically frail. If you are on Medicaid\,
+  watch for a letter from your state and ask the state agency whether this
+  applies to you.\nMore: https://www.cms.gov/newsroom/fact-sheets/medicaid
+ -community-engagement-requirement-certain-individuals-interim-final-rule-
+ comment-period-cms\nFrom The Civic Forecast: https://civic-forecast.pages
+ .dev
+TRANSP:TRANSPARENT
+URL:https://www.cms.gov/newsroom/fact-sheets/medicaid-community-engagement
+ -requirement-certain-individuals-interim-final-rule-comment-period-cms
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Medicaid work rules begin by Jan. 1
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-medicare-ma-oe-2027@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:Medicare Advantage switch window
+DESCRIPTION:If you're in a Medicare Advantage plan\, you can switch to a d
+ ifferent one or go back to Original Medicare\, once\, before March 31.\nM
+ ore: https://www.medicare.gov/basics/get-started-with-medicare/get-more-c
+ overage/your-coverage-options/compare-original-medicare-medicare-advantag
+ e\nFrom The Civic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.medicare.gov/basics/get-started-with-medicare/get-more-cov
+ erage/your-coverage-options/compare-original-medicare-medicare-advantage
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Medicare Advantage switch window
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-social-security-cola-2027@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:Social Security raises 3.6 percent
+DESCRIPTION:Nearly 72 million people on Social Security will see a 3.6 per
+ cent bigger payment starting in January 2027. You do not have to apply\; 
+ look for a letter from Social Security in December.\nMore: https://www.ss
+ a.gov/news/en/press/releases/2026-10-14.html\nFrom The Civic Forecast: ht
+ tps://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.ssa.gov/news/en/press/releases/2026-10-14.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Social Security raises 3.6 percent
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-aca-oe-ends-2027@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+SUMMARY:Last day to sign up on HealthCare.gov
+DESCRIPTION:Open Enrollment on HealthCare.gov ends today. After this you c
+ an only get a marketplace plan if you qualify for a Special Enrollment Pe
+ riod\, such as losing other coverage.\nMore: https://www.healthcare.gov/q
+ uick-guide/dates-and-deadlines/\nFrom The Civic Forecast: https://civic-f
+ orecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.healthcare.gov/quick-guide/dates-and-deadlines/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last day to sign up on HealthCare.gov
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-q4-estimated-tax-2027@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+SUMMARY:Last 2026 estimated tax payment due
+DESCRIPTION:If you make quarterly estimated tax payments (for example\, se
+ lf-employed or gig income)\, the fourth 2026 payment is due this day. If 
+ you file your full 2026 return and pay by January 31\, 2027\, you can ski
+ p it.\nMore: https://www.irs.gov/publications/p505\nFrom The Civic Foreca
+ st: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.irs.gov/publications/p505
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last 2026 estimated tax payment due
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-w2-2027@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:Your W-2 should be on its way
+DESCRIPTION:Employers have to send W-2 forms by this date. If yours hasn't
+  shown up by mid-February\, ask your employer.\nMore: https://www.irs.gov
+ /publications/p509\nFrom The Civic Forecast: https://civic-forecast.pages
+ .dev
+TRANSP:TRANSPARENT
+URL:https://www.irs.gov/publications/p509
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Your W-2 should be on its way
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-dst-start-2027@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20270314
+DTEND;VALUE=DATE:20270315
+SUMMARY:Clocks spring forward one hour
+DESCRIPTION:Daylight saving time starts at 2 a.m.\, so clocks jump to 3 a.
+ m. and you lose an hour of sleep. Hawaii and most of Arizona don't change
+ .\nMore: https://www.nist.gov/pml/time-and-frequency-division/popular-lin
+ ks/daylight-saving-time-dst\nFrom The Civic Forecast: https://civic-forec
+ ast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
+ light-saving-time-dst
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-medicare-ma-oe-2027-last@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20270331
+DTEND;VALUE=DATE:20270401
+SUMMARY:Last day: Medicare Advantage switch window
+DESCRIPTION:If you're in a Medicare Advantage plan\, you can switch to a d
+ ifferent one or go back to Original Medicare\, once\, before March 31.\nM
+ ore: https://www.medicare.gov/basics/get-started-with-medicare/get-more-c
+ overage/your-coverage-options/compare-original-medicare-medicare-advantag
+ e\nFrom The Civic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.medicare.gov/basics/get-started-with-medicare/get-more-cov
+ erage/your-coverage-options/compare-original-medicare-medicare-advantage
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last day: Medicare Advantage switch window
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-est-2027-4@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20270415
+DTEND;VALUE=DATE:20270416
+SUMMARY:Estimated tax payment due (first for 2027)
+DESCRIPTION:If you pay quarterly estimated taxes (for example\, self-emplo
+ yed or gig income)\, a payment is due today.\nMore: https://www.irs.gov/b
+ usinesses/small-businesses-self-employed/estimated-taxes\nFrom The Civic 
+ Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.irs.gov/businesses/small-businesses-self-employed/estimate
+ d-taxes
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Estimated tax payment due (first for 2027)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-tax-day-2027@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20270415
+DTEND;VALUE=DATE:20270416
+SUMMARY:Tax Day: 2026 returns are due
+DESCRIPTION:Federal income tax returns are due\, and so is any tax you owe
+ . If you need more time to file\, request an extension by today. An exten
+ sion gives you more time to file\, not to pay.\nMore: https://www.irs.gov
+ /filing/individuals/when-to-file\nFrom The Civic Forecast: https://civic-
+ forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.irs.gov/filing/individuals/when-to-file
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tax Day: 2026 returns are due
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-est-2027-6@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20270615
+DTEND;VALUE=DATE:20270616
+SUMMARY:Estimated tax payment due (second for 2027)
+DESCRIPTION:If you pay quarterly estimated taxes (for example\, self-emplo
+ yed or gig income)\, a payment is due today.\nMore: https://www.irs.gov/b
+ usinesses/small-businesses-self-employed/estimated-taxes\nFrom The Civic 
+ Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.irs.gov/businesses/small-businesses-self-employed/estimate
+ d-taxes
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Estimated tax payment due (second for 2027)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-est-2027-9@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20270915
+DTEND;VALUE=DATE:20270916
+SUMMARY:Estimated tax payment due (third for 2027)
+DESCRIPTION:If you pay quarterly estimated taxes (for example\, self-emplo
+ yed or gig income)\, a payment is due today.\nMore: https://www.irs.gov/b
+ usinesses/small-businesses-self-employed/estimated-taxes\nFrom The Civic 
+ Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.irs.gov/businesses/small-businesses-self-employed/estimate
+ d-taxes
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Estimated tax payment due (third for 2027)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-extension-2027@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20271015
+DTEND;VALUE=DATE:20271016
+SUMMARY:Extended tax returns are due
+DESCRIPTION:If you got an extension for your 2026 return\, it's due today.
+ \nMore: https://www.irs.gov/filing/individuals/when-to-file\nFrom The Civ
+ ic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.irs.gov/filing/individuals/when-to-file
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Extended tax returns are due
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-medicare-oe-2027@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20271015
+DTEND;VALUE=DATE:20271016
+SUMMARY:Medicare Open Enrollment
+DESCRIPTION:If you have Medicare\, this is the window to join\, drop\, or 
+ switch Medicare Advantage and drug (Part D) plans for 2028.\nMore: https:
+ //www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joi
+ ning-a-plan\nFrom The Civic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.medicare.gov/basics/get-started-with-medicare/get-more-cov
+ erage/joining-a-plan
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Medicare Open Enrollment
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-dst-end-2027@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20271107
+DTEND;VALUE=DATE:20271108
+SUMMARY:Clocks fall back one hour
+DESCRIPTION:Daylight saving time ends at 2 a.m.\, so clocks go back to 1 a
+ .m. and you get an extra hour. Hawaii and most of Arizona don't change.\n
+ More: https://www.nist.gov/pml/time-and-frequency-division/popular-links/
+ daylight-saving-time-dst\nFrom The Civic Forecast: https://civic-forecast
+ .pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
+ light-saving-time-dst
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-medicare-oe-last-2027@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20271207
+DTEND;VALUE=DATE:20271208
+SUMMARY:Last day to change Medicare plans
+DESCRIPTION:Medicare Open Enrollment ends today. Changes to your Medicare 
+ Advantage or drug plan for 2028 have to be in by today.\nMore: https://ww
+ w.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining
+ -a-plan\nFrom The Civic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.medicare.gov/basics/get-started-with-medicare/get-more-cov
+ erage/joining-a-plan
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last day to change Medicare plans
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-medicare-ma-oe-2028@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20280101
+DTEND;VALUE=DATE:20280102
+SUMMARY:Medicare Advantage switch window
+DESCRIPTION:If you're in a Medicare Advantage plan\, you can switch to a d
+ ifferent one or go back to Original Medicare\, once\, before March 31.\nM
+ ore: https://www.medicare.gov/basics/get-started-with-medicare/get-more-c
+ overage/your-coverage-options/compare-original-medicare-medicare-advantag
+ e\nFrom The Civic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.medicare.gov/basics/get-started-with-medicare/get-more-cov
+ erage/your-coverage-options/compare-original-medicare-medicare-advantage
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Medicare Advantage switch window
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-est-2028-q4@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20280118
+DTEND;VALUE=DATE:20280119
+SUMMARY:Last estimated tax payment for 2027 due
+DESCRIPTION:If you pay quarterly estimated taxes\, the fourth payment for 
+ last year is due today.\nMore: https://www.irs.gov/businesses/small-busin
+ esses-self-employed/estimated-taxes\nFrom The Civic Forecast: https://civ
+ ic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.irs.gov/businesses/small-businesses-self-employed/estimate
+ d-taxes
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last estimated tax payment for 2027 due
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-w2-2028@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20280131
+DTEND;VALUE=DATE:20280201
+SUMMARY:Your W-2 should be on its way
+DESCRIPTION:Employers have to send W-2 forms by this date. If yours hasn't
+  shown up by mid-February\, ask your employer.\nMore: https://www.irs.gov
+ /publications/p509\nFrom The Civic Forecast: https://civic-forecast.pages
+ .dev
+TRANSP:TRANSPARENT
+URL:https://www.irs.gov/publications/p509
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Your W-2 should be on its way
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-dst-start-2028@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20280312
+DTEND;VALUE=DATE:20280313
+SUMMARY:Clocks spring forward one hour
+DESCRIPTION:Daylight saving time starts at 2 a.m.\, so clocks jump to 3 a.
+ m. and you lose an hour of sleep. Hawaii and most of Arizona don't change
+ .\nMore: https://www.nist.gov/pml/time-and-frequency-division/popular-lin
+ ks/daylight-saving-time-dst\nFrom The Civic Forecast: https://civic-forec
+ ast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
+ light-saving-time-dst
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-medicare-ma-oe-2028-last@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20280331
+DTEND;VALUE=DATE:20280401
+SUMMARY:Last day: Medicare Advantage switch window
+DESCRIPTION:If you're in a Medicare Advantage plan\, you can switch to a d
+ ifferent one or go back to Original Medicare\, once\, before March 31.\nM
+ ore: https://www.medicare.gov/basics/get-started-with-medicare/get-more-c
+ overage/your-coverage-options/compare-original-medicare-medicare-advantag
+ e\nFrom The Civic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.medicare.gov/basics/get-started-with-medicare/get-more-cov
+ erage/your-coverage-options/compare-original-medicare-medicare-advantage
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last day: Medicare Advantage switch window
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-est-2028-4@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20280418
+DTEND;VALUE=DATE:20280419
+SUMMARY:Estimated tax payment due (first for 2028)
+DESCRIPTION:If you pay quarterly estimated taxes (for example\, self-emplo
+ yed or gig income)\, a payment is due today.\nMore: https://www.irs.gov/b
+ usinesses/small-businesses-self-employed/estimated-taxes\nFrom The Civic 
+ Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.irs.gov/businesses/small-businesses-self-employed/estimate
+ d-taxes
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Estimated tax payment due (first for 2028)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mo-tax-day-2028@civic-forecast.pages.dev
+DTSTAMP:20261027T015845Z
+DTSTART;VALUE=DATE:20280418
+DTEND;VALUE=DATE:20280419
+SUMMARY:Tax Day: 2027 returns are due
+DESCRIPTION:Federal income tax returns are due\, and so is any tax you owe
+ . If you need more time to file\, request an extension by today. An exten
+ sion gives you more time to file\, not to pay.\nMore: https://www.irs.gov
+ /filing/individuals/when-to-file\nFrom The Civic Forecast: https://civic-
+ forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.irs.gov/filing/individuals/when-to-file
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tax Day: 2027 returns are due
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

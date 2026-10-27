@@ -378,6 +378,29 @@ body.sheet-open { overflow: hidden; }
 .sticker-img { display: block; width: 100%; max-width: 360px; margin: 6px auto 12px; border-radius: 18px; }
 .sticker-actions { display: flex; justify-content: center; }
 
+/* ---------- calendar subscriptions ---------- */
+.cal-opts { display: grid; gap: 8px; }
+.cal-opt { display: flex; align-items: center; gap: 12px; padding: 13px 14px; border-radius: 14px; border: 1px solid var(--line-strong);
+  background: rgba(10, 14, 26, 0.5); text-decoration: none; text-align: left; cursor: pointer; width: 100%; }
+.cal-opt svg { width: 20px; height: 20px; color: var(--info); }
+.cal-opt b { display: block; font: 600 15px var(--font-display); }
+.cal-opt small { display: block; font-size: 12px; color: var(--ink-quiet); }
+.cal-opt.primary { border-color: var(--info); background: rgba(57, 135, 229, 0.14); }
+
+/* ---------- coming up on the ballot ---------- */
+.next-list { list-style: none; margin-bottom: 4px; }
+.next-list li { display: grid; grid-template-columns: 58px 1fr; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); }
+.next-list li:first-child { border-top: 0; padding-top: 0; }
+.next-list .when { text-align: center; }
+.next-list .when b { display: block; font: 300 26px/1 var(--font-display); }
+.next-list .when span { font: 500 10px var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-quiet); }
+.next-list h3 { font: 600 16px/1.3 var(--font-display); }
+.next-list h3 em { font: 500 11px var(--font-mono); font-style: normal; letter-spacing: 0.06em; text-transform: uppercase; color: var(--headsup); margin-left: 4px; }
+.next-list p { color: var(--ink-soft); font-size: 14px; margin-top: 2px; }
+.next-list p.reg { color: var(--ink); font-weight: 500; }
+.next-list a { font-size: 12px; color: var(--ink-quiet); }
+.local-note, .after-this { margin-top: 10px; }
+
 /* ---------- methodology ---------- */
 .bar .pill-btn { padding: 6px 12px; font-size: 13px; }
 .prose .hero { text-align: left; }

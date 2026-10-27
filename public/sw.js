@@ -6,10 +6,10 @@
  * Bumping VERSION clears every older cache, including v1's.
  */
 
-const VERSION = 'cf-v2.1.0';
+const VERSION = 'cf-v2.2.0';
 const STATIC_CACHE = `${VERSION}-static`;
 const DYNAMIC_CACHE = `${VERSION}-dynamic`;
-const V = '?v=2.1.0';
+const V = '?v=2.2.0';
 
 const PRECACHE = [
   './',

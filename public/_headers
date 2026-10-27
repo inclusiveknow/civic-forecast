@@ -20,6 +20,11 @@
 /
   Cache-Control: public, max-age=300, must-revalidate
 
+# Calendar feeds people subscribe to; their calendar apps re-check these
+/cal/*
+  Content-Type: text/calendar; charset=utf-8
+  Cache-Control: public, max-age=3600
+
 # Data files: rules and numbers can be corrected at any time
 /data/*
   Cache-Control: public, max-age=300, must-revalidate

@@ -56,16 +56,43 @@ const Civic = (() => {
     return 'Early voting is open';
   }
 
-  // code: inperson | mail | wait | election | arriving | counting
+  // ---------- after this election: the next ones ----------
+  // Counting and certifying run for weeks; after about a month the 2026 cycle
+  // is history and each state's forecast turns to its next election.
+  const CERTIFY = addDays(ELECTION, 30);
+  let DATA = { next: {}, presPrimary: {}, localNote: {} };
+  function use(civic) {
+    DATA = civic || DATA;
+    for (const [k, v] of Object.entries(civic?.voting || {})) v._code = k;
+  }
+  // dated elections from `d` on (inclusive), including a 2028 presidential primary if set
+  function upcoming(code, d) {
+    const list = (DATA.next?.[code] || []).filter((x) => x.date && x.date >= d);
+    const p = DATA.presPrimary?.[code];
+    if (p?.date && p.date >= d) list.push({ date: p.date, title: '2028 presidential primary', scope: 'statewide', what: p.text, source: p.source, confidence: p.confidence });
+    return list.sort((a, b) => (a.date < b.date ? -1 : 1));
+  }
+  // lowercase a title's first letter mid-sentence, but only for ordinary opening
+  // words: "Tax Day", "HealthCare.gov", "November election" keep their capitals
+  const COMMON = new Set(('last clocks deadline estimated extended your general spring fall municipal primary special runoff ' +
+    'statewide consolidated presidential school local election elections regular uniform city county state constitutional ' +
+    'nonpartisan judicial partisan open').split(' '));
+  const lower1 = (s) => (COMMON.has(String(s).split(/[\s:(]/)[0].toLowerCase()) ? s[0].toLowerCase() + s.slice(1) : s);
+
+  // code: inperson | mail | wait | election | arriving | counting | between
   function stateNow(v, d) {
     if (!v) return null;
     const e = v.early || {}, m = v.mail || {};
     if (d === ELECTION) return { code: 'election', label: 'Polls are open today', short: 'Election Day' };
     if (d > ELECTION) {
+      const nx = upcoming(v._code, d);
+      if (nx[0] && nx[0].date === d) return { code: 'election', label: `${nx[0].title} today`, short: nx[0].title, next: nx[0] };
       if (m.returnRule === 'postmarked' && m.receivedBy && d <= m.receivedBy) {
         return { code: 'arriving', label: 'Mailed ballots are still arriving', short: 'Ballots arriving' };
       }
-      return { code: 'counting', label: 'Counting the vote', short: 'Counting' };
+      if (d <= CERTIFY) return { code: 'counting', label: 'Counting the vote', short: 'Counting', next: nx[0] };
+      if (nx[0]) return { code: 'between', label: `Next election: ${lower1(nx[0].title)}, ${fmtDay(nx[0].date)}`, short: `Next: ${fmtDate(nx[0].date)}`, next: nx[0] };
+      return { code: 'between', label: 'No statewide election set yet. Local ones may be', short: 'Between elections' };
     }
     if (v.allMail) return { code: 'mail', label: 'Every voter here gets a ballot by mail', short: 'Vote by mail' };
     if (e.available && e.end && d <= e.end && (!e.start || d >= e.start)) {
@@ -87,6 +114,13 @@ const Civic = (() => {
   function mapCategory(v, d) {
     const s = stateNow(v, d);
     if (!s) return null;
+    if (d > CERTIFY) {
+      // between elections the map shows how soon each state votes next
+      const nx = upcoming(v._code, d)[0];
+      if (!nx) return 'wait';
+      const n = daysBetween(d, nx.date);
+      return n <= 90 ? 'now' : n <= 365 ? 'mail' : 'wait';
+    }
     if (s.code === 'election') return 'now';
     if (s.code === 'arriving') return 'mail';
     if (s.code === 'counting') return 'wait';
@@ -167,10 +201,29 @@ const Civic = (() => {
             level: 'info', icon: 'mail', title: `Mailed ballots can still arrive through ${fmtDay(m.receivedBy)}`,
             text: 'Ballots postmarked in time still count. Officials keep counting until then.',
           });
-        } else {
+        } else if (d <= CERTIFY) {
           out.push({
             level: 'info', icon: 'ballot', title: 'Election Day has passed',
             text: 'Officials keep counting and checking ballots for days or weeks before the results are certified.',
+          });
+        }
+        // the next elections: registration first, then the day itself
+        for (const x of upcoming(v._code, d).slice(0, 2)) {
+          const n = daysBetween(d, x.date);
+          if (n > 75) continue;
+          if (x.registrationDeadline && x.registrationDeadline >= d) {
+            const k = daysBetween(d, x.registrationDeadline);
+            out.push({
+              level: k <= 3 ? 'urgent' : k <= 14 ? 'headsup' : 'info', icon: 'pen',
+              title: k === 0 ? `Last day to register for the ${lower1(x.title)}` : `Register by ${relDay(x.registrationDeadline, d)} for the ${lower1(x.title)}`,
+              text: r.sameDay ? 'You can also register in person when you vote here.' : 'Registering or updating your address takes a few minutes online in most states.',
+              link: v.pollingPlaceUrl, linkText: 'Check or update your registration',
+            });
+          }
+          out.push({
+            level: n <= 1 ? 'urgent' : n <= 14 ? 'headsup' : 'info', icon: 'ballot',
+            title: n === 0 ? `${x.title} today` : `${x.title}${x.ifNeeded ? ' (if needed)' : ''}: ${relDay(x.date, d)}`,
+            text: x.what, link: x.source, linkText: 'Official details',
           });
         }
       }
@@ -238,6 +291,12 @@ const Civic = (() => {
     if (e.available && e.end === d) ev.push({ title: /office/.test(e.kind || '') ? 'Last day to vote at the election office' : 'Last day of early voting', cat: 'vote', strong: true });
     if (r.deadline === d) ev.push({ title: 'Last day to register', cat: 'vote', strong: true });
     if (m.receivedBy === d && d !== ELECTION) ev.push({ title: 'Last day mailed ballots can arrive', cat: 'vote' });
+    for (const x of DATA.next?.[v._code] || []) {
+      if (x.date === d) ev.push({ title: x.title + (x.ifNeeded ? ' (if needed)' : ''), cat: 'vote', strong: true, text: x.what, source: x.source });
+      if (x.registrationDeadline === d) ev.push({ title: `Register by today for the ${lower1(x.title)}`, cat: 'vote', strong: true, text: x.what, source: x.source });
+    }
+    const p = DATA.presPrimary?.[v._code];
+    if (p?.date === d) ev.push({ title: '2028 presidential primary', cat: 'vote', strong: true, text: p.text, source: p.source });
     return ev;
   }
 
@@ -252,7 +311,12 @@ const Civic = (() => {
 
   // nationally, the story of each day is which states open or close early voting
   function nationalEvents(voting, d) {
-    if (d >= ELECTION) return [];
+    if (d > ELECTION) {
+      // after this election: which states vote on this day
+      const voters = Object.keys(DATA.next || {}).filter((c) => (DATA.next[c] || []).some((x) => x.date === d && !x.ifNeeded) || DATA.presPrimary?.[c]?.date === d);
+      return voters.length ? [{ title: `Elections in ${voters.length === 1 ? names(voters) : places(voters)}`, cat: 'vote', strong: true, text: voters.length > 1 ? names(voters) + '.' : null }] : [];
+    }
+    if (d === ELECTION) return [];
     const ends = [], starts = [];
     for (const [c, x] of Object.entries(voting || {})) {
       const e = x.early || {};
@@ -294,9 +358,18 @@ const Civic = (() => {
     return t;
   }
 
+  // states with an election (not counting "if needed" runoffs) within `days` of d
+  function votingSoon(d, days) {
+    return Object.keys(DATA.next || {}).filter((c) => upcoming(c, d).some((x) => !x.ifNeeded && daysBetween(d, x.date) <= days));
+  }
+
   function nationalCondition(voting, d) {
     if (d === ELECTION) return { code: 'election', label: 'Polls open nationwide', short: 'Election Day' };
-    if (d > ELECTION) return { code: 'counting', label: 'Counting the vote', short: 'Counting' };
+    if (d > ELECTION && d <= CERTIFY) return { code: 'counting', label: 'Counting the vote', short: 'Counting' };
+    if (d > CERTIFY) {
+      const soon = votingSoon(d, 90);
+      return { code: 'between', label: soon.length ? `${places(soon)} vote in the next 3 months` : 'A quiet stretch between elections', short: 'Between elections' };
+    }
     const t = tally(voting, d);
     return { code: t.now.length ? 'inperson' : 'wait', label: `Voting is open in ${places(t.voting)}`, short: `${t.voting.length} voting` };
   }
@@ -305,7 +378,13 @@ const Civic = (() => {
     const n = daysBetween(d, ELECTION);
     const t = tally(voting, d);
     if (n === 0) return 'Polls are open across the country today. Hours depend on your state.';
-    if (n < 0) return 'Election Day has passed. Officials are counting and checking ballots, and states certify results over the coming weeks.';
+    if (n < 0 && d <= CERTIFY) return 'Election Day has passed. Officials are counting and checking ballots, and states certify results over the coming weeks.';
+    if (n < 0) {
+      const soon = votingSoon(d, 90);
+      return soon.length
+        ? `${places(soon).replace(/^./, (c) => c.toUpperCase())} have elections in the next three months. Put in your ZIP to see yours, along with the deadlines coming up where you live.`
+        : 'No statewide elections in the next three months. Local ones still happen, so put in your ZIP to see what’s coming where you live.';
+    }
     let s = '';
     if (t.now.length) s += `Early voting is open in ${places(t.now)} today.`;
     if (t.mail.length) s += ` Another ${places(t.mail)} mail every voter a ballot.`;
@@ -324,21 +403,48 @@ const Civic = (() => {
       };
     }
     if (n === 0) return { big: 'Today', unit: 'is Election Day', cond: v ? `Polls are open ${v.pollHours}` : 'Polls are open across the country', date: 'Tuesday, November 3' };
-    // after the election, the next thing on the civic calendar takes the stage
-    const next = (cal || [])
-      .map((c) => ({ c, when: c.date >= d ? c.date : c.end && c.end >= d ? c.end : null, ending: c.date < d }))
-      .filter((x) => x.when && x.c.category !== 'holiday')
-      .sort((a, b) => (a.when < b.when ? -1 : 1))[0];
-    if (next) {
-      const k = daysBetween(d, next.when);
+
+    // after the election, lead with what's most useful next: an election
+    // within ~6 weeks, else a deadline within a month, else whichever comes
+    // first of the next election and the next big date (Tax Day, the end of
+    // Medicare or HealthCare.gov enrollment). Clocks and holidays stay in the strip.
+    const cond = v ? stateNow(v, d).label : nationalCondition(voting, d).label;
+    const dated = (cal || [])
+      .filter((c) => !['holiday', 'vote', 'clock'].includes(c.category))
+      .map((c) => ({ c, when: c.date >= d ? c.date : c.end && c.end >= d && !hasExplicit(cal, c) ? c.end : null, ending: c.date < d }))
+      .filter((x) => x.when)
+      .sort((a, b) => (a.when < b.when ? -1 : 1));
+    const deadline = dated[0];
+    const major = dated.find((x) => x.c.major);
+    // within a month the big dates win; smaller ones lead only inside two weeks
+    const soonDeadline = major && daysBetween(d, major.when) <= 30 ? major
+      : deadline && daysBetween(d, deadline.when) <= 14 ? deadline : null;
+    const nx = v ? upcoming(v._code, d).find((x) => !x.ifNeeded) : null; // never count down to a maybe-runoff
+
+    const forElection = (x) => {
+      const k = daysBetween(d, x.date);
+      const first = String(x.what || '').split(/(?<=\.)\s/)[0];
       return {
         big: k === 0 ? 'Today' : String(k),
-        unit: k === 0 ? (next.ending ? `is the last day: ${next.c.title}` : next.c.title) : `${k === 1 ? 'day' : 'days'} until ${next.ending ? 'the last day of ' : ''}${next.c.title}`,
-        cond: v ? stateNow(v, d).label : 'Counting the vote',
-        date: fmtDay(next.when),
+        unit: k === 0 ? `is the ${lower1(x.title)}` : `${k === 1 ? 'day' : 'days'} until the ${lower1(x.title)}`,
+        cond: d <= CERTIFY ? cond : first || cond, date: fmtDay(x.date),
       };
-    }
-    return { big: '·', unit: 'A quiet stretch on the civic calendar', cond: '', date: '' };
+    };
+    const forDeadline = (x) => {
+      const k = daysBetween(d, x.when);
+      return {
+        big: k === 0 ? 'Today' : String(k),
+        unit: k === 0 ? (x.ending ? `is the last day: ${x.c.title}` : x.c.title) : `${k === 1 ? 'day' : 'days'} until ${x.ending ? 'the last day of ' : ''}${lower1(x.c.title)}`,
+        cond, date: fmtDay(x.when),
+      };
+    };
+    if (nx && daysBetween(d, nx.date) <= 45) return forElection(nx);
+    if (soonDeadline) return forDeadline(soonDeadline);
+    if (nx && (!major || nx.date <= major.when)) return forElection(nx);
+    if (major) return forDeadline(major);
+    if (nx) return forElection(nx);
+    if (deadline) return forDeadline(deadline);
+    return { big: '·', unit: 'A quiet stretch on the civic calendar', cond, date: '' };
   }
 
   // ---------- what's on the ballot ----------
@@ -363,7 +469,7 @@ const Civic = (() => {
   }
 
   return {
-    ELECTION, REGION, today, addDays, daysBetween, fmtDay, fmtDate, weekday, relDay, dayParts,
+    ELECTION, CERTIFY, REGION, use, upcoming, lower1, today, addDays, daysBetween, fmtDay, fmtDate, weekday, relDay, dayParts,
     stateNow, mapCategory, alertsFor, aqiBand, forecastDays, tally, places, nationalSentence, hero, ballotFor, ahead,
   };
 })();

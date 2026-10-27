@@ -273,9 +273,25 @@ const App = (() => {
     const races = Civic.ballotFor(code, S.civic.ballot);
     const sq = (S.civic.races || []).filter((r) => r.state === code);
     const after = S.today > Civic.ELECTION;
+    const settled = S.today > Civic.addDays(Civic.ELECTION, 7); // 2026's dated rules have expired
+    const next = Civic.upcoming(code, after ? S.today : Civic.addDays(Civic.ELECTION, 1)).slice(0, 4);
+    const local = S.civic.localNote?.[code];
+    const nextList = next.length ? `<ol class="next-list">${next.map((x) => {
+      const p = Civic.dayParts(x.date);
+      return `<li><div class="when"><b>${p.dn}</b><span>${p.mo} ${x.date.slice(0, 4)}</span></div><div>
+        <h3>${esc(x.title)}${x.ifNeeded ? ' <em>if needed</em>' : ''}</h3>
+        ${x.what ? `<p>${esc(x.what)}</p>` : ''}
+        ${x.registrationDeadline ? `<p class="reg">Register by ${esc(Civic.fmtDay(x.registrationDeadline))}</p>` : ''}
+        <a href="${esc(x.source)}" target="_blank" rel="noopener">${esc(host(x.source))}</a></div></li>`;
+    }).join('')}</ol>` : '';
 
-    $('#ballot').innerHTML = `
-      <div class="card-head"><h2 id="ballot-title">${after ? 'Was on the ballot' : 'On your ballot'}, Nov 3</h2></div>
+    $('#ballot').innerHTML = after ? `
+      <div class="card-head"><h2 id="ballot-title">Coming up on the ballot</h2></div>
+      ${nextList || '<p class="plus">No statewide election is set yet. Cities, counties, and school boards may still have their own.</p>'}
+      ${local ? `<p class="plus local-note">${esc(local)}</p>` : ''}
+      ${!settled ? `<p class="plus">Nov 3, 2026: ${esc(races.join(' · '))}. Results are certified over the coming weeks.</p>` : ''}
+      <div class="links">` : `
+      <div class="card-head"><h2 id="ballot-title">On your ballot, Nov 3</h2></div>
       <ul class="races">${races.map((r) => `<li>${esc(r)}</li>`).join('')}</ul>
       <p class="plus">Plus state and local races, and any ballot questions. Your exact ballot depends on your address.</p>
       ${sq.map((r) => `
@@ -285,12 +301,32 @@ const App = (() => {
           <span>Their real debate answers with names hidden, so you pick on what was said. ${esc(r.note || '')}</span>
           <span class="go-arrow">Open Same Question ${ICONS.out}</span>
         </a>`).join('')}
+      ${next[0] ? `<p class="plus after-this">After this: ${esc(Civic.lower1(next[0].title))}${next[0].ifNeeded ? ' (if needed)' : ''}, ${esc(Civic.fmtDay(next[0].date))}.</p>` : ''}
       <div class="links">
         <a href="${esc(v.pollingPlaceUrl)}" target="_blank" rel="noopener"><span>Look up your polling place and registration</span>${ICONS.out}</a>
         <a href="${esc(v.official)}" target="_blank" rel="noopener"><span>${esc(Live.STATE_NAMES[code])} elections office</span>${ICONS.out}</a>
       </div>`;
 
     const e = v.early || {}, m = v.mail || {}, r = v.registration || {};
+    $('#howto').classList.add('howto');
+    if (settled) {
+      // the 2026 dates have expired; what stays true between elections is how voting works here
+      const howRows = [
+        ['mail', 'Getting a mail ballot', v.allMail ? 'Every active voter is mailed a ballot automatically.'
+          : m.noExcuse === false ? 'You need a reason to vote by mail here.'
+            : m.noExcuse ? 'Any voter can ask for a mail ballot. No reason needed.' : 'Check your state’s rules on voting by mail.'],
+        ['ballot', 'Sending it back', m.returnRule === 'received' ? 'It has to arrive by the deadline. Postmarks don’t count.' : 'A postmark by Election Day counts, as long as it arrives within the state’s window.'],
+        ['pen', 'Registering', !r.deadline && !r.sameDay ? 'No voter registration needed.'
+          : r.sameDay ? 'You can register and vote on the same day, in person.' : 'Register before the deadline. There’s no same-day registration.'],
+        ['star', 'Voting early in person', v.allMail && !e.available ? 'Ballots come by mail; there’s no early in-person voting.'
+          : e.available ? 'Elections here usually have early in-person voting.' : 'No early in-person voting here.'],
+      ];
+      $('#howto').innerHTML = `
+        <div class="card-head"><h2 id="howto-title">How voting works in ${esc(Live.STATE_NAMES[code])}</h2></div>
+        <dl>${howRows.map(([ic, k, t]) => `<div class="row">${ICONS[ic]}<dt>${esc(k)}</dt><dd>${esc(t)}</dd></div>`).join('')}</dl>
+        <p class="source">Based on the rules for the November 2026 election. Rules can change, so confirm the dates before each election with <a href="${esc(v.official)}" target="_blank" rel="noopener">${esc(host(v.official))}</a>.</p>`;
+      return;
+    }
     const rows = [
       ['ballot', e.available ? 'Early, in person' : 'Early, in person', e.text || 'No early in-person voting here.'],
       ['mail', v.allMail ? 'By mail (everyone gets a ballot)' : 'By mail', m.text],
@@ -298,7 +334,6 @@ const App = (() => {
       // same-day details live in the alert above; here, the state's own summary
       ['pen', 'Registering', r.text || r.sameDayText],
     ];
-    $('#howto').classList.add('howto');
     $('#howto').innerHTML = `
       <div class="card-head"><h2 id="howto-title">How to vote in ${esc(Live.STATE_NAMES[code])}</h2></div>
       <dl>${rows.map(([ic, k, t]) => `<div class="row">${ICONS[ic]}<dt>${esc(k)}</dt><dd>${esc(t)}</dd></div>`).join('')}</dl>
@@ -470,6 +505,20 @@ const App = (() => {
     setPlace(next, { persist: false });
   }
 
+  // ---------- calendar subscriptions (the forecast that keeps arriving) ----------
+  const feedURL = (scheme) => `${scheme}://${location.host}/cal/${S.place?.state || 'us'}.ics`;
+  function renderCalSheet() {
+    const name = S.place ? Live.STATE_NAMES[S.place.state] : null;
+    $('#cal-sub').textContent = `Subscribe once and new dates show up on their own: ${name ? `${name}'s deadlines and next elections, ` : 'Election Day, '}health enrollment windows, tax dates, and the clocks changing.`;
+    const google = `https://calendar.google.com/calendar/render?cid=${encodeURIComponent(feedURL('webcal'))}`;
+    $('#cal-opts').innerHTML = `
+      <a class="cal-opt primary" href="${esc(feedURL('webcal'))}">${ICONS.calendar}<span><b>Subscribe on iPhone or Mac</b><small>Opens your Calendar app</small></span></a>
+      <a class="cal-opt" href="${esc(google)}" target="_blank" rel="noopener">${ICONS.calendar}<span><b>Subscribe in Google Calendar</b><small>Works on Android and the web</small></span></a>
+      <button type="button" class="cal-opt" data-act="cal-download">${ICONS.out}<span><b>Download once</b><small>Today's dates, with a reminder the evening before each</small></span></button>
+      <button type="button" class="cal-opt" data-act="cal-copy">${ICONS.share}<span><b>Copy the calendar link</b><small>For Outlook or any other calendar</small></span></button>
+      <p class="sheet-sub">There's no sign-up, and we don't learn who you are. Your calendar app just checks this file now and then for new dates.</p>`;
+  }
+
   let stickerImg = null;
   async function showSticker() {
     const st = S.place.state;
@@ -487,9 +536,13 @@ const App = (() => {
       if (act === 'share') share();
       if (act === 'places' || act === 'change') { renderPlaces(); openSheet('#places-sheet'); }
       if (act === 'alerts') { S.alertsOpen = !S.alertsOpen; renderAlerts(); }
-      if (act === 'calendar') {
+      if (act === 'calendar') { renderCalSheet(); openSheet('#cal-sheet'); }
+      if (act === 'cal-download') {
         const n = Plan.addAllToCalendar({ st: S.place?.state, v, cal: S.civic.calendar, today: S.today });
-        toast(`${n} dates ready for your calendar`);
+        closeSheets(); toast(`${n} dates ready for your calendar`);
+      }
+      if (act === 'cal-copy') {
+        try { await navigator.clipboard.writeText(feedURL('https')); toast('Calendar link copied'); } catch { prompt('Copy this calendar link', feedURL('https')); }
       }
       if (act === 'plan-cal' && v) {
         const n = Plan.addPlanToCalendar({ st: S.place.state, v, today: S.today, method: Plan.get(S.place.state)?.method });
@@ -598,6 +651,7 @@ const App = (() => {
       $('#hero').innerHTML = '<p class="hero-cond">The forecast couldn’t load. Try again in a minute.</p>';
       return;
     }
+    Civic.use(S.civic);
     wire();
     Sky.init($('.sky'));
     const fromURL = await placeFromURL();

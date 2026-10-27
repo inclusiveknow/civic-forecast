@@ -43,14 +43,20 @@ jobs:
           BLS_KEY: ${{ secrets.BLS_KEY }}
         run: python tools/build_econ.py
 
+      # rolls the rule-based life calendar forward (always 18 months ahead) and
+      # rebuilds the calendar feeds people subscribe to; keeps the published
+      # Same Question races since that repo isn't here
+      - name: Build calendar, elections and feeds
+        run: python tools/build_civic.py
+
       - name: Commit if anything changed
         run: |
-          if git diff --quiet -- public/data; then
+          if git diff --quiet -- public/data public/cal; then
             echo "No new data this month."
             exit 0
           fi
           git config user.name "civic-forecast-data"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data/rent.json public/data/econ.json
-          git commit -m "Monthly data refresh: rent, prices, jobs"
+          git add public/data public/cal
+          git commit -m "Monthly refresh: rent, prices, jobs, calendar, feeds"
           git push

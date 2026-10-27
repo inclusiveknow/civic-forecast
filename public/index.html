@@ -37,7 +37,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles/app.css?v=2.1.0">
+<link rel="stylesheet" href="styles/app.css?v=2.2.0">
 </head>
 <body>
 
@@ -162,6 +162,16 @@
   </div>
 </div>
 
+<div class="sheet" id="cal-sheet" hidden>
+  <div class="sheet-backdrop" data-close></div>
+  <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="cal-title">
+    <div class="sheet-grip" aria-hidden="true"></div>
+    <div class="sheet-head"><h2 id="cal-title">Put these dates in your calendar</h2><button type="button" class="icon-btn" data-close aria-label="Close"></button></div>
+    <p class="sheet-sub" id="cal-sub"></p>
+    <div class="cal-opts" id="cal-opts"></div>
+  </div>
+</div>
+
 <div class="sheet" id="sticker-sheet" hidden>
   <div class="sheet-backdrop" data-close></div>
   <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sticker-title">
@@ -179,12 +189,12 @@
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js" defer></script>
-<script src="scripts/icons.js?v=2.1.0" defer></script>
-<script src="scripts/civic.js?v=2.1.0" defer></script>
-<script src="scripts/live.js?v=2.1.0" defer></script>
-<script src="scripts/map.js?v=2.1.0" defer></script>
-<script src="scripts/plan.js?v=2.1.0" defer></script>
-<script src="scripts/sky.js?v=2.1.0" defer></script>
-<script src="scripts/app.js?v=2.1.0" defer></script>
+<script src="scripts/icons.js?v=2.2.0" defer></script>
+<script src="scripts/civic.js?v=2.2.0" defer></script>
+<script src="scripts/live.js?v=2.2.0" defer></script>
+<script src="scripts/map.js?v=2.2.0" defer></script>
+<script src="scripts/plan.js?v=2.2.0" defer></script>
+<script src="scripts/sky.js?v=2.2.0" defer></script>
+<script src="scripts/app.js?v=2.2.0" defer></script>
 </body>
 </html>
