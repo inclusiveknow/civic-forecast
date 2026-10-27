@@ -65,9 +65,13 @@ const Civic = (() => {
     DATA = civic || DATA;
     for (const [k, v] of Object.entries(civic?.voting || {})) v._code = k;
   }
-  // dated elections from `d` on (inclusive), including a 2028 presidential primary if set
-  function upcoming(code, d) {
-    const list = (DATA.next?.[code] || []).filter((x) => x.date && x.date >= d);
+  // dated elections from `d` on (inclusive), including a 2028 presidential primary if set.
+  // By default only elections the whole state votes in (statewide, runoffs): a town
+  // council special in Purcellville isn't "Virginia's next election". all=true adds
+  // the local and district ones, for lists that label them.
+  const wide = (x) => x.scope === 'statewide' || x.scope === 'runoff';
+  function upcoming(code, d, all = false) {
+    const list = (DATA.next?.[code] || []).filter((x) => x.date && x.date >= d && (all || wide(x)));
     const p = DATA.presPrimary?.[code];
     if (p?.date && p.date >= d) list.push({ date: p.date, title: '2028 presidential primary', scope: 'statewide', what: p.text, source: p.source, confidence: p.confidence });
     return list.sort((a, b) => (a.date < b.date ? -1 : 1));
@@ -292,8 +296,9 @@ const Civic = (() => {
     if (r.deadline === d) ev.push({ title: 'Last day to register', cat: 'vote', strong: true });
     if (m.receivedBy === d && d !== ELECTION) ev.push({ title: 'Last day mailed ballots can arrive', cat: 'vote' });
     for (const x of DATA.next?.[v._code] || []) {
-      if (x.date === d) ev.push({ title: x.title + (x.ifNeeded ? ' (if needed)' : ''), cat: 'vote', strong: true, text: x.what, source: x.source });
-      if (x.registrationDeadline === d) ev.push({ title: `Register by today for the ${lower1(x.title)}`, cat: 'vote', strong: true, text: x.what, source: x.source });
+      const some = wide(x) ? '' : ' (some places)';
+      if (x.date === d) ev.push({ title: x.title + (x.ifNeeded ? ' (if needed)' : '') + some, cat: 'vote', strong: wide(x), text: x.what, source: x.source });
+      if (x.registrationDeadline === d) ev.push({ title: `Register by today for the ${lower1(x.title)}${some}`, cat: 'vote', strong: wide(x), text: x.what, source: x.source });
     }
     const p = DATA.presPrimary?.[v._code];
     if (p?.date === d) ev.push({ title: '2028 presidential primary', cat: 'vote', strong: true, text: p.text, source: p.source });
@@ -313,7 +318,7 @@ const Civic = (() => {
   function nationalEvents(voting, d) {
     if (d > ELECTION) {
       // after this election: which states vote on this day
-      const voters = Object.keys(DATA.next || {}).filter((c) => (DATA.next[c] || []).some((x) => x.date === d && !x.ifNeeded) || DATA.presPrimary?.[c]?.date === d);
+      const voters = Object.keys(DATA.next || {}).filter((c) => (DATA.next[c] || []).some((x) => x.date === d && !x.ifNeeded && wide(x)) || DATA.presPrimary?.[c]?.date === d);
       return voters.length ? [{ title: `Elections in ${voters.length === 1 ? names(voters) : places(voters)}`, cat: 'vote', strong: true, text: voters.length > 1 ? names(voters) + '.' : null }] : [];
     }
     if (d === ELECTION) return [];

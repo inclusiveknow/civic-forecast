@@ -10,7 +10,7 @@ REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
 UID:tx-2026-early-last@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
 SUMMARY:Last day of early voting (Texas)
@@ -28,7 +28,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-aca-oe-opens-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:HealthCare.gov sign-up opens for 2027
@@ -47,7 +47,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-dst-ends-2026@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:Clocks fall back one hour
@@ -62,7 +62,7 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-2026-election@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Election Day (Texas)
@@ -80,7 +80,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-2026-mail-due@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
 SUMMARY:Last day mailed ballots can arrive (Texas)
@@ -101,8 +101,29 @@ TRIGGER:-PT15H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:tx-next-2026-12-12-local-runoff-election-register@civic-forecast.pages
+ .dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:Register by today for the local runoff election (Texas)
+DESCRIPTION:A second round for city\, school district and other local race
+ s from the Nov. 3\, 2026 election where nobody won a majority.\nMore: htt
+ ps://www.sos.state.tx.us/elections/laws/advisory2026-27-dec-12-runoff-ele
+ ction-law-calendar.shtml\nFrom The Civic Forecast: https://civic-forecast
+ .pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.sos.state.tx.us/elections/laws/advisory2026-27-dec-12-runo
+ ff-election-law-calendar.shtml
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Register by today for the local runoff election (Texas)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:tx-medicare-oe-last-day@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261207
 DTEND;VALUE=DATE:20261208
 SUMMARY:Last day to change Medicare plans
@@ -121,8 +142,28 @@ TRIGGER:-PT15H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:tx-next-2026-12-12-local-runoff-election@civic-forecast.pages.dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:Local runoff election (Texas) · if needed
+DESCRIPTION:A second round for city\, school district and other local race
+ s from the Nov. 3\, 2026 election where nobody won a majority.\nMore: htt
+ ps://www.sos.state.tx.us/elections/laws/advisory2026-27-dec-12-runoff-ele
+ ction-law-calendar.shtml\nFrom The Civic Forecast: https://civic-forecast
+ .pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.sos.state.tx.us/elections/laws/advisory2026-27-dec-12-runo
+ ff-election-law-calendar.shtml
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Local runoff election (Texas) · if needed
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:tx-aca-dec15-deadline@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Deadline for Jan. 1 health coverage
@@ -141,7 +182,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-ssi-cola-2026-12-31@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:SSI raise shows up in payments
@@ -160,7 +201,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-medicaid-work-rule-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Medicaid work rules begin by Jan. 1
@@ -184,7 +225,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-medicare-ma-oe-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Medicare Advantage switch window
@@ -204,7 +245,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-social-security-cola-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Social Security raises 3.6 percent
@@ -223,7 +264,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-aca-oe-ends-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:Last day to sign up on HealthCare.gov
@@ -242,7 +283,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-q4-estimated-tax-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:Last 2026 estimated tax payment due
@@ -261,7 +302,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-w2-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:Your W-2 should be on its way
@@ -279,7 +320,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-dst-start-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270314
 DTEND;VALUE=DATE:20270315
 SUMMARY:Clocks spring forward one hour
@@ -294,7 +335,7 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-medicare-ma-oe-2027-last@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Last day: Medicare Advantage switch window
@@ -314,7 +355,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-est-2027-4@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270415
 DTEND;VALUE=DATE:20270416
 SUMMARY:Estimated tax payment due (first for 2027)
@@ -333,7 +374,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-tax-day-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270415
 DTEND;VALUE=DATE:20270416
 SUMMARY:Tax Day: 2026 returns are due
@@ -352,7 +393,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-est-2027-6@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270615
 DTEND;VALUE=DATE:20270616
 SUMMARY:Estimated tax payment due (second for 2027)
@@ -371,7 +412,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-est-2027-9@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270915
 DTEND;VALUE=DATE:20270916
 SUMMARY:Estimated tax payment due (third for 2027)
@@ -390,7 +431,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-extension-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271015
 DTEND;VALUE=DATE:20271016
 SUMMARY:Extended tax returns are due
@@ -407,7 +448,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-medicare-oe-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271015
 DTEND;VALUE=DATE:20271016
 SUMMARY:Medicare Open Enrollment
@@ -425,8 +466,29 @@ TRIGGER:-PT15H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:tx-next-2027-11-02-november-uniform-election-date@civic-forecast.pages
+ .dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20271102
+DTEND;VALUE=DATE:20271103
+SUMMARY:November uniform election date (Texas)
+DESCRIPTION:Cities\, school districts and other local groups hold election
+ s\, and any state constitutional amendments the Legislature approves in 2
+ 027 appear on this ballot.\nMore: https://www.sos.texas.gov/elections/law
+ s/advisory2026-21-november-3-election-law-calendar.shtml\nFrom The Civic 
+ Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-el
+ ection-law-calendar.shtml
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:November uniform election date (Texas)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:tx-dst-end-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271107
 DTEND;VALUE=DATE:20271108
 SUMMARY:Clocks fall back one hour
@@ -441,7 +503,7 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-medicare-oe-last-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271207
 DTEND;VALUE=DATE:20271208
 SUMMARY:Last day to change Medicare plans
@@ -460,7 +522,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-medicare-ma-oe-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280101
 DTEND;VALUE=DATE:20280102
 SUMMARY:Medicare Advantage switch window
@@ -480,7 +542,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-est-2028-q4@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280118
 DTEND;VALUE=DATE:20280119
 SUMMARY:Last estimated tax payment for 2027 due
@@ -499,7 +561,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-w2-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280131
 DTEND;VALUE=DATE:20280201
 SUMMARY:Your W-2 should be on its way
@@ -516,8 +578,27 @@ TRIGGER:-PT15H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:tx-2028-presidential-primary@civic-forecast.pages.dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20280307
+DTEND;VALUE=DATE:20280308
+SUMMARY:2028 presidential primary (Texas)
+DESCRIPTION:The Texas Secretary of State says the 2028 presidential primar
+ y will be held on March 7\, 2028.\nMore: https://www.sos.state.tx.us/elec
+ tions/candidates/guide/2026/president.shtml\nFrom The Civic Forecast: htt
+ ps://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.sos.state.tx.us/elections/candidates/guide/2026/president.
+ shtml
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:2028 presidential primary (Texas)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:tx-dst-start-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280312
 DTEND;VALUE=DATE:20280313
 SUMMARY:Clocks spring forward one hour
@@ -532,7 +613,7 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-medicare-ma-oe-2028-last@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
 SUMMARY:Last day: Medicare Advantage switch window
@@ -552,7 +633,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-est-2028-4@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280418
 DTEND;VALUE=DATE:20280419
 SUMMARY:Estimated tax payment due (first for 2028)
@@ -571,7 +652,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tx-tax-day-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280418
 DTEND;VALUE=DATE:20280419
 SUMMARY:Tax Day: 2027 returns are due

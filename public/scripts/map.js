@@ -23,9 +23,9 @@ const CivicMap = (() => {
   function voteLegend(d) {
     if (d > Civic.CERTIFY) {
       return [
-        { key: 'now', label: 'Votes in the next 3 months' },
+        { key: 'now', label: 'Statewide vote in the next 3 months' },
         { key: 'mail', label: 'In 3 to 12 months' },
-        { key: 'wait', label: 'Nothing set for the next year' },
+        { key: 'wait', label: 'No statewide vote in the next year' },
       ];
     }
     if (d === Civic.ELECTION) return [{ key: 'now', label: 'Polls are open' }];

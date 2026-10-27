@@ -274,12 +274,13 @@ const App = (() => {
     const sq = (S.civic.races || []).filter((r) => r.state === code);
     const after = S.today > Civic.ELECTION;
     const settled = S.today > Civic.addDays(Civic.ELECTION, 7); // 2026's dated rules have expired
-    const next = Civic.upcoming(code, after ? S.today : Civic.addDays(Civic.ELECTION, 1)).slice(0, 4);
+    const next = Civic.upcoming(code, after ? S.today : Civic.addDays(Civic.ELECTION, 1), true).slice(0, 5);
+    const nextWide = Civic.upcoming(code, after ? S.today : Civic.addDays(Civic.ELECTION, 1));
     const local = S.civic.localNote?.[code];
     const nextList = next.length ? `<ol class="next-list">${next.map((x) => {
       const p = Civic.dayParts(x.date);
       return `<li><div class="when"><b>${p.dn}</b><span>${p.mo} ${x.date.slice(0, 4)}</span></div><div>
-        <h3>${esc(x.title)}${x.ifNeeded ? ' <em>if needed</em>' : ''}</h3>
+        <h3>${esc(x.title)}${x.ifNeeded ? ' <em>if needed</em>' : ''}${x.scope === 'local' || x.scope === 'special' ? ' <em class="some">some places</em>' : ''}${x.confidence === 'medium' ? ' <em class="exp">expected</em>' : ''}</h3>
         ${x.what ? `<p>${esc(x.what)}</p>` : ''}
         ${x.registrationDeadline ? `<p class="reg">Register by ${esc(Civic.fmtDay(x.registrationDeadline))}</p>` : ''}
         <a href="${esc(x.source)}" target="_blank" rel="noopener">${esc(host(x.source))}</a></div></li>`;
@@ -301,7 +302,7 @@ const App = (() => {
           <span>Their real debate answers with names hidden, so you pick on what was said. ${esc(r.note || '')}</span>
           <span class="go-arrow">Open Same Question ${ICONS.out}</span>
         </a>`).join('')}
-      ${next[0] ? `<p class="plus after-this">After this: ${esc(Civic.lower1(next[0].title))}${next[0].ifNeeded ? ' (if needed)' : ''}, ${esc(Civic.fmtDay(next[0].date))}.</p>` : ''}
+      ${nextWide[0] ? `<p class="plus after-this">After this: ${esc(Civic.lower1(nextWide[0].title))}${nextWide[0].ifNeeded ? ' (if needed)' : ''}, ${esc(Civic.fmtDay(nextWide[0].date))}.</p>` : ''}
       <div class="links">
         <a href="${esc(v.pollingPlaceUrl)}" target="_blank" rel="noopener"><span>Look up your polling place and registration</span>${ICONS.out}</a>
         <a href="${esc(v.official)}" target="_blank" rel="noopener"><span>${esc(Live.STATE_NAMES[code])} elections office</span>${ICONS.out}</a>

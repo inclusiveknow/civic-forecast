@@ -1,0 +1,612 @@
+{
+  "checked": "2026-10-26",
+  "states": {
+    "nd": {
+      "name": "North Dakota",
+      "next": [
+        {
+          "date": null,
+          "title": "Local and special elections (dates vary)",
+          "scope": "local",
+          "what": "Cities, school districts and other local groups can hold special votes (like a tax or bond question) on dates they choose. The state can also call a special election to fill a vacancy.",
+          "ifNeeded": true,
+          "registrationDeadline": null,
+          "source": "https://www.sos.nd.gov/elections",
+          "confidence": "high",
+          "note": "North Dakota has no regular statewide election in 2027. City and school races are decided at the June primary in even-numbered years (next one is June 2028), and the state website says local groups may run their own special elections on their own dates. North Dakota does not require voter registration, so there is no registration deadline."
+        }
+      ],
+      "presidentialPrimary2028": null,
+      "localNote": "North Dakota cities and school districts mostly vote at the June primary and November general election in even years; for a special vote, check your county auditor or the Secretary of State's special elections page."
+    },
+    "oh": {
+      "name": "Ohio",
+      "next": [
+        {
+          "date": "2027-05-04",
+          "title": "Municipal and school primary election",
+          "scope": "local",
+          "what": "A primary to narrow down candidates for city, village, township and school board jobs, in places that use primaries. Some local tax and bond questions can also appear.",
+          "ifNeeded": true,
+          "registrationDeadline": "2027-04-05",
+          "source": "https://www.ohiosos.gov/assets/election-calendar-2027.pdf",
+          "confidence": "high",
+          "note": "The 30th day before the election is a Sunday, so the official calendar moves the deadline to Monday April 5. Only places with more candidates than open seats hold a primary, and a few charter cities use different dates."
+        },
+        {
+          "date": "2027-08-03",
+          "title": "August special election",
+          "scope": "special",
+          "what": "A special election date for a limited set of local issues. It only happens if a local group qualifies for it.",
+          "ifNeeded": true,
+          "registrationDeadline": "2027-07-06",
+          "source": "https://www.ohiosos.gov/assets/election-calendar-2027.pdf",
+          "confidence": "high",
+          "note": "Listed on the official 2027 calendar. Ohio law now limits what can go on August ballots, so many voters will not have anything to vote on this day. The deadline moves from July 4 (a Sunday) to July 6 on the official calendar."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "General election (city, township and school board)",
+          "scope": "local",
+          "what": "Voters choose mayors, city and village councils, township officials and school board members, and decide local tax and bond questions. There are no state or federal offices on the ballot in odd years.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-10-04",
+          "source": "https://www.ohiosos.gov/assets/election-calendar-2027.pdf",
+          "confidence": "high",
+          "note": "The 30th day before the election is a Sunday, so the official calendar moves the deadline to Monday October 4."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-21",
+        "text": "Ohio's presidential primary is scheduled for Tuesday, March 21, 2028.",
+        "source": "https://www.ohiosos.gov/assets/election-calendar-2027.pdf",
+        "confidence": "high"
+      },
+      "localNote": "Ohio sets one statewide schedule for local elections (May primary and November general in odd years); check your county board of elections for what is on your ballot."
+    },
+    "ok": {
+      "name": "Oklahoma",
+      "next": [
+        {
+          "date": "2027-02-09",
+          "title": "Board of Education primary and special elections",
+          "scope": "local",
+          "what": "A primary for local school board seats, plus any special primaries that have been called, such as for a county judge seat.",
+          "ifNeeded": true,
+          "registrationDeadline": "2027-01-15",
+          "source": "https://oklahoma.gov/elections/elections-results/next-election/2027-voter-information-calendar.html",
+          "confidence": "high",
+          "note": "Early voting is Feb. 4-5. Only places with a race on the ballot hold an election."
+        },
+        {
+          "date": "2027-04-06",
+          "title": "Board of Education general and special elections",
+          "scope": "local",
+          "what": "The main vote for local school board seats, plus any special general elections that have been called.",
+          "ifNeeded": true,
+          "registrationDeadline": "2027-03-12",
+          "source": "https://oklahoma.gov/elections/elections-results/next-election/2027-voter-information-calendar.html",
+          "confidence": "high",
+          "note": "Early voting is April 1-2."
+        },
+        {
+          "date": "2027-06-15",
+          "title": "Special elections (only if called)",
+          "scope": "special",
+          "what": "A day set aside for special elections, such as local tax or bond questions. Nothing is on the ballot unless a local group or the state calls one.",
+          "ifNeeded": true,
+          "registrationDeadline": "2027-05-21",
+          "source": "https://oklahoma.gov/elections/elections-results/next-election/2027-voter-information-calendar.html",
+          "confidence": "high",
+          "note": "Early voting is June 10-11. The state also reserves other dates (Jan. 12, Mar. 2, May 4, July 13, Sept. 14, Oct. 5, Dec. 14) only to fill empty state or federal offices."
+        },
+        {
+          "date": "2027-08-24",
+          "title": "Special elections (only if called)",
+          "scope": "special",
+          "what": "A day set aside for special elections, such as local tax or bond questions. Nothing is on the ballot unless one is called.",
+          "ifNeeded": true,
+          "registrationDeadline": "2027-07-30",
+          "source": "https://oklahoma.gov/elections/elections-results/next-election/2027-voter-information-calendar.html",
+          "confidence": "high",
+          "note": "Early voting is Aug. 19-20."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "Special elections (only if called)",
+          "scope": "special",
+          "what": "A day set aside for special elections, such as local tax or bond questions. Nothing is on the ballot unless one is called.",
+          "ifNeeded": true,
+          "registrationDeadline": "2027-10-08",
+          "source": "https://oklahoma.gov/elections/elections-results/next-election/2027-voter-information-calendar.html",
+          "confidence": "high",
+          "note": "Early voting is Oct. 28-29. The state lists this date as special elections only, not a regular general election."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-07",
+        "text": "Oklahoma law puts the presidential primary on the first Tuesday in March, which is March 7, 2028.",
+        "source": "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=78787",
+        "confidence": "medium"
+      },
+      "localNote": "Oklahoma cities and towns hold their own elections on the state's set dates (Feb, Apr, Aug, Nov); check your county election board to see which apply to you."
+    },
+    "or": {
+      "name": "Oregon",
+      "next": [
+        {
+          "date": "2027-03-09",
+          "title": "March local election date (only if called)",
+          "scope": "local",
+          "what": "A date local governments can use for votes on local measures. Nothing is on the ballot unless a city, county or district puts something there.",
+          "ifNeeded": true,
+          "registrationDeadline": null,
+          "source": "https://sos.oregon.gov/elections/Documents/2026-2027-Local-Elections-Calendar-Referral.pdf",
+          "confidence": "high",
+          "note": "Listed on the state's 2027 local elections calendar. Oregon registration closes 21 days before an election (about Feb. 16), but that exact date is not yet published, so it is not given here."
+        },
+        {
+          "date": "2027-05-18",
+          "title": "May district election",
+          "scope": "local",
+          "what": "The regular election for many local district boards (such as school, fire, water and park districts) and for local measures.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://sos.oregon.gov/elections/Documents/2026-2027-Local-Elections-Calendar-Referral.pdf",
+          "confidence": "high",
+          "note": "Listed on the state's 2027 local elections calendar; state law puts the May election on the third Tuesday of May. Registration closes 21 days before (about April 27), but that exact date is not yet published."
+        },
+        {
+          "date": "2027-08-24",
+          "title": "August local election date (only if called)",
+          "scope": "local",
+          "what": "A date local governments can use for votes on local measures. Nothing is on the ballot unless a local government calls one.",
+          "ifNeeded": true,
+          "registrationDeadline": null,
+          "source": "https://sos.oregon.gov/elections/Documents/2026-2027-Local-Elections-Calendar-Referral.pdf",
+          "confidence": "high",
+          "note": "Listed on the state's 2027 local elections calendar. Registration closes 21 days before (about Aug. 3), but that exact date is not yet published."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "November local election",
+          "scope": "local",
+          "what": "Local measures and some city or district races. There are no state or federal offices on the ballot in odd years.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://sos.oregon.gov/elections/Documents/2026-2027-Local-Elections-Calendar-Referral.pdf",
+          "confidence": "high",
+          "note": "Listed on the state's 2027 local elections calendar. Registration closes 21 days before (about Oct. 12), but that exact date is not yet published."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-05-16",
+        "text": "Oregon's primary, which includes the presidential race, is on the third Tuesday in May, which is May 16, 2028.",
+        "source": "https://www.oregonlegislature.gov/bills_laws/ors/ors254.html",
+        "confidence": "medium"
+      },
+      "localNote": "Oregon votes entirely by mail; your county elections office tells you which of the four statewide local election dates your city or district is using."
+    },
+    "pa": {
+      "name": "Pennsylvania",
+      "next": [
+        {
+          "date": "2027-05-18",
+          "title": "Municipal primary",
+          "scope": "statewide",
+          "what": "A primary to pick party candidates for local jobs such as mayor, city or borough council, school board, township supervisor and county offices.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-05-03",
+          "source": "https://www.pa.gov/content/dam/copapwp-pagov/en/dos/programs/voting-and-elections/running-for-office/2027/2027%20pennsylvania%20election%20important%20dates.pdf",
+          "confidence": "high",
+          "note": "Mail-in ballot request deadline is May 11. The state says dates can change without notice."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "Municipal election",
+          "scope": "statewide",
+          "what": "Voters choose local officials such as mayors, councils, school boards, and township and county offices. There are no federal or governor races in odd years.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-10-18",
+          "source": "https://www.pa.gov/content/dam/copapwp-pagov/en/dos/programs/voting-and-elections/running-for-office/2027/2027%20pennsylvania%20election%20important%20dates.pdf",
+          "confidence": "high",
+          "note": "Mail-in ballot request deadline is Oct. 26. The state's special elections page listed no upcoming special elections on Oct. 26, 2026; new ones can be called at any time if a seat opens."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-04-25",
+        "text": "Pennsylvania's presidential primary is held on the fourth Tuesday of April, which is April 25, 2028.",
+        "source": "https://www.pa.gov/agencies/vote/elections/types-of-elections",
+        "confidence": "medium"
+      },
+      "localNote": "Pennsylvania sets one statewide date for municipal primaries and elections; your county elections office has the list of races in your area."
+    },
+    "ri": {
+      "name": "Rhode Island",
+      "next": [
+        {
+          "date": null,
+          "title": "Special and local elections (as needed)",
+          "scope": "local",
+          "what": "Rhode Island has no regular statewide election in 2027. A special election is held only if a seat opens up or a town or city calls a vote on a local question.",
+          "ifNeeded": true,
+          "registrationDeadline": null,
+          "source": "https://elections.ri.gov/elections/upcoming-elections",
+          "confidence": "high",
+          "note": "On Oct. 26, 2026 the state's Upcoming Elections page listed only the Nov. 3, 2026 general election, with no 2027 dates. Statewide primaries and general elections come back in 2028."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-04-25",
+        "text": "Rhode Island law holds the presidential primary on the fourth Tuesday in April every fourth year, which is April 25, 2028.",
+        "source": "https://webserver.rilegislature.gov/Statutes/TITLE17/17-12.1/17-12.1-1.htm",
+        "confidence": "medium"
+      },
+      "localNote": "Rhode Island has no regular local election dates in odd years; check your city or town clerk or the state elections page for any special vote."
+    },
+    "sc": {
+      "name": "South Carolina",
+      "next": [
+        {
+          "date": null,
+          "title": "Municipal and special elections (dates vary by town)",
+          "scope": "local",
+          "what": "Each town or city sets its own election date, so some places vote in 2027 and some do not. Special elections to fill an empty seat can also be called at any time.",
+          "ifNeeded": true,
+          "registrationDeadline": null,
+          "source": "https://scvotes.gov/elections-statistics/municipal-elections/",
+          "confidence": "high",
+          "note": "South Carolina has more than 270 towns and cities, and the state says each one is responsible for setting its own election date. The state's Upcoming Elections page is updated every two weeks and lists each local election."
+        }
+      ],
+      "presidentialPrimary2028": null,
+      "localNote": "South Carolina towns and cities choose their own election dates; look up yours on the Election Commission's Upcoming Elections page or ask your county elections office."
+    },
+    "sd": {
+      "name": "South Dakota",
+      "next": [
+        {
+          "date": null,
+          "title": "City and school elections (June 8 or Nov. 2, set locally)",
+          "scope": "local",
+          "what": "Every city and school district holds an election each year for local officers. Each one picks which of the two allowed days to use.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://sdsos.gov/elections-voting/assets/2026%20Documents/2026%20Election%20Code.pdf",
+          "confidence": "medium",
+          "note": "State law (SDCL 9-13-1 and 13-7-10) allows these elections only on the first Tuesday after the first Monday in June or in November. Computed for 2027, that is Tuesday June 8 or Tuesday November 2. Each city or school board picks its date by a January deadline, so ask your city or school district which one applies."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-06-06",
+        "text": "South Dakota's primary, which includes the presidential race, is the first Tuesday after the first Monday in June, which is June 6, 2028.",
+        "source": "https://sdsos.gov/elections-voting/assets/2026%20Documents/2026%20Election%20Code.pdf",
+        "confidence": "medium"
+      },
+      "localNote": "South Dakota cities and school districts hold an election every year, either in June or November; your city finance office or school district tells you which day."
+    },
+    "tn": {
+      "name": "Tennessee",
+      "next": [
+        {
+          "date": null,
+          "title": "City and special elections (dates vary)",
+          "scope": "local",
+          "what": "Tennessee has no regular statewide election in 2027. Some cities hold their own city elections in odd years, and special elections can be called to fill an empty seat.",
+          "ifNeeded": true,
+          "registrationDeadline": null,
+          "source": "https://sos.tn.gov/elections/services/special-election-information",
+          "confidence": "medium",
+          "note": "State and county elections happen in even years. A state advisory commission report says some cities, including Nashville, use odd-year dates (Nashville's past city elections were on the first Thursday of August). I could not find a 2027 statewide calendar from the Secretary of State, so confirm with your county election commission."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-07",
+        "text": "Tennessee law holds the presidential primary on the first Tuesday in March, which is March 7, 2028.",
+        "source": "https://publications.tnsosfiles.com/acts/107/pub/pc0182.pdf",
+        "confidence": "medium"
+      },
+      "localNote": "Tennessee cities set some of their own election dates; check your county election commission for any 2027 city vote."
+    },
+    "tx": {
+      "name": "Texas",
+      "next": [
+        {
+          "date": "2026-12-12",
+          "title": "Local runoff election",
+          "scope": "runoff",
+          "what": "A second round for city, school district and other local races from the Nov. 3, 2026 election where nobody won a majority.",
+          "ifNeeded": true,
+          "registrationDeadline": "2026-11-12",
+          "source": "https://www.sos.state.tx.us/elections/laws/advisory2026-27-dec-12-runoff-election-law-calendar.shtml",
+          "confidence": "high",
+          "note": "The Secretary of State set this Saturday date for local runoffs. Early voting is Nov. 30 to Dec. 8. It only happens in places with a runoff."
+        },
+        {
+          "date": "2027-05-01",
+          "title": "May uniform election date",
+          "scope": "local",
+          "what": "Cities, school districts and other local groups elect their leaders and vote on local bonds and tax questions.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.sos.state.tx.us/elections/laws/advisory2026-02-may-election-law-calendar.shtml",
+          "confidence": "high",
+          "note": "The Secretary of State's calendar names May 1, 2027 as a uniform election date. Texas registration closes 30 days before an election (about April 1), but the exact date is not yet published. Runoffs, if needed, are set later by the state."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "November uniform election date",
+          "scope": "statewide",
+          "what": "Cities, school districts and other local groups hold elections, and any state constitutional amendments the Legislature approves in 2027 appear on this ballot.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml",
+          "confidence": "high",
+          "note": "The Secretary of State's calendar names Nov. 2, 2027 as a uniform election date. Whether there are statewide amendments will not be known until after the 2027 legislative session. Registration closes 30 days before (about Oct. 4, since the 30th day is a Sunday), but the exact date is not yet published."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-07",
+        "text": "The Texas Secretary of State says the 2028 presidential primary will be held on March 7, 2028.",
+        "source": "https://www.sos.state.tx.us/elections/candidates/guide/2026/president.shtml",
+        "confidence": "high"
+      },
+      "localNote": "Texas cities and districts must use one of the state's uniform election dates (first Saturday in May and first Tuesday after the first Monday in November); your county elections office lists what is on your ballot."
+    },
+    "ut": {
+      "name": "Utah",
+      "next": [
+        {
+          "date": "2027-08-10",
+          "title": "Municipal primary (only where needed)",
+          "scope": "local",
+          "what": "A primary to narrow down candidates for city and town offices, held only in cities with more candidates than allowed on the general ballot.",
+          "ifNeeded": true,
+          "registrationDeadline": null,
+          "source": "https://le.utah.gov/xcode/Title20A/Chapter1/C20A-1-P2_1800010118000101.pdf",
+          "confidence": "medium",
+          "note": "Computed from state law: the municipal primary is the second Tuesday after the first Monday in August (the 2025 one was Aug. 12). Many towns skip it. Utah's registration deadline for the 2026 general election was 11 days before the election, so expect about July 30, but the 2027 date is not yet published."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "Municipal general election",
+          "scope": "local",
+          "what": "Voters choose mayors and city or town council members, and decide local questions. There are no state or federal offices on the ballot in odd years.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://le.utah.gov/xcode/Title20A/Chapter1/C20A-1-P2_1800010118000101.pdf",
+          "confidence": "medium",
+          "note": "Computed from state law: the first Tuesday after the first Monday in November of an odd-numbered year. Registration closes about 11 days before (around Oct. 22), but the exact date is not yet published."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-07",
+        "text": "Utah law holds the presidential primary on the first Tuesday in March of a presidential election year, which is March 7, 2028.",
+        "source": "https://le.utah.gov/xcode/Title20A/Chapter1/C20A-1-P2_1800010118000101.pdf",
+        "confidence": "medium"
+      },
+      "localNote": "Utah cities and towns use the state's set municipal dates; your county clerk tells you whether your city has a primary."
+    },
+    "vt": {
+      "name": "Vermont",
+      "next": [
+        {
+          "date": "2027-03-02",
+          "title": "Town Meeting Day",
+          "scope": "local",
+          "what": "Towns and school districts elect local officers and vote on town and school budgets and local questions, in person or by ballot.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://legislature.vermont.gov/statutes/section/17/055/02640",
+          "confidence": "medium",
+          "note": "Computed from state law: annual town meeting is the first Tuesday of March. A town may start its meeting earlier, in the three days before, and some towns vote by paper ballot all day. Vermont lets people register up to and including election day, so no earlier deadline is listed."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-07",
+        "text": "The Vermont Secretary of State lists the 2028 presidential primary for March 7, 2028.",
+        "source": "https://sos.vermont.gov/elections/election-info-resources/candidates/presidential-candidates",
+        "confidence": "high"
+      },
+      "localNote": "Vermont towns vote on Town Meeting Day in March; each town clerk posts its own warning with the exact time, place and items."
+    },
+    "va": {
+      "name": "Virginia",
+      "next": [
+        {
+          "date": "2027-03-09",
+          "title": "Special election: Town of Purcellville (Loudoun County)",
+          "scope": "special",
+          "what": "A special election to fill a seat on the Purcellville Town Council.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-02-26",
+          "source": "https://www.elections.virginia.gov/casting-a-ballot/calendars-schedules/upcoming-elections.html",
+          "confidence": "high",
+          "note": "Only voters in that town are affected."
+        },
+        {
+          "date": "2027-03-16",
+          "title": "Special election: Chancellor District, Spotsylvania County",
+          "scope": "special",
+          "what": "A special election to fill a seat on the county Board of Supervisors for the Chancellor District.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-03-05",
+          "source": "https://www.elections.virginia.gov/casting-a-ballot/calendars-schedules/upcoming-elections.html",
+          "confidence": "high",
+          "note": "Only voters in that district are affected."
+        },
+        {
+          "date": "2027-04-06",
+          "title": "Special election: sales tax question, Washington County",
+          "scope": "special",
+          "what": "A local vote on a sales tax question in Washington County.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-03-26",
+          "source": "https://www.elections.virginia.gov/casting-a-ballot/calendars-schedules/upcoming-elections.html",
+          "confidence": "high",
+          "note": "Only voters in that county are affected."
+        },
+        {
+          "date": "2027-06-15",
+          "title": "Primary election (if held)",
+          "scope": "statewide",
+          "what": "A primary where parties pick their candidates for the November 2027 State Senate, House of Delegates and local offices.",
+          "ifNeeded": true,
+          "registrationDeadline": null,
+          "source": "https://www.elections.virginia.gov/media/boardpapers/calendar/Five_year_election_day_calendar-2026_2030.pdf",
+          "confidence": "high",
+          "note": "The state's five-year calendar lists June 15 for 2027, but only for races where a party chooses to hold a primary. Virginia moved the 2026 primary to August 4 by a special law, so this date could also change. Virginia registration closes 11 days before an election (about June 4), but the exact date is not yet published."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "General election",
+          "scope": "statewide",
+          "what": "Voters choose all of the State Senate and House of Delegates, plus local offices like boards of supervisors, school boards, sheriffs and some city and town councils.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.elections.virginia.gov/media/boardpapers/calendar/Five_year_election_day_calendar-2026_2030.pdf",
+          "confidence": "high",
+          "note": "Date is on the state's five-year election calendar. Virginia registration closes 11 days before an election (about Oct. 22), with same-day registration by provisional ballot after that, but the exact 2027 date is not yet published."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-07",
+        "text": "Virginia's calendar lists a presidential primary on March 7, 2028, if the political parties choose to hold one.",
+        "source": "https://www.elections.virginia.gov/media/boardpapers/calendar/Five_year_election_day_calendar-2026_2030.pdf",
+        "confidence": "high"
+      },
+      "localNote": "Virginia's local offices are on the state's set schedule, but small special elections get added during the year; the Department of Elections' Upcoming Elections page lists them."
+    },
+    "wa": {
+      "name": "Washington",
+      "next": [
+        {
+          "date": "2027-02-09",
+          "title": "February special election",
+          "scope": "local",
+          "what": "A date local governments (schools, cities, fire and other districts) can use for votes on levies and other local questions.",
+          "ifNeeded": true,
+          "registrationDeadline": "2027-02-01",
+          "source": "https://www.sos.wa.gov/elections/calendar",
+          "confidence": "high",
+          "note": "Feb. 1 is the deadline to register online or by mail. In-person registration is allowed up to 8 pm on election day. Only places with a measure on the ballot vote."
+        },
+        {
+          "date": "2027-04-27",
+          "title": "April special election",
+          "scope": "local",
+          "what": "A date local governments can use for votes on levies, bonds and other local questions.",
+          "ifNeeded": true,
+          "registrationDeadline": "2027-04-19",
+          "source": "https://www.sos.wa.gov/elections/calendar",
+          "confidence": "high",
+          "note": "April 19 is the deadline to register online or by mail; in-person registration is allowed up to election day. Only places with a measure on the ballot vote."
+        },
+        {
+          "date": "2027-08-03",
+          "title": "Primary election",
+          "scope": "local",
+          "what": "A primary that narrows the field for city, school board and other local races where more than two people are running.",
+          "ifNeeded": true,
+          "registrationDeadline": "2027-07-26",
+          "source": "https://www.sos.wa.gov/elections/calendar",
+          "confidence": "high",
+          "note": "July 26 is the deadline to register online or by mail; in-person registration is allowed up to election day. Only places with races that need a primary vote."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "General election",
+          "scope": "local",
+          "what": "Voters choose local officials such as city councils, school boards and port and fire commissioners, and vote on local measures. The state can also add statewide measures.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-10-25",
+          "source": "https://www.sos.wa.gov/elections/calendar",
+          "confidence": "high",
+          "note": "Oct. 25 is the deadline to register online or by mail; in-person registration is allowed up to election day."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-14",
+        "text": "Washington law holds the presidential primary on the second Tuesday in March, which is March 14, 2028, unless a different date is set by Oct. 1, 2027.",
+        "source": "https://app.leg.wa.gov/rcw/default.aspx?cite=29A.56.020",
+        "confidence": "medium"
+      },
+      "localNote": "Washington votes by mail, and local governments must use one of four set dates each year; your county elections office lists what is on your ballot."
+    },
+    "wv": {
+      "name": "West Virginia",
+      "next": [
+        {
+          "date": null,
+          "title": "Municipal elections (date set by each city or town)",
+          "scope": "local",
+          "what": "Some cities and towns elect mayors and councils in 2027. Each one sets its own date.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://sos.wv.gov/media/477/download?inline=",
+          "confidence": "medium",
+          "note": "The state's municipal guide says the statutory general election day for towns is the second Tuesday in June, which in 2027 is June 8, but towns can use other dates and many used different days in 2026 (for example June 2 and June 9). The state lists the year's municipal elections each spring. West Virginia registration closes 21 days before an election."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-05-09",
+        "text": "West Virginia holds its primary, which includes the presidential race, on the second Tuesday in May, which is May 9, 2028.",
+        "source": "https://sos.wv.gov/elections/voter-information/elections-frequently-asked-questions-faqs",
+        "confidence": "medium"
+      },
+      "localNote": "West Virginia towns pick their own election dates; ask your city or town recorder or clerk."
+    },
+    "wi": {
+      "name": "Wisconsin",
+      "next": [
+        {
+          "date": "2027-02-16",
+          "title": "Spring primary",
+          "scope": "statewide",
+          "what": "A primary for nonpartisan races (judges and local offices) that have more than two candidates, to narrow the list for April.",
+          "ifNeeded": true,
+          "registrationDeadline": null,
+          "source": "https://elections.wi.gov/sites/default/files/documents/2026_2027%20Election%20Calendar_0.pdf",
+          "confidence": "high",
+          "note": "State law sets this as the third Tuesday in February. It is only held if a race has more than two candidates. Online and mail registration closes the third Wednesday before the election (Jan. 27); after that people can register in person at the clerk's office or on election day."
+        },
+        {
+          "date": "2027-04-06",
+          "title": "Spring election",
+          "scope": "statewide",
+          "what": "Voters choose judges and local officials (such as school boards, mayors and county boards) and may vote on local questions.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://elections.wi.gov/sites/default/files/documents/2026_2027%20Election%20Calendar_0.pdf",
+          "confidence": "high",
+          "note": "State law sets this as the first Tuesday in April, and the Elections Commission's 2027 calendar lists April 6. Online and mail registration closes Wednesday March 17; after that people can register in person at the clerk's office or on election day."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-04-04",
+        "text": "Wisconsin holds its presidential preference vote on the spring election day, the first Tuesday in April, which is April 4, 2028.",
+        "source": "https://docs.legis.wisconsin.gov/statutes/statutes/5/i/02/21",
+        "confidence": "medium"
+      },
+      "localNote": "Wisconsin local offices are mostly on the April spring election; your municipal clerk lists the races and questions in your area."
+    },
+    "wy": {
+      "name": "Wyoming",
+      "next": [
+        {
+          "date": null,
+          "title": "Town, bond and special elections (dates vary)",
+          "scope": "local",
+          "what": "Some towns hold elections in May, and local groups can hold votes on bonds in May or November. Special elections can also be called to fill an empty seat.",
+          "ifNeeded": true,
+          "registrationDeadline": null,
+          "source": "https://sos.wyo.gov/Forms/Publications/ElectionCode.pdf",
+          "confidence": "medium",
+          "note": "Wyoming law (W.S. 22-2-104) allows a May town election every two years on the first Tuesday after the first Monday in May (May 4, 2027, if your town is on that cycle), and bond elections on that day or the first Tuesday after the first Monday in November (Nov. 2, 2027). There is no regular statewide election in 2027."
+        }
+      ],
+      "presidentialPrimary2028": null,
+      "localNote": "Wyoming has no regular statewide election in 2027; ask your county clerk or town clerk whether your town is voting in May or has a bond question."
+    }
+  }
+}

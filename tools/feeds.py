@@ -85,7 +85,8 @@ def state_events(code, v, nxt, pres, today, election, name):
         add(m["receivedBy"], "2026-mail-due", f"Last day mailed ballots can arrive ({name})", m.get("text"), v.get("official"))
     add(election, "2026-election", f"Election Day ({name})", f"Polls are open {v.get('pollHours')}", v.get("pollingPlaceUrl"))
     for x in nxt or []:
-        if not x.get("date"):
+        # only elections the whole state votes in; a town's special doesn't belong in every subscriber's calendar
+        if not x.get("date") or x.get("scope") not in ("statewide", "runoff"):
             continue
         tag = f"{x['date']}-{slug(x['title'])}"
         title = f"{x['title']} ({name})" + (" · if needed" if x.get("ifNeeded") else "")

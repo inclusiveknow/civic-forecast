@@ -10,7 +10,7 @@ REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
 UID:la-2026-early-last@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
 SUMMARY:Last day of early voting (Louisiana)
@@ -29,7 +29,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-aca-oe-opens-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:HealthCare.gov sign-up opens for 2027
@@ -48,7 +48,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-dst-ends-2026@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:Clocks fall back one hour
@@ -63,7 +63,7 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
 END:VEVENT
 BEGIN:VEVENT
 UID:la-2026-mail-due@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
 SUMMARY:Last day mailed ballots can arrive (Louisiana)
@@ -84,7 +84,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-2026-election@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Election Day (Louisiana)
@@ -100,8 +100,30 @@ TRIGGER:-PT15H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:la-next-2026-12-12-runoff-and-general-election-december-register@civic
+ -forecast.pages.dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:Register by today for the runoff and general election (december) (
+ Louisiana)
+DESCRIPTION:Runoff for races where nobody won a majority on Nov 3\, includ
+ ing U.S. House seats and local offices\, plus a special primary for one B
+ aton Rouge-area state Senate seat.\nMore: https://www.sos.la.gov/media/p3
+ 1j4zkc/elections-calendar-2026.pdf\nFrom The Civic Forecast: https://civi
+ c-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.sos.la.gov/media/p31j4zkc/elections-calendar-2026.pdf
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Register by today for the runoff and general election (decembe
+ r) (Louisiana)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:la-medicare-oe-last-day@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261207
 DTEND;VALUE=DATE:20261208
 SUMMARY:Last day to change Medicare plans
@@ -120,8 +142,29 @@ TRIGGER:-PT15H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:la-next-2026-12-12-runoff-and-general-election-december@civic-forecast
+ .pages.dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:Runoff and general election (December) (Louisiana) · if needed
+DESCRIPTION:Runoff for races where nobody won a majority on Nov 3\, includ
+ ing U.S. House seats and local offices\, plus a special primary for one B
+ aton Rouge-area state Senate seat.\nMore: https://www.sos.la.gov/media/p3
+ 1j4zkc/elections-calendar-2026.pdf\nFrom The Civic Forecast: https://civi
+ c-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.sos.la.gov/media/p31j4zkc/elections-calendar-2026.pdf
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Runoff and general election (December) (Louisiana) · if neede
+ d
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:la-aca-dec15-deadline@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Deadline for Jan. 1 health coverage
@@ -140,7 +183,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-ssi-cola-2026-12-31@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:SSI raise shows up in payments
@@ -159,7 +202,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-medicaid-work-rule-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Medicaid work rules begin by Jan. 1
@@ -183,7 +226,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-medicare-ma-oe-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Medicare Advantage switch window
@@ -203,7 +246,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-social-security-cola-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Social Security raises 3.6 percent
@@ -222,7 +265,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-aca-oe-ends-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:Last day to sign up on HealthCare.gov
@@ -241,7 +284,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-q4-estimated-tax-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:Last 2026 estimated tax payment due
@@ -260,7 +303,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-w2-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:Your W-2 should be on its way
@@ -278,7 +321,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-dst-start-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270314
 DTEND;VALUE=DATE:20270315
 SUMMARY:Clocks spring forward one hour
@@ -293,7 +336,7 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
 END:VEVENT
 BEGIN:VEVENT
 UID:la-medicare-ma-oe-2027-last@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Last day: Medicare Advantage switch window
@@ -313,7 +356,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-est-2027-4@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270415
 DTEND;VALUE=DATE:20270416
 SUMMARY:Estimated tax payment due (first for 2027)
@@ -332,7 +375,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-tax-day-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270415
 DTEND;VALUE=DATE:20270416
 SUMMARY:Tax Day: 2026 returns are due
@@ -351,7 +394,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-est-2027-6@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270615
 DTEND;VALUE=DATE:20270616
 SUMMARY:Estimated tax payment due (second for 2027)
@@ -369,8 +412,29 @@ TRIGGER:-PT15H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:la-next-2027-10-09-governor-and-statewide-primary-register@civic-forec
+ ast.pages.dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20270908
+DTEND;VALUE=DATE:20270909
+SUMMARY:Register by today for the governor and statewide primary (Louisian
+ a)
+DESCRIPTION:Open primary for governor and other statewide offices\, plus s
+ tate legislature seats and the general election for the state school boar
+ d (BESE).\nMore: https://www.sos.la.gov/media/byfpyc5f/elections-calendar
+ -2027.pdf\nFrom The Civic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.sos.la.gov/media/byfpyc5f/elections-calendar-2027.pdf
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Register by today for the governor and statewide primary (Loui
+ siana)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:la-est-2027-9@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270915
 DTEND;VALUE=DATE:20270916
 SUMMARY:Estimated tax payment due (third for 2027)
@@ -388,8 +452,27 @@ TRIGGER:-PT15H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:la-next-2027-10-09-governor-and-statewide-primary@civic-forecast.pages
+ .dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20271009
+DTEND;VALUE=DATE:20271010
+SUMMARY:Governor and statewide primary (Louisiana)
+DESCRIPTION:Open primary for governor and other statewide offices\, plus s
+ tate legislature seats and the general election for the state school boar
+ d (BESE).\nMore: https://www.sos.la.gov/media/byfpyc5f/elections-calendar
+ -2027.pdf\nFrom The Civic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.sos.la.gov/media/byfpyc5f/elections-calendar-2027.pdf
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Governor and statewide primary (Louisiana)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:la-extension-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271015
 DTEND;VALUE=DATE:20271016
 SUMMARY:Extended tax returns are due
@@ -406,7 +489,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-medicare-oe-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271015
 DTEND;VALUE=DATE:20271016
 SUMMARY:Medicare Open Enrollment
@@ -424,8 +507,29 @@ TRIGGER:-PT15H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:la-next-2027-11-20-governor-and-statewide-general-election-register@ci
+ vic-forecast.pages.dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20271020
+DTEND;VALUE=DATE:20271021
+SUMMARY:Register by today for the governor and statewide general election 
+ (Louisiana)
+DESCRIPTION:Runoff for the governor and other statewide or legislative rac
+ es where nobody won a majority on Oct 9.\nMore: https://www.sos.la.gov/me
+ dia/byfpyc5f/elections-calendar-2027.pdf\nFrom The Civic Forecast: https:
+ //civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.sos.la.gov/media/byfpyc5f/elections-calendar-2027.pdf
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Register by today for the governor and statewide general elect
+ ion (Louisiana)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:la-dst-end-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271107
 DTEND;VALUE=DATE:20271108
 SUMMARY:Clocks fall back one hour
@@ -439,8 +543,28 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
  light-saving-time-dst
 END:VEVENT
 BEGIN:VEVENT
+UID:la-next-2027-11-20-governor-and-statewide-general-election@civic-forec
+ ast.pages.dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20271120
+DTEND;VALUE=DATE:20271121
+SUMMARY:Governor and statewide general election (Louisiana) · if needed
+DESCRIPTION:Runoff for the governor and other statewide or legislative rac
+ es where nobody won a majority on Oct 9.\nMore: https://www.sos.la.gov/me
+ dia/byfpyc5f/elections-calendar-2027.pdf\nFrom The Civic Forecast: https:
+ //civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.sos.la.gov/media/byfpyc5f/elections-calendar-2027.pdf
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Governor and statewide general election (Louisiana) · if need
+ ed
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:la-medicare-oe-last-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271207
 DTEND;VALUE=DATE:20271208
 SUMMARY:Last day to change Medicare plans
@@ -459,7 +583,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-medicare-ma-oe-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280101
 DTEND;VALUE=DATE:20280102
 SUMMARY:Medicare Advantage switch window
@@ -479,7 +603,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-est-2028-q4@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280118
 DTEND;VALUE=DATE:20280119
 SUMMARY:Last estimated tax payment for 2027 due
@@ -498,7 +622,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-w2-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280131
 DTEND;VALUE=DATE:20280201
 SUMMARY:Your W-2 should be on its way
@@ -516,7 +640,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-dst-start-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280312
 DTEND;VALUE=DATE:20280313
 SUMMARY:Clocks spring forward one hour
@@ -530,8 +654,27 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
  light-saving-time-dst
 END:VEVENT
 BEGIN:VEVENT
+UID:la-2028-presidential-primary@civic-forecast.pages.dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20280325
+DTEND;VALUE=DATE:20280326
+SUMMARY:2028 presidential primary (Louisiana)
+DESCRIPTION:Louisiana holds its presidential preference primary on the las
+ t Saturday in March\; party members of the two large parties vote.\nMore:
+  https://www.sos.la.gov/media/y2vlaw02/ppp-qualifying-information-packet.
+ pdf\nFrom The Civic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.sos.la.gov/media/y2vlaw02/ppp-qualifying-information-packe
+ t.pdf
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:2028 presidential primary (Louisiana)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:la-medicare-ma-oe-2028-last@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
 SUMMARY:Last day: Medicare Advantage switch window
@@ -551,7 +694,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-est-2028-4@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280418
 DTEND;VALUE=DATE:20280419
 SUMMARY:Estimated tax payment due (first for 2028)
@@ -570,7 +713,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:la-tax-day-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280418
 DTEND;VALUE=DATE:20280419
 SUMMARY:Tax Day: 2027 returns are due

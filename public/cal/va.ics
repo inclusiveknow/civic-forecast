@@ -10,7 +10,7 @@ REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
 UID:va-2026-early-last@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261101
 SUMMARY:Last day of early voting (Virginia)
@@ -30,7 +30,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-aca-oe-opens-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:HealthCare.gov sign-up opens for 2027
@@ -49,7 +49,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-dst-ends-2026@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:Clocks fall back one hour
@@ -64,7 +64,7 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
 END:VEVENT
 BEGIN:VEVENT
 UID:va-2026-election@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Election Day (Virginia)
@@ -83,7 +83,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-2026-mail-due@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:Last day mailed ballots can arrive (Virginia)
@@ -104,7 +104,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-medicare-oe-last-day@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261207
 DTEND;VALUE=DATE:20261208
 SUMMARY:Last day to change Medicare plans
@@ -124,7 +124,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-aca-dec15-deadline@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Deadline for Jan. 1 health coverage
@@ -143,7 +143,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-ssi-cola-2026-12-31@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:SSI raise shows up in payments
@@ -162,7 +162,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-medicaid-work-rule-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Medicaid work rules begin by Jan. 1
@@ -186,7 +186,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-medicare-ma-oe-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Medicare Advantage switch window
@@ -206,7 +206,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-social-security-cola-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Social Security raises 3.6 percent
@@ -225,7 +225,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-aca-oe-ends-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:Last day to sign up on HealthCare.gov
@@ -244,7 +244,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-q4-estimated-tax-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:Last 2026 estimated tax payment due
@@ -263,7 +263,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-w2-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:Your W-2 should be on its way
@@ -281,7 +281,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-dst-start-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270314
 DTEND;VALUE=DATE:20270315
 SUMMARY:Clocks spring forward one hour
@@ -296,7 +296,7 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
 END:VEVENT
 BEGIN:VEVENT
 UID:va-medicare-ma-oe-2027-last@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Last day: Medicare Advantage switch window
@@ -316,7 +316,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-est-2027-4@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270415
 DTEND;VALUE=DATE:20270416
 SUMMARY:Estimated tax payment due (first for 2027)
@@ -335,7 +335,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-tax-day-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270415
 DTEND;VALUE=DATE:20270416
 SUMMARY:Tax Day: 2026 returns are due
@@ -353,8 +353,28 @@ TRIGGER:-PT15H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:va-next-2027-06-15-primary-election-if-held@civic-forecast.pages.dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20270615
+DTEND;VALUE=DATE:20270616
+SUMMARY:Primary election (if held) (Virginia) · if needed
+DESCRIPTION:A primary where parties pick their candidates for the November
+  2027 State Senate\, House of Delegates and local offices.\nMore: https:/
+ /www.elections.virginia.gov/media/boardpapers/calendar/Five_year_election
+ _day_calendar-2026_2030.pdf\nFrom The Civic Forecast: https://civic-forec
+ ast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.elections.virginia.gov/media/boardpapers/calendar/Five_yea
+ r_election_day_calendar-2026_2030.pdf
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Primary election (if held) (Virginia) · if needed
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:va-est-2027-6@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270615
 DTEND;VALUE=DATE:20270616
 SUMMARY:Estimated tax payment due (second for 2027)
@@ -373,7 +393,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-est-2027-9@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270915
 DTEND;VALUE=DATE:20270916
 SUMMARY:Estimated tax payment due (third for 2027)
@@ -392,7 +412,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-extension-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271015
 DTEND;VALUE=DATE:20271016
 SUMMARY:Extended tax returns are due
@@ -409,7 +429,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-medicare-oe-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271015
 DTEND;VALUE=DATE:20271016
 SUMMARY:Medicare Open Enrollment
@@ -427,8 +447,28 @@ TRIGGER:-PT15H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:va-next-2027-11-02-general-election@civic-forecast.pages.dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20271102
+DTEND;VALUE=DATE:20271103
+SUMMARY:General election (Virginia)
+DESCRIPTION:Voters choose all of the State Senate and House of Delegates\,
+  plus local offices like boards of supervisors\, school boards\, sheriffs
+  and some city and town councils.\nMore: https://www.elections.virginia.g
+ ov/media/boardpapers/calendar/Five_year_election_day_calendar-2026_2030.p
+ df\nFrom The Civic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.elections.virginia.gov/media/boardpapers/calendar/Five_yea
+ r_election_day_calendar-2026_2030.pdf
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:General election (Virginia)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:va-dst-end-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271107
 DTEND;VALUE=DATE:20271108
 SUMMARY:Clocks fall back one hour
@@ -443,7 +483,7 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
 END:VEVENT
 BEGIN:VEVENT
 UID:va-medicare-oe-last-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271207
 DTEND;VALUE=DATE:20271208
 SUMMARY:Last day to change Medicare plans
@@ -462,7 +502,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-medicare-ma-oe-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280101
 DTEND;VALUE=DATE:20280102
 SUMMARY:Medicare Advantage switch window
@@ -482,7 +522,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-est-2028-q4@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280118
 DTEND;VALUE=DATE:20280119
 SUMMARY:Last estimated tax payment for 2027 due
@@ -501,7 +541,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-w2-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280131
 DTEND;VALUE=DATE:20280201
 SUMMARY:Your W-2 should be on its way
@@ -518,8 +558,28 @@ TRIGGER:-PT15H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:va-2028-presidential-primary@civic-forecast.pages.dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20280307
+DTEND;VALUE=DATE:20280308
+SUMMARY:2028 presidential primary (Virginia)
+DESCRIPTION:Virginia's calendar lists a presidential primary on March 7\, 
+ 2028\, if the political parties choose to hold one.\nMore: https://www.el
+ ections.virginia.gov/media/boardpapers/calendar/Five_year_election_day_ca
+ lendar-2026_2030.pdf\nFrom The Civic Forecast: https://civic-forecast.pag
+ es.dev
+TRANSP:TRANSPARENT
+URL:https://www.elections.virginia.gov/media/boardpapers/calendar/Five_yea
+ r_election_day_calendar-2026_2030.pdf
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:2028 presidential primary (Virginia)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:va-dst-start-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280312
 DTEND;VALUE=DATE:20280313
 SUMMARY:Clocks spring forward one hour
@@ -534,7 +594,7 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
 END:VEVENT
 BEGIN:VEVENT
 UID:va-medicare-ma-oe-2028-last@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
 SUMMARY:Last day: Medicare Advantage switch window
@@ -554,7 +614,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-est-2028-4@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280418
 DTEND;VALUE=DATE:20280419
 SUMMARY:Estimated tax payment due (first for 2028)
@@ -573,7 +633,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:va-tax-day-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280418
 DTEND;VALUE=DATE:20280419
 SUMMARY:Tax Day: 2027 returns are due

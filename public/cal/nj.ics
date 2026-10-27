@@ -10,7 +10,7 @@ REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
 UID:nj-2026-early-last@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:Last day of early voting (New Jersey)
@@ -29,7 +29,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-aca-oe-opens-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:HealthCare.gov sign-up opens for 2027
@@ -48,7 +48,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-dst-ends-2026@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:Clocks fall back one hour
@@ -63,7 +63,7 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-2026-election@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Election Day (New Jersey)
@@ -80,7 +80,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-2026-mail-due@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
 SUMMARY:Last day mailed ballots can arrive (New Jersey)
@@ -100,7 +100,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-medicare-oe-last-day@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261207
 DTEND;VALUE=DATE:20261208
 SUMMARY:Last day to change Medicare plans
@@ -120,7 +120,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-aca-dec15-deadline@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Deadline for Jan. 1 health coverage
@@ -139,7 +139,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-ssi-cola-2026-12-31@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:SSI raise shows up in payments
@@ -158,7 +158,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-medicaid-work-rule-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Medicaid work rules begin by Jan. 1
@@ -182,7 +182,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-medicare-ma-oe-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Medicare Advantage switch window
@@ -202,7 +202,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-social-security-cola-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Social Security raises 3.6 percent
@@ -221,7 +221,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-aca-oe-ends-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:Last day to sign up on HealthCare.gov
@@ -240,7 +240,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-q4-estimated-tax-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:Last 2026 estimated tax payment due
@@ -259,7 +259,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-w2-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:Your W-2 should be on its way
@@ -277,7 +277,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-dst-start-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270314
 DTEND;VALUE=DATE:20270315
 SUMMARY:Clocks spring forward one hour
@@ -292,7 +292,7 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-medicare-ma-oe-2027-last@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Last day: Medicare Advantage switch window
@@ -312,7 +312,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-est-2027-4@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270415
 DTEND;VALUE=DATE:20270416
 SUMMARY:Estimated tax payment due (first for 2027)
@@ -331,7 +331,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-tax-day-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270415
 DTEND;VALUE=DATE:20270416
 SUMMARY:Tax Day: 2026 returns are due
@@ -349,8 +349,46 @@ TRIGGER:-PT15H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:nj-next-2027-06-08-primary-election-register@civic-forecast.pages.dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20270518
+DTEND;VALUE=DATE:20270519
+SUMMARY:Register by today for the primary election (New Jersey)
+DESCRIPTION:Democratic and Republican voters pick their candidates for the
+  state Senate and General Assembly\, plus county and local offices.\nMore
+ : https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-primary
+ -election.pdf\nFrom The Civic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-primar
+ y-election.pdf
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Register by today for the primary election (New Jersey)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nj-next-2027-06-08-primary-election@civic-forecast.pages.dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20270608
+DTEND;VALUE=DATE:20270609
+SUMMARY:Primary election (New Jersey)
+DESCRIPTION:Democratic and Republican voters pick their candidates for the
+  state Senate and General Assembly\, plus county and local offices.\nMore
+ : https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-primary
+ -election.pdf\nFrom The Civic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-primar
+ y-election.pdf
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Primary election (New Jersey)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:nj-est-2027-6@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270615
 DTEND;VALUE=DATE:20270616
 SUMMARY:Estimated tax payment due (second for 2027)
@@ -369,7 +407,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-est-2027-9@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270915
 DTEND;VALUE=DATE:20270916
 SUMMARY:Estimated tax payment due (third for 2027)
@@ -387,8 +425,27 @@ TRIGGER:-PT15H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:nj-next-2027-11-02-general-election-register@civic-forecast.pages.dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20271012
+DTEND;VALUE=DATE:20271013
+SUMMARY:Register by today for the general election (New Jersey)
+DESCRIPTION:Voters choose all state Senate and General Assembly seats\, pl
+ us county and local offices and any ballot questions.\nMore: https://www.
+ nj.gov/state/elections/assets/pdf/chrons/2026-chron-primary-election.pdf\
+ nFrom The Civic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-primar
+ y-election.pdf
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Register by today for the general election (New Jersey)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:nj-extension-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271015
 DTEND;VALUE=DATE:20271016
 SUMMARY:Extended tax returns are due
@@ -405,7 +462,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-medicare-oe-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271015
 DTEND;VALUE=DATE:20271016
 SUMMARY:Medicare Open Enrollment
@@ -423,8 +480,27 @@ TRIGGER:-PT15H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:nj-next-2027-11-02-general-election@civic-forecast.pages.dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20271102
+DTEND;VALUE=DATE:20271103
+SUMMARY:General election (New Jersey)
+DESCRIPTION:Voters choose all state Senate and General Assembly seats\, pl
+ us county and local offices and any ballot questions.\nMore: https://www.
+ nj.gov/state/elections/assets/pdf/chrons/2026-chron-primary-election.pdf\
+ nFrom The Civic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-primar
+ y-election.pdf
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:General election (New Jersey)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:nj-dst-end-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271107
 DTEND;VALUE=DATE:20271108
 SUMMARY:Clocks fall back one hour
@@ -439,7 +515,7 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-medicare-oe-last-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271207
 DTEND;VALUE=DATE:20271208
 SUMMARY:Last day to change Medicare plans
@@ -458,7 +534,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-medicare-ma-oe-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280101
 DTEND;VALUE=DATE:20280102
 SUMMARY:Medicare Advantage switch window
@@ -478,7 +554,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-est-2028-q4@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280118
 DTEND;VALUE=DATE:20280119
 SUMMARY:Last estimated tax payment for 2027 due
@@ -497,7 +573,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-w2-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280131
 DTEND;VALUE=DATE:20280201
 SUMMARY:Your W-2 should be on its way
@@ -515,7 +591,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-dst-start-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280312
 DTEND;VALUE=DATE:20280313
 SUMMARY:Clocks spring forward one hour
@@ -530,7 +606,7 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-medicare-ma-oe-2028-last@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
 SUMMARY:Last day: Medicare Advantage switch window
@@ -550,7 +626,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-est-2028-4@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280418
 DTEND;VALUE=DATE:20280419
 SUMMARY:Estimated tax payment due (first for 2028)
@@ -569,7 +645,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nj-tax-day-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280418
 DTEND;VALUE=DATE:20280419
 SUMMARY:Tax Day: 2027 returns are due
@@ -583,6 +659,26 @@ URL:https://www.irs.gov/filing/individuals/when-to-file
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Tax Day: 2027 returns are due
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nj-2028-presidential-primary@civic-forecast.pages.dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20280606
+DTEND;VALUE=DATE:20280607
+SUMMARY:2028 presidential primary (New Jersey)
+DESCRIPTION:New Jersey holds its presidential primary on the Tuesday after
+  the first Monday in June of a presidential year. Date computed from the 
+ same state law\; the state had not posted a 2028 timeline.\nMore: https:/
+ /www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-primary-election
+ .pdf\nFrom The Civic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-primar
+ y-election.pdf
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:2028 presidential primary (New Jersey)
 TRIGGER:-PT15H
 END:VALARM
 END:VEVENT

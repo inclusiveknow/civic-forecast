@@ -1,0 +1,649 @@
+{
+  "checked": "2026-10-26",
+  "states": {
+    "ky": {
+      "name": "Kentucky",
+      "next": [
+        {
+          "date": "2027-05-18",
+          "title": "Primary election",
+          "scope": "statewide",
+          "what": "Voters pick each party's candidates for governor and the other statewide offices (such as attorney general and secretary of state).",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-04-19",
+          "source": "https://elect.ky.gov/Resources/Documents/2027%20Election%20Calendar.pdf",
+          "confidence": "high",
+          "note": "Date is the first Tuesday after the third Monday in May (KRS 118.025) and is printed on the State Board of Elections 2027 calendar."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "General election",
+          "scope": "statewide",
+          "what": "Voters choose the governor and other statewide offices, such as lieutenant governor, attorney general and secretary of state.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-10-04",
+          "source": "https://elect.ky.gov/Resources/Documents/2027%20Election%20Calendar.pdf",
+          "confidence": "high",
+          "note": null
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-05-16",
+        "text": "Kentucky holds its presidential primary on the same day as its regular May primary, the first Tuesday after the third Monday in May. The date is worked out from state law (KRS 118.025 and 118.561), not yet posted on a published 2028 calendar.",
+        "source": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=27658",
+        "confidence": "medium"
+      },
+      "localNote": "Kentucky's regular local offices (mayors, city councils, county offices) are on the even-year ballots; check your county clerk for special local votes."
+    },
+    "la": {
+      "name": "Louisiana",
+      "next": [
+        {
+          "date": "2026-12-12",
+          "title": "Runoff and general election (December)",
+          "scope": "runoff",
+          "what": "Runoff for races where nobody won a majority on Nov 3, including U.S. House seats and local offices, plus a special primary for one Baton Rouge-area state Senate seat.",
+          "ifNeeded": true,
+          "registrationDeadline": "2026-11-12",
+          "source": "https://www.sos.la.gov/media/p31j4zkc/elections-calendar-2026.pdf",
+          "confidence": "high",
+          "note": "Only voters in places with a race that needs a second round can vote. Dates are subject to change by the Legislature."
+        },
+        {
+          "date": "2027-01-09",
+          "title": "Special election, state Senate District 14",
+          "scope": "special",
+          "what": "Special general election to fill one state Senate seat in the East Baton Rouge area.",
+          "ifNeeded": false,
+          "registrationDeadline": "2026-12-09",
+          "source": "https://www.sos.la.gov/media/byfpyc5f/elections-calendar-2027.pdf",
+          "confidence": "high",
+          "note": "Only voters in that district. Follows the Dec 12 special primary. Dates are subject to change by the Legislature."
+        },
+        {
+          "date": "2027-02-06",
+          "title": "Special primary, state House District 77",
+          "scope": "special",
+          "what": "Special primary to fill one state House seat in St. Tammany Parish.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-01-06",
+          "source": "https://www.sos.la.gov/media/byfpyc5f/elections-calendar-2027.pdf",
+          "confidence": "high",
+          "note": "Only voters in that district. Dates are subject to change by the Legislature."
+        },
+        {
+          "date": "2027-03-13",
+          "title": "Special general election, state House District 77",
+          "scope": "special",
+          "what": "Special general election for the same St. Tammany Parish state House seat.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-02-10",
+          "source": "https://www.sos.la.gov/media/byfpyc5f/elections-calendar-2027.pdf",
+          "confidence": "high",
+          "note": "Only voters in that district. Dates are subject to change by the Legislature."
+        },
+        {
+          "date": "2027-04-17",
+          "title": "Spring party primary and city primary",
+          "scope": "local",
+          "what": "State school board (BESE) party primaries and primaries for city and town offices that are on the ballot.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-03-17",
+          "source": "https://www.sos.la.gov/media/byfpyc5f/elections-calendar-2027.pdf",
+          "confidence": "high",
+          "note": "Only voters in districts and towns that have a race. Dates are subject to change by the Legislature."
+        },
+        {
+          "date": "2027-05-29",
+          "title": "Spring second party primary and city general election",
+          "scope": "local",
+          "what": "Second round for the school board party primaries, plus the general election for city and town offices.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-04-28",
+          "source": "https://www.sos.la.gov/media/byfpyc5f/elections-calendar-2027.pdf",
+          "confidence": "high",
+          "note": "Only voters in places with a race. Dates are subject to change by the Legislature."
+        },
+        {
+          "date": "2027-10-09",
+          "title": "Governor and statewide primary",
+          "scope": "statewide",
+          "what": "Open primary for governor and other statewide offices, plus state legislature seats and the general election for the state school board (BESE).",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-09-08",
+          "source": "https://www.sos.la.gov/media/byfpyc5f/elections-calendar-2027.pdf",
+          "confidence": "high",
+          "note": "The official calendar says this date was moved up one week under state law (R.S. 18:402). Dates are subject to change by the Legislature."
+        },
+        {
+          "date": "2027-11-20",
+          "title": "Governor and statewide general election",
+          "scope": "statewide",
+          "what": "Runoff for the governor and other statewide or legislative races where nobody won a majority on Oct 9.",
+          "ifNeeded": true,
+          "registrationDeadline": "2027-10-20",
+          "source": "https://www.sos.la.gov/media/byfpyc5f/elections-calendar-2027.pdf",
+          "confidence": "high",
+          "note": "Only needed for races without a majority winner. Dates are subject to change by the Legislature."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-25",
+        "text": "Louisiana holds its presidential preference primary on the last Saturday in March; party members of the two large parties vote.",
+        "source": "https://www.sos.la.gov/media/y2vlaw02/ppp-qualifying-information-packet.pdf",
+        "confidence": "high"
+      },
+      "localNote": "Louisiana sets uniform election dates for the whole state; check the Secretary of State's election calendar or your parish registrar for what is on your ballot."
+    },
+    "me": {
+      "name": "Maine",
+      "next": [
+        {
+          "date": "2027-11-02",
+          "title": "Statewide ballot questions (if any)",
+          "scope": "statewide",
+          "what": "Maine votes on statewide ballot questions (citizen petitions, bond issues, or state law changes) on the Tuesday after the first Monday in November in odd years, when any have qualified.",
+          "ifNeeded": true,
+          "registrationDeadline": null,
+          "source": "https://www.maine.gov/sos/elections-voting/peoples-veto-or-citizens-initiative-resources/current-citizen-initiatives-and-peoples-vetoes",
+          "confidence": "medium",
+          "note": "The Secretary of State had not posted a 2027 question list as of Oct 26, 2026. The date comes from Maine's regular schedule, so confirm after the Legislature finishes its 2027 session. Maine allows same-day voter registration at the town office."
+        },
+        {
+          "date": null,
+          "title": "Town and city elections",
+          "scope": "local",
+          "what": "Voters choose local officials and vote on local budgets and questions at town meetings or city elections.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.maine.gov/sos/elections-voting/upcoming-elections",
+          "confidence": "high",
+          "note": "Maine's Secretary of State says it does not run local elections; each town sets its own date under its charter or state law."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-07",
+        "text": "Maine's presidential primary is held on the first Tuesday after the first Monday in March, if a party has a contested race for its nominee. Date is worked out from state law (21-A MRSA section 441); the Secretary of State announces which parties qualify after Oct 1, 2027.",
+        "source": "https://www.mainelegislature.org/legis/statutes/21-A/title21-Asec441.html",
+        "confidence": "medium"
+      },
+      "localNote": "Maine's Secretary of State does not run town or city elections; ask your municipal clerk."
+    },
+    "md": {
+      "name": "Maryland",
+      "next": [
+        {
+          "date": null,
+          "title": "City and town elections",
+          "scope": "local",
+          "what": "Some Maryland cities and towns elect mayors and councils in 2027 on dates they choose, for example in spring or fall.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://elections.maryland.gov/elections/special_elections.html",
+          "confidence": "medium",
+          "note": "Maryland has no statewide election in 2027, and no state special election was listed as of Oct 26, 2026. Dates differ by town; the State Board of Elections keeps a municipal list."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-04-25",
+        "text": "Under current state law, Maryland's presidential primary is the fourth Tuesday in April of a presidential year. The date comes from state law (Election Law section 8-201) and lawmakers moved it for 2024, so they could change it in 2027.",
+        "source": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gel&section=8-201&enactments=false",
+        "confidence": "medium"
+      },
+      "localNote": "Maryland towns and cities set their own election dates; check your local board of elections or town hall."
+    },
+    "ma": {
+      "name": "Massachusetts",
+      "next": [
+        {
+          "date": null,
+          "title": "City and town elections",
+          "scope": "local",
+          "what": "Many Massachusetts cities (for example, Boston) hold elections for mayor and city council in the fall of odd years; towns hold town elections on dates they pick.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.sec.state.ma.us/divisions/elections/recent-updates/special-elections.htm",
+          "confidence": "medium",
+          "note": "No statewide election in 2027, and no special state election was on the Secretary of the Commonwealth's list as of Oct 26, 2026. Local dates differ by city and town."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-07",
+        "text": "Massachusetts holds presidential primaries on the first Tuesday in March of a presidential year. Date is computed from state law (Chapter 53, Section 28).",
+        "source": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVIII/Chapter53/Section28",
+        "confidence": "medium"
+      },
+      "localNote": "Each Massachusetts city or town sets its own election date; ask your city or town clerk."
+    },
+    "mi": {
+      "name": "Michigan",
+      "next": [
+        {
+          "date": "2027-05-04",
+          "title": "May regular election date",
+          "scope": "local",
+          "what": "Local ballot questions, such as school bonds and tax measures, and some local offices where one is scheduled.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.legislature.mi.gov/documents/mcl/pdf/mcl-168-641.pdf",
+          "confidence": "medium",
+          "note": "Michigan law only allows elections on set dates: the Tuesday after the first Monday in May, August and November. Computed from MCL 168.641; the vote only happens where something is on the local ballot."
+        },
+        {
+          "date": "2027-08-03",
+          "title": "August regular election date",
+          "scope": "local",
+          "what": "Primaries for local offices and local ballot questions where a community has one.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.legislature.mi.gov/documents/mcl/pdf/mcl-168-641.pdf",
+          "confidence": "medium",
+          "note": "Computed from MCL 168.641 (Tuesday after the first Monday in August). Only communities with something on the ballot vote."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "November regular election date",
+          "scope": "local",
+          "what": "Mayor, city council, township and school board races and local ballot questions in communities that elect in odd years.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.legislature.mi.gov/documents/mcl/pdf/mcl-168-641.pdf",
+          "confidence": "medium",
+          "note": "Computed from MCL 168.641 (Tuesday after the first Monday in November). There are no statewide offices in 2027. I could not confirm whether any state special election has been called."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-02-22",
+        "text": "Michigan holds its presidential primary on the fourth Tuesday in February of a presidential year. Date is computed from MCL 168.613a; lawmakers could still change it.",
+        "source": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-168-613a",
+        "confidence": "medium"
+      },
+      "localNote": "Michigan only allows elections on three set dates a year (May, August, November); your city or township clerk can say if your area has one."
+    },
+    "mn": {
+      "name": "Minnesota",
+      "next": [
+        {
+          "date": "2027-03-09",
+          "title": "Township elections",
+          "scope": "local",
+          "what": "Voters in townships choose township officials and vote on township questions.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.sos.mn.gov/election-administration-campaigns/elections-calendar/",
+          "confidence": "high",
+          "note": "Listed on the Secretary of State's election calendar. Only townships that hold their election in March."
+        },
+        {
+          "date": "2027-08-10",
+          "title": "State primary date (local primaries only)",
+          "scope": "local",
+          "what": "In 2027 this is a primary for city and school district offices that have too many candidates.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-07-20",
+          "source": "https://www.sos.mn.gov/election-administration-campaigns/elections-calendar/",
+          "confidence": "high",
+          "note": "Only places with a primary on the ballot vote. The registration date is 21 days before, the same rule as in 2026."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "General election (local)",
+          "scope": "local",
+          "what": "City and school district races and local ballot questions in places that elect in odd years. No statewide offices in 2027.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-10-12",
+          "source": "https://www.sos.mn.gov/election-administration-campaigns/elections-calendar/",
+          "confidence": "high",
+          "note": "Registration date is computed as 21 days before; Minnesota also allows same-day registration at the polls."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-07",
+        "text": "Minnesota's presidential primary is on the first Tuesday in March of a presidential year.",
+        "source": "https://www.sos.mn.gov/election-administration-campaigns/elections-calendar/",
+        "confidence": "high"
+      },
+      "localNote": "Minnesota special elections can only be held on certain dates; check the Secretary of State's special elections page or your county auditor (I could not load that page, so none are confirmed here)."
+    },
+    "ms": {
+      "name": "Mississippi",
+      "next": [
+        {
+          "date": "2026-12-01",
+          "title": "General election runoff (December)",
+          "scope": "runoff",
+          "what": "Second round for judge and school board races, and some special elections, where nobody won a majority on Nov 3.",
+          "ifNeeded": true,
+          "registrationDeadline": "2026-11-02",
+          "source": "https://www.sos.ms.gov/content/documents/elections/2026%20Elections%20Calendar.pdf",
+          "confidence": "high",
+          "note": "Only needed if a race has no majority winner."
+        },
+        {
+          "date": "2027-08-03",
+          "title": "Primary election",
+          "scope": "statewide",
+          "what": "Party primaries for governor, other statewide offices, the state legislature, and many county offices.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.sos.ms.gov/sites/default/files/publications/Election%20Calendar_2026.pdf",
+          "confidence": "high",
+          "note": "From the Secretary of State's 2026-2027 calendar, which says dates can change. The registration deadline is about 30 days before; not yet posted for 2027."
+        },
+        {
+          "date": "2027-08-31",
+          "title": "Primary runoff",
+          "scope": "runoff",
+          "what": "Second round for any primary race where nobody won a majority on Aug 3.",
+          "ifNeeded": true,
+          "registrationDeadline": null,
+          "source": "https://www.sos.ms.gov/sites/default/files/publications/Election%20Calendar_2026.pdf",
+          "confidence": "high",
+          "note": "Only needed for races without a majority winner."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "General election",
+          "scope": "statewide",
+          "what": "Voters choose the governor and other statewide officials, state legislators, and county officials.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.sos.ms.gov/sites/default/files/publications/Election%20Calendar_2026.pdf",
+          "confidence": "high",
+          "note": "The registration deadline is about 30 days before; the Secretary of State had not posted the exact 2027 date."
+        },
+        {
+          "date": "2027-11-30",
+          "title": "General election runoff",
+          "scope": "runoff",
+          "what": "Second round for judge, school board or special races where nobody won a majority on Nov 2.",
+          "ifNeeded": true,
+          "registrationDeadline": null,
+          "source": "https://www.sos.ms.gov/sites/default/files/publications/Election%20Calendar_2026.pdf",
+          "confidence": "high",
+          "note": "Only needed if a race has no majority winner."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-14",
+        "text": "State law allows a party to hold a presidential preference primary on the second Tuesday in March of a presidential year. Date computed from Miss. Code 23-15-1081; the party chooses whether to hold it.",
+        "source": "https://www.sos.ms.gov/elections-voting",
+        "confidence": "medium"
+      },
+      "localNote": "Mississippi's regular local offices are elected in the same statewide cycles; check your circuit clerk for special local votes."
+    },
+    "mo": {
+      "name": "Missouri",
+      "next": [
+        {
+          "date": "2027-02-02",
+          "title": "Bond election day",
+          "scope": "local",
+          "what": "Cities, school districts and other local groups can ask voters to approve bonds (borrowing money). Nothing else can be on this ballot.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-01-06",
+          "source": "https://www.sos.mo.gov/elections/calendar/2027cal",
+          "confidence": "high",
+          "note": "Only places that called a bond vote."
+        },
+        {
+          "date": "2027-03-02",
+          "title": "Charter city and county election day",
+          "scope": "local",
+          "what": "Only charter cities and charter counties may hold elections on this date, per their local charter.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-02-03",
+          "source": "https://www.sos.mo.gov/elections/calendar/2027cal",
+          "confidence": "high",
+          "note": "Only places whose charter uses this date."
+        },
+        {
+          "date": "2027-04-06",
+          "title": "General municipal election",
+          "scope": "local",
+          "what": "Voters choose city and town officials and school board members, and vote on local questions.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-03-10",
+          "source": "https://www.sos.mo.gov/elections/calendar/2027cal",
+          "confidence": "high",
+          "note": null
+        },
+        {
+          "date": "2027-08-03",
+          "title": "August election date",
+          "scope": "local",
+          "what": "An election date available to local governments and special districts for votes and ballot questions.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-07-07",
+          "source": "https://www.sos.mo.gov/elections/calendar/2027cal",
+          "confidence": "high",
+          "note": "Only places that called an election."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "November election date",
+          "scope": "local",
+          "what": "An election date available to local governments and special districts for votes and ballot questions. No statewide offices in 2027.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-10-06",
+          "source": "https://www.sos.mo.gov/elections/calendar/2027cal",
+          "confidence": "high",
+          "note": "Only places that called an election."
+        }
+      ],
+      "presidentialPrimary2028": null,
+      "localNote": "Missouri sets uniform election days (Feb, Mar, Apr, Aug, Nov), but each city, school or district decides whether to hold one; ask your local election authority. The state-run presidential primary was repealed in 2022 and a 2026 bill to bring it back did not pass, so 2028 has no state-set date yet."
+    },
+    "mt": {
+      "name": "Montana",
+      "next": [
+        {
+          "date": "2027-05-04",
+          "title": "School district election",
+          "scope": "local",
+          "what": "Voters choose school trustees and vote on school levies and bonds in districts that hold an election.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://mca.legmt.gov/bills/mca/title_0200/chapter_0200/part_0010/section_0050/0200-0200-0010-0050.html",
+          "confidence": "medium",
+          "note": "State law (20-20-105 MCA) sets the regular school election day as the first Tuesday after the first Monday in May. The Secretary of State has not yet posted a 2027 calendar."
+        },
+        {
+          "date": "2027-09-14",
+          "title": "City and town primary (if needed)",
+          "scope": "local",
+          "what": "Primary for mayors and city or town council seats where there are too many candidates.",
+          "ifNeeded": true,
+          "registrationDeadline": null,
+          "source": "https://mca.legmt.gov/bills/mca/title_0130/chapter_0010/part_0010/section_0070/0130-0010-0010-0070.html",
+          "confidence": "medium",
+          "note": "State law (13-1-107 MCA) puts it on the Tuesday following the second Monday in September in odd years. Only held if required. Computed date."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "City and town general election",
+          "scope": "local",
+          "what": "Voters choose mayors and city or town council members and vote on local questions. No statewide offices in 2027.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://mca.legmt.gov/bills/mca/title_0130/chapter_0010/part_0010/section_0040/0130-0010-0010-0040.html",
+          "confidence": "medium",
+          "note": "State law (13-1-104 MCA) holds municipal elections on general election day in odd years. Computed date; registration deadline not yet posted."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-06-06",
+        "text": "Montana's primary is on the first Tuesday after the first Monday in June in even years, and presidential nominating contests use that date. Date is computed from state law (13-1-107 MCA).",
+        "source": "https://mca.legmt.gov/bills/mca/title_0130/chapter_0010/part_0010/section_0070/0130-0010-0010-0070.html",
+        "confidence": "medium"
+      },
+      "localNote": "Montana sets school (May) and city (Sept/Nov) election days by state law, but only places with something to vote on hold elections; ask your county elections office."
+    },
+    "ne": {
+      "name": "Nebraska",
+      "next": [
+        {
+          "date": null,
+          "title": "City and village elections",
+          "scope": "local",
+          "what": "Some Nebraska cities, including Omaha and Lincoln, vote on mayors and city councils in the spring of odd-numbered years; school and other local districts also have their own dates.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://sos.nebraska.gov/elections",
+          "confidence": "medium",
+          "note": "Nebraska has no statewide election in 2027. Local dates differ by city and are set by the county election office. I did not find an official statewide list of 2027 local dates."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-05-09",
+        "text": "Nebraska's statewide primary, which includes the vote for presidential preference, is the first Tuesday after the second Monday in May of even years. Date computed from state law (Neb. Rev. Stat. 32-401); the Secretary of State posts the official 2028 calendar by Nov 1, 2027.",
+        "source": "https://nebraskalegislature.gov/laws/laws-index/chap32-full.html",
+        "confidence": "medium"
+      },
+      "localNote": "Local election dates in Nebraska vary by city and district; check your county election office."
+    },
+    "nv": {
+      "name": "Nevada",
+      "next": [],
+      "presidentialPrimary2028": {
+        "date": "2028-02-01",
+        "text": "Nevada's presidential preference primary is on the first Tuesday in February of a presidential year, unless a party has only one candidate. Date computed from state law (NRS 298.650); lawmakers meet in 2027 and could change it.",
+        "source": "https://www.leg.state.nv.us/nrs/nrs-298.html",
+        "confidence": "medium"
+      },
+      "localNote": "No regular Nevada elections were found between Nov 2026 and the 2028 presidential primary; any special election would be announced by the Secretary of State or your county clerk."
+    },
+    "nh": {
+      "name": "New Hampshire",
+      "next": [
+        {
+          "date": "2027-03-09",
+          "title": "Town elections",
+          "scope": "local",
+          "what": "Voters in towns choose local officials and school board members and vote on local questions (many towns also hold town meeting).",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.sos.nh.gov/elections/2026-2027-political-calendar",
+          "confidence": "high",
+          "note": "This is the standard town election date on the state political calendar. The calendar also lists an alternate town election on May 11, 2027, and towns with the SB2 system may vote on Mar 9, Apr 13 or May 11. New Hampshire allows same-day registration."
+        }
+      ],
+      "presidentialPrimary2028": null,
+      "localNote": "Most New Hampshire towns vote on the second Tuesday of March; ask your town or city clerk for your date. The 2028 presidential primary date is set by the Secretary of State and had not been announced."
+    },
+    "nj": {
+      "name": "New Jersey",
+      "next": [
+        {
+          "date": "2027-06-08",
+          "title": "Primary election",
+          "scope": "statewide",
+          "what": "Democratic and Republican voters pick their candidates for the state Senate and General Assembly, plus county and local offices.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-05-18",
+          "source": "https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-primary-election.pdf",
+          "confidence": "medium",
+          "note": "Computed: New Jersey law (N.J.S.A. 19:2-1) puts the primary on the Tuesday after the first Monday in June; the 2026 official timeline confirms the rule. The Division of Elections had not posted a 2027 timeline."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "General election",
+          "scope": "statewide",
+          "what": "Voters choose all state Senate and General Assembly seats, plus county and local offices and any ballot questions.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-10-12",
+          "source": "https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-primary-election.pdf",
+          "confidence": "medium",
+          "note": "Computed from state law (first Tuesday after the first Monday in November). The registration deadline is 21 days before."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-06-06",
+        "text": "New Jersey holds its presidential primary on the Tuesday after the first Monday in June of a presidential year. Date computed from the same state law; the state had not posted a 2028 timeline.",
+        "source": "https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-primary-election.pdf",
+        "confidence": "medium"
+      },
+      "localNote": "Many New Jersey towns hold May or November nonpartisan elections; ask your county clerk or municipal clerk."
+    },
+    "nm": {
+      "name": "New Mexico",
+      "next": [
+        {
+          "date": "2027-11-02",
+          "title": "Regular local election",
+          "scope": "local",
+          "what": "Voters choose members of local governing bodies such as school boards, community colleges and special districts, and vote on local questions. No statewide offices in 2027.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-10-05",
+          "source": "https://sos.nm.gov/voting-and-elections/voter-information-portal/local-election-act-information",
+          "confidence": "medium",
+          "note": "The Secretary of State says the Regular Local Election is held every November of odd years; the day is computed as the Tuesday after the first Monday. Registration deadline computed as 28 days before."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-06-06",
+        "text": "New Mexico's presidential primary is held on the same day as its state primary, the first Tuesday after the first Monday in June. Date computed from state law (NMSA 1-15A-2 and 1-8-11); not yet posted by the Secretary of State.",
+        "source": "https://sos.nm.gov/voting-and-elections/voter-information-portal/local-election-act-information",
+        "confidence": "medium"
+      },
+      "localNote": "New Mexico's Local Election Act uses one regular local election in November of odd years; municipal officers are elected in March of even years."
+    },
+    "ny": {
+      "name": "New York",
+      "next": [
+        {
+          "date": "2027-06-22",
+          "title": "Primary election (local offices)",
+          "scope": "local",
+          "what": "Party primaries for the local offices that are on the ballot in 2027, such as some county, city, town and judge seats.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-06-12",
+          "source": "https://www.nysenate.gov/legislation/laws/ELN/8-100",
+          "confidence": "medium",
+          "note": "Computed: state law makes the fourth Tuesday in June the primary day. No statewide offices are up in 2027. The Board of Elections had not posted a 2027 calendar. Registration deadline computed as 10 days before."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "General election (local offices)",
+          "scope": "local",
+          "what": "Local offices on the ballot in 2027 (some county, city, town and court seats) and any ballot questions. No governor or legislature races in 2027.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-10-23",
+          "source": "https://www.nysenate.gov/legislation/laws/ELN/8-100",
+          "confidence": "medium",
+          "note": "Computed: general election is the Tuesday after the first Monday in November. A 2023 law moved many local races to even years, so fewer places vote in 2027. Registration deadline computed as 10 days before."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-02-01",
+        "text": "Written in state law as the first Tuesday in February, but New York lawmakers moved the date for 2020 and 2024 and may do so again, so treat this as unconfirmed.",
+        "source": "https://www.nysenate.gov/legislation/laws/ELN/8-100",
+        "confidence": "low"
+      },
+      "localNote": "Which local offices are on New York's 2027 ballot depends on your county and town; check your county board of elections."
+    },
+    "nc": {
+      "name": "North Carolina",
+      "next": [
+        {
+          "date": "2027-11-02",
+          "title": "Municipal elections",
+          "scope": "local",
+          "what": "Cities and towns that use a one-round vote choose mayors and councils. Many towns with party or two-round systems hold earlier primaries in September or October.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-10-08",
+          "source": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_163/GS_163-279.html",
+          "confidence": "medium",
+          "note": "Computed from G.S. 163-279 (Tuesday after the first Monday in November for one-round nonpartisan elections); each town's charter sets its method. No statewide offices in 2027. Registration deadline computed as 25 days before, as in 2026."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-07",
+        "text": "North Carolina holds its presidential primary on the Tuesday after the first Monday in March of a presidential year. Date computed from state law (G.S. 163-213.2); not yet published by the State Board.",
+        "source": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_163/GS_163-213.2.html",
+        "confidence": "medium"
+      },
+      "localNote": "North Carolina cities and towns set their election method in their charters; check your county board of elections."
+    }
+  }
+}

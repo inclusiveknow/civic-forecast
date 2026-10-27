@@ -1,0 +1,532 @@
+{
+  "checked": "2026-10-26",
+  "states": {
+    "al": {
+      "name": "Alabama",
+      "next": [
+        {
+          "date": "2027-08-24",
+          "title": "Local elections in four cities",
+          "scope": "local",
+          "what": "Voters in Montgomery, Mountain Brook, Scottsboro and Talladega have local elections or referendums (local ballot questions) on this day.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.sos.alabama.gov/alabama-votes/voter/upcoming-elections",
+          "confidence": "high",
+          "note": "The Secretary of State lists only these four cities for this date. Other Alabama towns may have different dates. The 2028 primary date is computed from the \"first Tuesday in March\" rule in Code of Alabama 17-13-3 (the source shown is the legislature bill that moved the primary to that day); the Secretary of State has not posted a 2028 calendar yet."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-07",
+        "text": "Alabama state law puts the presidential primary on the first Tuesday in March in presidential years, which is March 7, 2028.",
+        "source": "https://alison.legislature.state.al.us/files/pdf/SearchableInstruments/2015RS/PrintFiles/SB240-Int.pdf",
+        "confidence": "medium"
+      },
+      "localNote": "Alabama does not run one statewide date for local elections each year; cities and counties set their own, and the Secretary of State lists them at sos.alabama.gov/alabama-votes/voter/upcoming-elections."
+    },
+    "ak": {
+      "name": "Alaska",
+      "next": [
+        {
+          "date": "2027-04-06",
+          "title": "Anchorage city election",
+          "scope": "local",
+          "what": "Voters in the Municipality of Anchorage choose city officials (such as Assembly and school board seats) and vote on local questions.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-03-07",
+          "source": "https://www.elections.alaska.gov/calendar/",
+          "confidence": "medium",
+          "note": "Computed from the state calendar, which lists the 2026 Anchorage election on the first Tuesday in April (April 7, 2026). The 2027 date and the 30-days-before registration deadline have not been posted yet."
+        },
+        {
+          "date": "2027-10-05",
+          "title": "Borough, city and rural school board elections",
+          "scope": "local",
+          "what": "Many Alaska boroughs and cities hold their regular local elections on this day, and the state also runs elections for rural school boards (called REAAs) in areas outside organized boroughs.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-09-05",
+          "source": "https://www.elections.alaska.gov/calendar/",
+          "confidence": "medium",
+          "note": "Computed from the state calendar, which lists the 2026 regular municipal elections and rural school board election on the first Tuesday in October (October 6, 2026). Not every town uses this date; Anchorage uses April."
+        }
+      ],
+      "presidentialPrimary2028": null,
+      "localNote": "Alaska towns, boroughs and school districts each set their own election dates (many use the first Tuesday in October, Anchorage uses the first Tuesday in April); check your city or borough clerk and elections.alaska.gov/calendar.",
+      "presidentialPrimary2028Note": "Alaska does not run a presidential primary; each political party picks its own way and date (usually a caucus) and announces it itself."
+    },
+    "az": {
+      "name": "Arizona",
+      "next": [
+        {
+          "date": "2027-03-09",
+          "title": "March local election day",
+          "scope": "local",
+          "what": "Cities, towns, school districts and other local governments may hold elections on local ballot questions such as bonds or budget overrides. Not every community has one.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-02-08",
+          "source": "https://azsos.gov/sites/default/files/docs/HB2022-Primary-Date-Change-2025-2026-calendar-05052026.pdf",
+          "confidence": "high",
+          "note": "Listed on the Secretary of State 2025-2026 election calendar as the \"March Next Odd Year Election\" under A.R.S. 16-204, with the registration deadline shown there."
+        },
+        {
+          "date": "2027-05-18",
+          "title": "May local election day",
+          "scope": "local",
+          "what": "Local governments may hold elections on local ballot questions such as bonds or budget overrides. Not every community has one.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-04-19",
+          "source": "https://azsos.gov/sites/default/files/docs/HB2022-Primary-Date-Change-2025-2026-calendar-05052026.pdf",
+          "confidence": "high",
+          "note": "Date listed on the Secretary of State calendar. The registration deadline is computed as 29 days before, the same rule the state shows for the March date."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "November local election day",
+          "scope": "local",
+          "what": "Cities, towns, counties, school districts and other local governments may put local ballot questions (such as tax or bond measures) to voters. People are not elected on this date in odd years.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-10-04",
+          "source": "https://www.azleg.gov/ars/16/00204.htm",
+          "confidence": "medium",
+          "note": "Computed from A.R.S. 16-204: first Tuesday after the first Monday in November. Registration deadline computed as 29 days before the election."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-21",
+        "text": "Arizona law puts the presidential preference election on the Tuesday after March 15 in presidential years, which is March 21, 2028. The Governor can move it by proclamation.",
+        "source": "https://www.azleg.gov/ars/16/00241.htm",
+        "confidence": "medium"
+      },
+      "localNote": "Arizona only lets local governments hold elections on a few set dates (March, May, July in even years, and November), but each city, town or school district chooses whether to use them; in 2027 only measures, not people, are voted on; the second-to-last Tuesday in July (July 20, 2027) is also an allowed date for measures; check your county elections office."
+    },
+    "ar": {
+      "name": "Arkansas",
+      "next": [
+        {
+          "date": "2026-12-01",
+          "title": "General runoff (county and city races)",
+          "scope": "runoff",
+          "what": "If no candidate wins a majority in some county or city races on November 3, the top candidates face off in a runoff.",
+          "ifNeeded": true,
+          "registrationDeadline": "2026-11-02",
+          "source": "https://www.sos.arkansas.gov/uploads/elections/2026_Election_Calendar_Rev._6-2025_.pdf",
+          "confidence": "high",
+          "note": "The state calendar lists the registration deadline as Sunday, November 1 but says the actual deadline moves to Monday, November 2, 2026."
+        },
+        {
+          "date": null,
+          "title": "School elections and local ballot questions in 2027",
+          "scope": "local",
+          "what": "Some Arkansas school districts and local governments may hold school board elections or vote on local questions in 2027, but the date depends on the district.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://arkleg.state.ar.us/Home/FTPDocument?path=%2FACTS%2F2025R%2FPublic%2FACT405.pdf",
+          "confidence": "low",
+          "note": "Arkansas 2025 laws (Acts 405 and 503) moved most school board elections to the even-year primary or November general election. The bill text we could read still mentions odd-year dates, but we could not confirm the exact 2027 days, so none is given. Ask your county clerk or school district."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-07",
+        "text": "Arkansas law puts the presidential-year primary on the first Tuesday after the first Monday in March, which is March 7, 2028.",
+        "source": "https://arkleg.state.ar.us/Home/FTPDocument?path=%2FACTS%2F2025R%2FPublic%2FACT405.pdf",
+        "confidence": "medium"
+      },
+      "localNote": "Arkansas city and school dates mostly follow the March primary and November general election in even years; for special local elections check your county clerk or the Secretary of State at sos.arkansas.gov/elections."
+    },
+    "ca": {
+      "name": "California",
+      "next": [
+        {
+          "date": "2027-03-02",
+          "title": "March local election day",
+          "scope": "local",
+          "what": "Cities, school districts and other local agencies may hold elections on this day, including special elections to fill vacancies. Not every community has one.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=ELEC&sectionNum=1000",
+          "confidence": "medium",
+          "note": "Computed from California Elections Code 1000(b): first Tuesday after the first Monday in March of odd-numbered years. Whether any election happens depends on your local agency or any special election called by the state."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "November local election day",
+          "scope": "local",
+          "what": "Many city councils, school boards and special districts hold their regular elections, and local ballot measures appear, on this day.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=ELEC&sectionNum=1000",
+          "confidence": "medium",
+          "note": "Computed from California Elections Code 1000(e): first Tuesday after the first Monday in November. Whether you have a ballot depends on your city, school district or special district."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-07",
+        "text": "California holds its presidential primary on the first Tuesday after the first Monday in March in presidential years, which is March 7, 2028.",
+        "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=ELEC&sectionNum=1000",
+        "confidence": "medium"
+      },
+      "localNote": "California law allows local elections only on a few set dates (March, April and June in some years, and November), but each city, school district or district decides whether to use them; check your county elections office. Special elections for vacancies in the legislature or Congress are called by the Governor as needed."
+    },
+    "co": {
+      "name": "Colorado",
+      "next": [
+        {
+          "date": "2027-11-02",
+          "title": "Coordinated election",
+          "scope": "local",
+          "what": "Local governments such as school boards, special districts and some cities hold elections and ballot questions on this day, and any statewide ballot questions go on it too. All voting is by mail ballot.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.coloradosos.gov/pubs/elections/calendars/2027ElectionCalendar.pdf",
+          "confidence": "high",
+          "note": "Colorado has same-day voter registration, so people can register through Election Day. The state calendar also lists 2027 deadlines for this election."
+        }
+      ],
+      "presidentialPrimary2028": null,
+      "localNote": "Colorado cities and towns each set their own municipal election dates (many use April of odd years) while school boards and special districts use the November odd-year \"coordinated election\"; check your county clerk.",
+      "presidentialPrimary2028Note": "Colorado holds a presidential primary in March of presidential years, but the Governor picks the date (by law no later than the third Tuesday in March, March 21, 2028) and it has not been announced yet."
+    },
+    "ct": {
+      "name": "Connecticut",
+      "next": [
+        {
+          "date": "2027-11-02",
+          "title": "Municipal election",
+          "scope": "local",
+          "what": "Every Connecticut town and city elects local officials such as mayor or first selectman, council and school board members, and may vote on local questions.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.cga.ct.gov/current/pub/chap_146.htm",
+          "confidence": "medium",
+          "note": "Computed from Connecticut General Statutes 9-164: Tuesday after the first Monday of November in odd-numbered years. A town can instead hold it on the first Monday in May (May 3, 2027) if its council votes by a three-fourths majority, so check your town clerk."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-04-04",
+        "text": "Connecticut law puts presidential primaries on the first Tuesday in April of presidential years, which is April 4, 2028. A party only holds one in a town if it has two or more candidates.",
+        "source": "https://www.cga.ct.gov/current/pub/chap_154.htm",
+        "confidence": "medium"
+      },
+      "localNote": "Connecticut sets municipal elections statewide for November of odd years (some towns pick May); check your town clerk or portal.ct.gov/sots."
+    },
+    "de": {
+      "name": "Delaware",
+      "next": [
+        {
+          "date": "2027-05-11",
+          "title": "School board elections",
+          "scope": "local",
+          "what": "Voters in each Delaware school district elect school board members and may vote on school funding questions.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://delcode.delaware.gov/title14/c010/sc04/index.html",
+          "confidence": "medium",
+          "note": "Computed from Delaware Code Title 14, section 1072(c): school board elections are held annually on the second Tuesday of May. Voters do not need to be registered for the general election to vote in school board elections."
+        },
+        {
+          "date": null,
+          "title": "Town and city elections",
+          "scope": "local",
+          "what": "Delaware towns and cities set their own election dates for mayor and council, so each community differs.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://elections.delaware.gov/public/calendar/calendars.html",
+          "confidence": "medium",
+          "note": "The Department of Elections publishes a separate \"Delaware Municipal Elections Calendar\" each year; the 2027 one is not posted yet."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-04-25",
+        "text": "Delaware law puts the presidential primary on the fourth Tuesday in April of presidential years, which is April 25, 2028. A party can opt out.",
+        "source": "https://elections.delaware.gov/elections/primary/presidential.html",
+        "confidence": "medium"
+      },
+      "localNote": "Delaware school board elections are in May, but town and city elections follow each municipality's own calendar; see elections.delaware.gov/public/calendar/calendars.html."
+    },
+    "dc": {
+      "name": "District of Columbia",
+      "next": [
+        {
+          "date": null,
+          "title": "Special elections if a seat opens",
+          "scope": "special",
+          "what": "If a D.C. Council, school board or neighborhood commission seat becomes vacant, the Board of Elections schedules a special election.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://dcboe.org/Elections",
+          "confidence": "low",
+          "note": "No special election dated after November 3, 2026 was found on official D.C. pages."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-06-06",
+        "text": "D.C. law puts the presidential primary on the first Tuesday in June of presidential years, which is June 6, 2028.",
+        "source": "https://code.dccouncil.gov/us/dc/council/code/sections/1-1001.10",
+        "confidence": "medium"
+      },
+      "localNote": "D.C. elects its mayor, Council and other offices in even-numbered years; special elections for vacancies and neighborhood commission (ANC) vacancies are called as needed, so check dcboe.org."
+    },
+    "fl": {
+      "name": "Florida",
+      "next": [
+        {
+          "date": null,
+          "title": "Local and special elections",
+          "scope": "local",
+          "what": "Florida cities and special districts hold their own elections (many in spring) and the state can call special elections when a legislative or congressional seat opens.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://dos.fl.gov/elections/for-voters/special-elections/",
+          "confidence": "medium",
+          "note": "The state listed no special election dated after November 3, 2026 as of July 2026. The state also keeps a Local Elections Database where counties report local dates."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-21",
+        "text": "Florida's next presidential preference primary is March 21, 2028 (the third Tuesday in March). It is closed, so only voters registered with a party can take part.",
+        "source": "https://dos.fl.gov/elections/for-voters/presidential-election-year/",
+        "confidence": "high"
+      },
+      "localNote": "Florida city and special district election dates vary; check your county Supervisor of Elections or the state's Local Elections Database."
+    },
+    "ga": {
+      "name": "Georgia",
+      "next": [
+        {
+          "date": "2026-12-01",
+          "title": "General election runoff",
+          "scope": "runoff",
+          "what": "If no candidate gets more than half the votes in a race on November 3, the top two face off in a runoff.",
+          "ifNeeded": true,
+          "registrationDeadline": "2026-11-02",
+          "source": "https://georgia.gov/events/2026-12-01/election-day-general-election-runoff",
+          "confidence": "high",
+          "note": "November 2, 2026 is the last day to register for the runoff, as listed on georgia.gov."
+        },
+        {
+          "date": "2027-03-16",
+          "title": "Special election day for local questions",
+          "scope": "special",
+          "what": "Counties, cities and school districts may hold special elections on local ballot questions this day.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.legis.ga.gov/api/legislation/document/20252026/242720",
+          "confidence": "medium",
+          "note": "Computed from Georgia law (O.C.G.A. 21-2-540) as quoted in the legislature's 2026 bill text: in odd years special elections for questions are held on the third Tuesday in March or the Tuesday after the first Monday in November. A 2026 bill (SB 514) would also add June and September dates; we did not confirm whether it became law. Whether any election is held depends on local calls."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "Municipal and special election day",
+          "scope": "local",
+          "what": "Georgia cities elect mayors and council members in odd years, and local ballot questions may be voted on this day.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.legis.ga.gov/api/legislation/document/20252026/242720",
+          "confidence": "medium",
+          "note": "Computed: Tuesday after the first Monday in November of odd-numbered years, the date Georgia law uses for municipal general elections and special elections. Not every city has an election; check with your city or county."
+        }
+      ],
+      "presidentialPrimary2028": null,
+      "localNote": "Georgia cities hold their elections in odd-numbered years, mostly in November, but exact schedules and which offices are up vary by city, so check your county elections office or mvp.sos.ga.gov.",
+      "presidentialPrimary2028Note": "Georgia's presidential primary date for 2028 has not been announced by the Secretary of State yet."
+    },
+    "hi": {
+      "name": "Hawaii",
+      "next": [],
+      "presidentialPrimary2028": null,
+      "localNote": "Hawaii's regular elections are statewide and held only in even-numbered years (primary in August, general in November); special elections are called only when certain seats open, so check elections.hawaii.gov.",
+      "presidentialPrimary2028Note": "Hawaii does not run a presidential preference primary; political parties choose their nominees through their own caucus or party process."
+    },
+    "id": {
+      "name": "Idaho",
+      "next": [
+        {
+          "date": "2027-05-18",
+          "title": "May election day",
+          "scope": "local",
+          "what": "Cities, school districts and other local governments may hold elections on local questions such as school levies and bonds. Not every community has one.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://legislature.idaho.gov/statutesrules/idstat/Title34/T34CH1/SECT34-106/",
+          "confidence": "medium",
+          "note": "Computed from Idaho Code 34-106: elections may be held on the third Tuesday in May. Idaho allows same-day voter registration, so there is no separate deadline."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "November election day",
+          "scope": "local",
+          "what": "Idaho cities elect mayors and city council members in odd years, and local questions can be on the ballot (including city initiatives and referendums).",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://legislature.idaho.gov/statutesrules/idstat/Title34/T34CH1/SECT34-106/",
+          "confidence": "medium",
+          "note": "Computed from Idaho Code 34-106: Tuesday following the first Monday in November."
+        }
+      ],
+      "presidentialPrimary2028": null,
+      "localNote": "Idaho lets local governments hold elections only on the third Tuesday in May and the November election date, so check your county clerk to see what is on your ballot.",
+      "presidentialPrimary2028Note": "We could not confirm whether Idaho will hold a separate March presidential primary in 2028; the current statute we found does not list a March date, so none is given."
+    },
+    "il": {
+      "name": "Illinois",
+      "next": [
+        {
+          "date": "2027-02-23",
+          "title": "Consolidated primary election",
+          "scope": "local",
+          "what": "Voters nominate candidates for city, village, township, school board and other local offices in places that hold primary-style elections.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.ilga.gov/Documents/legislation/ilcs/documents/001000050K2A-1.1.htm",
+          "confidence": "medium",
+          "note": "Computed from 10 ILCS 5/2A-1.1(b): last Tuesday in February of odd-numbered years. Many places have no primary because too few people file for the offices."
+        },
+        {
+          "date": "2027-04-06",
+          "title": "Consolidated election",
+          "scope": "local",
+          "what": "Voters elect mayors, councils, school boards, township and other local officials and may vote on local questions.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.ilga.gov/Documents/legislation/ilcs/documents/001000050K2A-1.1.htm",
+          "confidence": "medium",
+          "note": "Computed from 10 ILCS 5/2A-1.1(b): first Tuesday in April of odd-numbered years."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-03-21",
+        "text": "Illinois' general primary, which includes the presidential primary, is on the third Tuesday in March of even years, which is March 21, 2028.",
+        "source": "https://www.ilga.gov/Documents/legislation/ilcs/documents/001000050K2A-1.1.htm",
+        "confidence": "medium"
+      },
+      "localNote": "Illinois sets the same local election days statewide (consolidated primary in February and consolidated election in April of odd years); check your county clerk or elections.il.gov for what is on your ballot."
+    },
+    "in": {
+      "name": "Indiana",
+      "next": [
+        {
+          "date": "2027-05-04",
+          "title": "Municipal primary election",
+          "scope": "local",
+          "what": "Voters in cities and larger towns pick party nominees for mayor, council and other city or town offices.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-04-05",
+          "source": "https://www.in.gov/dA/315067e776/2026-Election-Calendar-Election-Administrators-Edition.FINAL.pdf?language_id=1",
+          "confidence": "high",
+          "note": "The state calendar lists May 4, 2027 as Municipal Primary Election Day. The registration deadline is computed as 29 days before the election (Indiana's usual rule) and has not been separately posted yet."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "Municipal election",
+          "scope": "local",
+          "what": "Voters elect mayors, city and town councils, clerks and other local officials.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-10-04",
+          "source": "https://www.in.gov/dA/315067e776/2026-Election-Calendar-Election-Administrators-Edition.FINAL.pdf?language_id=1",
+          "confidence": "high",
+          "note": "The state calendar lists November 2, 2027 as Municipal Election Day. The registration deadline is computed as 29 days before the election."
+        }
+      ],
+      "presidentialPrimary2028": {
+        "date": "2028-05-02",
+        "text": "Indiana's primary, which includes the presidential primary, is held on the first Tuesday after the first Monday in May, which is May 2, 2028.",
+        "source": "https://www.in.gov/dA/315067e776/2026-Election-Calendar-Election-Administrators-Edition.FINAL.pdf?language_id=1",
+        "confidence": "medium"
+      },
+      "localNote": "Indiana holds city and town elections in odd-numbered years (primary in May, election in November); a few tiny towns and special-charter towns differ, so check your county election office."
+    },
+    "ia": {
+      "name": "Iowa",
+      "next": [
+        {
+          "date": "2027-03-02",
+          "title": "Public measure election day",
+          "scope": "local",
+          "what": "Counties, cities and school districts may hold elections on local ballot questions (public measures) on this day.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://sos.iowa.gov/voters/possible-special-election-dates",
+          "confidence": "medium",
+          "note": "Computed from Iowa Code 39.2 as described by the Secretary of State: first Tuesday in March. Only happens if a local government calls one."
+        },
+        {
+          "date": "2027-09-14",
+          "title": "Public measure election day",
+          "scope": "local",
+          "what": "Counties, cities and school districts may hold elections on local ballot questions (public measures) on this day.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://sos.iowa.gov/voters/possible-special-election-dates",
+          "confidence": "medium",
+          "note": "Computed from Iowa Code 39.2 as described by the Secretary of State: second Tuesday in September. Only happens if a local government calls one."
+        },
+        {
+          "date": "2027-10-05",
+          "title": "City primary",
+          "scope": "local",
+          "what": "In cities that use primaries, voters narrow the list of candidates for mayor and city council.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-09-20",
+          "source": "https://sos.iowa.gov/three-year-election-calendar",
+          "confidence": "high",
+          "note": "The state lists this date as the voter pre-registration deadline; Iowa also allows same-day registration at the polls."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "Regular city and school election",
+          "scope": "local",
+          "what": "Voters elect city officials (mayors, councils) and school board members and may vote on public measures.",
+          "ifNeeded": false,
+          "registrationDeadline": "2027-10-18",
+          "source": "https://sos.iowa.gov/three-year-election-calendar",
+          "confidence": "high",
+          "note": "The state lists this date as the voter pre-registration deadline; Iowa also allows same-day registration at the polls."
+        },
+        {
+          "date": "2027-11-30",
+          "title": "City runoff",
+          "scope": "runoff",
+          "what": "If no candidate wins enough votes in some city races on November 2, the top candidates face a runoff.",
+          "ifNeeded": true,
+          "registrationDeadline": "2027-11-15",
+          "source": "https://sos.iowa.gov/three-year-election-calendar",
+          "confidence": "high",
+          "note": "The state lists this date as the voter pre-registration deadline."
+        }
+      ],
+      "presidentialPrimary2028": null,
+      "localNote": "Iowa runs one set of city and school elections statewide in November of odd years (with an October primary in some cities); special elections to fill vacancies can be called on most Tuesdays, so check your county auditor.",
+      "presidentialPrimary2028Note": "Iowa's 2028 caucus date is not set in what we found; the state parties decide, and the state's regular 2028 primary is June 6, 2028."
+    },
+    "ks": {
+      "name": "Kansas",
+      "next": [
+        {
+          "date": "2027-08-03",
+          "title": "City and school primary",
+          "scope": "local",
+          "what": "Where more candidates file than seats, voters narrow the field for city and school board offices.",
+          "ifNeeded": true,
+          "registrationDeadline": null,
+          "source": "https://www.ksrevisor.gov/statutes/chapters/ch25/025_021_0007.html",
+          "confidence": "medium",
+          "note": "Computed from K.S.A. 25-2107: a primary may be held the first Tuesday in August of odd years, if needed. Many places have no primary."
+        },
+        {
+          "date": "2027-11-02",
+          "title": "City and school election",
+          "scope": "local",
+          "what": "Voters elect city council members, mayors and school board members and may vote on local questions.",
+          "ifNeeded": false,
+          "registrationDeadline": null,
+          "source": "https://www.ksrevisor.gov/statutes/chapters/ch25/025_021_0007.html",
+          "confidence": "medium",
+          "note": "Computed from K.S.A. 25-2107: Tuesday following the first Monday in November of odd and even years."
+        }
+      ],
+      "presidentialPrimary2028": null,
+      "localNote": "Kansas holds city and school elections in odd-numbered years in November (with an August primary if needed); check your county election office or sos.ks.gov.",
+      "presidentialPrimary2028Note": "Kansas has a law for a presidential preference primary, but we found no 2028 date; the state posted no 2028 calendar and no presidential primary was held in 2024."
+    }
+  }
+}

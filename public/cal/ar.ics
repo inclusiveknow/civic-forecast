@@ -10,7 +10,7 @@ REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
 UID:ar-aca-oe-opens-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:HealthCare.gov sign-up opens for 2027
@@ -29,7 +29,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-dst-ends-2026@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:Clocks fall back one hour
@@ -44,7 +44,7 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-2026-early-last@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
 SUMMARY:Last day of early voting (Arkansas)
@@ -62,8 +62,30 @@ TRIGGER:-PT15H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:ar-next-2026-12-01-general-runoff-county-and-city-races-register@civic
+ -forecast.pages.dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:Register by today for the general runoff (county and city races) (
+ Arkansas)
+DESCRIPTION:If no candidate wins a majority in some county or city races o
+ n November 3\, the top candidates face off in a runoff.\nMore: https://ww
+ w.sos.arkansas.gov/uploads/elections/2026_Election_Calendar_Rev._6-2025_.
+ pdf\nFrom The Civic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.sos.arkansas.gov/uploads/elections/2026_Election_Calendar_
+ Rev._6-2025_.pdf
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Register by today for the general runoff (county and city race
+ s) (Arkansas)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:ar-2026-election@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Election Day (Arkansas)
@@ -79,8 +101,28 @@ TRIGGER:-PT15H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:ar-next-2026-12-01-general-runoff-county-and-city-races@civic-forecast
+ .pages.dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:General runoff (county and city races) (Arkansas) · if needed
+DESCRIPTION:If no candidate wins a majority in some county or city races o
+ n November 3\, the top candidates face off in a runoff.\nMore: https://ww
+ w.sos.arkansas.gov/uploads/elections/2026_Election_Calendar_Rev._6-2025_.
+ pdf\nFrom The Civic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://www.sos.arkansas.gov/uploads/elections/2026_Election_Calendar_
+ Rev._6-2025_.pdf
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:General runoff (county and city races) (Arkansas) · if needed
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:ar-medicare-oe-last-day@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261207
 DTEND;VALUE=DATE:20261208
 SUMMARY:Last day to change Medicare plans
@@ -100,7 +142,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-aca-dec15-deadline@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Deadline for Jan. 1 health coverage
@@ -119,7 +161,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-ssi-cola-2026-12-31@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:SSI raise shows up in payments
@@ -138,7 +180,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-medicaid-work-rule-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Medicaid work rules begin by Jan. 1
@@ -162,7 +204,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-medicare-ma-oe-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Medicare Advantage switch window
@@ -182,7 +224,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-social-security-cola-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Social Security raises 3.6 percent
@@ -201,7 +243,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-aca-oe-ends-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:Last day to sign up on HealthCare.gov
@@ -220,7 +262,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-q4-estimated-tax-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:Last 2026 estimated tax payment due
@@ -239,7 +281,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-w2-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:Your W-2 should be on its way
@@ -257,7 +299,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-dst-start-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270314
 DTEND;VALUE=DATE:20270315
 SUMMARY:Clocks spring forward one hour
@@ -272,7 +314,7 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-medicare-ma-oe-2027-last@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Last day: Medicare Advantage switch window
@@ -292,7 +334,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-est-2027-4@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270415
 DTEND;VALUE=DATE:20270416
 SUMMARY:Estimated tax payment due (first for 2027)
@@ -311,7 +353,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-tax-day-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270415
 DTEND;VALUE=DATE:20270416
 SUMMARY:Tax Day: 2026 returns are due
@@ -330,7 +372,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-est-2027-6@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270615
 DTEND;VALUE=DATE:20270616
 SUMMARY:Estimated tax payment due (second for 2027)
@@ -349,7 +391,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-est-2027-9@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20270915
 DTEND;VALUE=DATE:20270916
 SUMMARY:Estimated tax payment due (third for 2027)
@@ -368,7 +410,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-extension-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271015
 DTEND;VALUE=DATE:20271016
 SUMMARY:Extended tax returns are due
@@ -385,7 +427,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-medicare-oe-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271015
 DTEND;VALUE=DATE:20271016
 SUMMARY:Medicare Open Enrollment
@@ -404,7 +446,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-dst-end-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271107
 DTEND;VALUE=DATE:20271108
 SUMMARY:Clocks fall back one hour
@@ -419,7 +461,7 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-medicare-oe-last-2027@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20271207
 DTEND;VALUE=DATE:20271208
 SUMMARY:Last day to change Medicare plans
@@ -438,7 +480,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-medicare-ma-oe-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280101
 DTEND;VALUE=DATE:20280102
 SUMMARY:Medicare Advantage switch window
@@ -458,7 +500,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-est-2028-q4@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280118
 DTEND;VALUE=DATE:20280119
 SUMMARY:Last estimated tax payment for 2027 due
@@ -477,7 +519,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-w2-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280131
 DTEND;VALUE=DATE:20280201
 SUMMARY:Your W-2 should be on its way
@@ -494,8 +536,27 @@ TRIGGER:-PT15H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:ar-2028-presidential-primary@civic-forecast.pages.dev
+DTSTAMP:20261027T020342Z
+DTSTART;VALUE=DATE:20280307
+DTEND;VALUE=DATE:20280308
+SUMMARY:2028 presidential primary (Arkansas)
+DESCRIPTION:Arkansas law puts the presidential-year primary on the first T
+ uesday after the first Monday in March\, which is March 7\, 2028.\nMore: 
+ https://arkleg.state.ar.us/Home/FTPDocument?path=%2FACTS%2F2025R%2FPublic
+ %2FACT405.pdf\nFrom The Civic Forecast: https://civic-forecast.pages.dev
+TRANSP:TRANSPARENT
+URL:https://arkleg.state.ar.us/Home/FTPDocument?path=%2FACTS%2F2025R%2FPub
+ lic%2FACT405.pdf
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:2028 presidential primary (Arkansas)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:ar-dst-start-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280312
 DTEND;VALUE=DATE:20280313
 SUMMARY:Clocks spring forward one hour
@@ -510,7 +571,7 @@ URL:https://www.nist.gov/pml/time-and-frequency-division/popular-links/day
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-medicare-ma-oe-2028-last@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
 SUMMARY:Last day: Medicare Advantage switch window
@@ -530,7 +591,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-est-2028-4@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280418
 DTEND;VALUE=DATE:20280419
 SUMMARY:Estimated tax payment due (first for 2028)
@@ -549,7 +610,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ar-tax-day-2028@civic-forecast.pages.dev
-DTSTAMP:20261027T015845Z
+DTSTAMP:20261027T020342Z
 DTSTART;VALUE=DATE:20280418
 DTEND;VALUE=DATE:20280419
 SUMMARY:Tax Day: 2027 returns are due

@@ -41,7 +41,7 @@ def iso(v, where, allow_null=True):
     except ValueError:
         errors.append(f"{where}: impossible date {v!r}")
         return None
-    if not (date(2026, 1, 1) <= d <= date(2027, 3, 31)):
+    if not (date(2026, 1, 1) <= d <= date(2028, 12, 31)):
         warnings.append(f"{where}: date {v} is outside the expected window")
     return v
 
@@ -155,9 +155,15 @@ def main(sq_races):
                 if x.get("registrationDeadline") and x.get("date") and x["registrationDeadline"] > x["date"]:
                     errors.append(f"{w}: registration deadline after the election")
                 url(x.get("source"), f"{w}.source")
+                if x.get("date") and x.get("confidence") not in ("high", "medium"):
+                    warnings.append(f"{w}: {x.get('confidence')} confidence, left off the page")
+                    continue
                 items.append(x)
             nxt[code] = sorted(items, key=lambda x: x.get("date") or "9999")
             p = s.get("presidentialPrimary2028")
+            if p and p.get("date") and p.get("confidence") not in ("high", "medium"):
+                warnings.append(f"{code}.presidentialPrimary2028: {p.get('confidence')} confidence, left off the page")
+                p = None
             if p and p.get("date"):
                 iso(p["date"], f"{code}.presidentialPrimary2028")
                 pres[code] = p
